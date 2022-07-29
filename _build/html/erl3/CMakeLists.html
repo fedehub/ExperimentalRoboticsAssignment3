@@ -69,7 +69,7 @@
            <div itemprop="articleBody">
              
   <p>cmake_minimum_required(VERSION 3.0.2)
-project(exp_assignment3)</p>
+project(erl3)</p>
 <p>## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)</p>
 <p>## Find catkin macros and libraries
@@ -79,8 +79,9 @@ find_package(catkin REQUIRED COMPONENTS</p>
 <blockquote>
 <div><p>roscpp
 rospy
-erl2
-message_generation</p>
+message_generation
+geometry_msgs
+std_msgs</p>
 </div></blockquote>
 <p>)</p>
 <p>## System dependencies are found with CMake’s conventions
@@ -136,7 +137,7 @@ Oracle.srv</p>
 <dl>
 <dt>## Generate added messages and services with any dependencies listed here</dt><dd><dl class="simple">
 <dt>generate_messages(</dt><dd><p>DEPENDENCIES
-erl2  std_msgs geometry_msgs</p>
+std_msgs geometry_msgs</p>
 </dd>
 </dl>
 <p>)</p>
@@ -170,7 +171,7 @@ erl2  std_msgs geometry_msgs</p>
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES exp_assignment3
+#  LIBRARIES erl3
 #  CATKIN_DEPENDS roscpp rospy
 #  DEPENDS system_lib
 )</p>
@@ -187,7 +188,7 @@ include_directories(
 <p>)</p>
 <p>## Declare a C++ library
 # add_library(${PROJECT_NAME}
-#   src/${PROJECT_NAME}/exp_assignment3.cpp
+#   src/${PROJECT_NAME}/erl3.cpp
 # )</p>
 <p>## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -256,7 +257,7 @@ include_directories(
 <div class="section" id="testing">
 <h1>## Testing ##<a class="headerlink" href="#testing" title="Permalink to this headline"></a></h1>
 <p>## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_exp_assignment3.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_erl3.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()</p>

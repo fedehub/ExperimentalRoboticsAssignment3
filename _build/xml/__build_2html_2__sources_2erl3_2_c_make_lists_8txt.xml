@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
-  <compounddef id="erl3_2_c_make_lists_8txt" kind="file" language="C++">
+  <compounddef id="__build_2html_2__sources_2erl3_2_c_make_lists_8txt" kind="file" language="C++">
     <compoundname>CMakeLists.txt</compoundname>
     <briefdescription>
     </briefdescription>
@@ -215,6 +215,6 @@
 <codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Add<sp/>folders<sp/>to<sp/>be<sp/>run<sp/>by<sp/>python<sp/>nosetests</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="207"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>catkin_add_nosetests(test)</highlight></codeline>
     </programlisting>
-    <location file="erl3/CMakeLists.txt"/>
+    <location file="_build/html/_sources/erl3/CMakeLists.txt"/>
   </compounddef>
 </doxygen>
