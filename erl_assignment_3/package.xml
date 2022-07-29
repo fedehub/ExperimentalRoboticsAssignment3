@@ -62,6 +62,7 @@
   <exec_depend>rospy</exec_depend>
   <exec_depend>std_msgs</exec_depend>
   <depend>cv_bridge</depend>
+  <depend>erl_assignment_3_msgs</depend>
 
 
   <!-- The export tag contains other, unspecified, tags -->
