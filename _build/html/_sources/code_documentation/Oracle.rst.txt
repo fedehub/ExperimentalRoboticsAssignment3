@@ -34,15 +34,3 @@ to check whether a specific ID is the solution of the mystery, call the service 
 	int32 ID
 
 
-Hints generation
------------------
-
-referring to the code, 
-
-* the ID of the hint is from 0 to 5
-* the orale knows only the IDs and not the corresponding solution in terms of where, what and who
-
-in particular,
-
-* the *winID* is, randomly choosen from 0 to 5
-* the array *uIDs* contains the inconsistent IDs
