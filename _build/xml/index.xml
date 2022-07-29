@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="namespaceconf" kind="namespace"><name>conf</name>
+    <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
+    <member refid="namespaceconf_1a33fa97cf51dcb25970fbf53f10159589" kind="variable"><name>copyright</name></member>
+    <member refid="namespaceconf_1a637c239d256432248aa8d9f3ab0b8c52" kind="variable"><name>author</name></member>
+    <member refid="namespaceconf_1a325dc746d8bf05c54d26351c35a21d90" kind="variable"><name>release</name></member>
+    <member refid="namespaceconf_1ae475e080536acb271a0a0efe56c3ba42" kind="variable"><name>extensions</name></member>
+    <member refid="namespaceconf_1ae850ae634911b713e036b43894fdd525" kind="variable"><name>templates_path</name></member>
+    <member refid="namespaceconf_1a7ad48fb6f3e9b129c02346ea0d3527c1" kind="variable"><name>exclude_patterns</name></member>
+    <member refid="namespaceconf_1a94c3a9e097903ba149e86d3037ca3b7a" kind="variable"><name>autodoc_mock_imports</name></member>
+    <member refid="namespaceconf_1a6c3bfcc1a44546c1c75ce20f55bd0fd6" kind="variable"><name>html_theme</name></member>
+    <member refid="namespaceconf_1af4fb5d8851ccaade135c2668dd3ced41" kind="variable"><name>html_static_path</name></member>
+    <member refid="namespaceconf_1a6fcd7e5236f355b1e1a55f9d95988810" kind="variable"><name>master_doc</name></member>
+    <member refid="namespaceconf_1a8f403b478ab86c8b7663d82045f21741" kind="variable"><name>source_suffix</name></member>
+    <member refid="namespaceconf_1a3117edf4443d9b8c70a9f0f44294ba79" kind="variable"><name>highlight_language</name></member>
+    <member refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kind="variable"><name>shell</name></member>
+    <member refid="namespaceconf_1acb47d2c0c2904fa7d36b63142533f383" kind="variable"><name>breathe_projects</name></member>
+    <member refid="namespaceconf_1a6eba2d2c7ae923054b1c49e686ec89b9" kind="variable"><name>breathe_default_project</name></member>
+    <member refid="namespaceconf_1a54585428ce84441199d9dfd7087e2243" kind="variable"><name>breathe_default_members</name></member>
+    <member refid="namespaceconf_1a05f7acd354f09362b4fa8f2abdfa1b54" kind="variable"><name>myst_enable_extensions</name></member>
+  </compound>
+  <compound refid="code__documentation_2index_8md" kind="file"><name>index.md</name>
+  </compound>
+  <compound refid="documents_2index_8md" kind="file"><name>index.md</name>
+  </compound>
+  <compound refid="conf_8py" kind="file"><name>conf.py</name>
+  </compound>
+  <compound refid="markdown-vs-rest_8md" kind="file"><name>markdown-vs-rest.md</name>
+  </compound>
+  <compound refid="erl3_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="erl__assignment__3_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="erl__assignment__3__msgs_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="simulation_8cpp" kind="file"><name>simulation.cpp</name>
+    <member refid="simulation_8cpp_1a32812fe000700d7aa8988d74e59471c7" kind="variable"><name>oracle_pub</name></member>
+    <member refid="simulation_8cpp_1a36b0204cd96e3dc326a2adfa3d1dceda" kind="variable"><name>markx</name></member>
+    <member refid="simulation_8cpp_1a0bc4146f286fe42bd5e8fa1e53826447" kind="variable"><name>marky</name></member>
+    <member refid="simulation_8cpp_1a8d90002e6a9c50028f184b22c380efc4" kind="variable"><name>markz</name></member>
+    <member refid="simulation_8cpp_1a412ed4d68a81f370cdcd20e3019db982" kind="variable"><name>lastmarkx</name></member>
+    <member refid="simulation_8cpp_1a174c0dfc727a92493b03f7b0573f4f3e" kind="variable"><name>lastmarky</name></member>
+    <member refid="simulation_8cpp_1a0049a8a39c319bf1470f36c9e0f75abd" kind="variable"><name>key</name></member>
+    <member refid="simulation_8cpp_1a68fa6a0c7a1208892294604263e23d92" kind="variable"><name>person</name></member>
+    <member refid="simulation_8cpp_1a4368e40a20e72e62974037baf19dba80" kind="variable"><name>object</name></member>
+    <member refid="simulation_8cpp_1a5e5bd50ead53d20df3f8ede527f47ce7" kind="variable"><name>place</name></member>
+    <member refid="simulation_8cpp_1a37d4a0b625b8b9583adf9362f5aae971" kind="variable"><name>uIDs</name></member>
+    <member refid="simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" kind="variable"><name>winID</name></member>
+    <member refid="simulation_8cpp_1ab5f3446a47fbb2ab4e388c5f5e6674df" kind="variable"><name>markerID</name></member>
+    <member refid="simulation_8cpp_1aa1e0faa63b5f5b649a5056108449dc95" kind="variable"><name>oracle_msgs</name></member>
+    <member refid="simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" kind="function"><name>oracleService</name></member>
+    <member refid="simulation_8cpp_1ad9cf714dd0ccfe55b69a3f8ac68c60df" kind="function"><name>oracleCallback</name></member>
+    <member refid="simulation_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="md_code_documentation_index" kind="page"><name>md_code_documentation_index</name>
+  </compound>
+  <compound refid="md_documents_index" kind="page"><name>md_documents_index</name>
+  </compound>
+  <compound refid="md_documents_markdown-vs-rest" kind="page"><name>md_documents_markdown-vs-rest</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_dc965ea0807d6e8790d6607c44bea479" kind="dir"><name>code_documentation</name>
+  </compound>
+  <compound refid="dir_8dd08f2658aa08180a5d08d0b206f839" kind="dir"><name>documents</name>
+  </compound>
+  <compound refid="dir_9fc0922878e189bd9fbcf7835f617b1d" kind="dir"><name>erl3</name>
+  </compound>
+  <compound refid="dir_ee728be804a4aa272f9ec8c96eeac188" kind="dir"><name>erl_assignment_3</name>
+  </compound>
+  <compound refid="dir_47e65dd551f63c3d1c659a9857b22197" kind="dir"><name>erl_assignment_3_msgs</name>
+  </compound>
+  <compound refid="dir_935e8cbcc0134fa0e1b68b8355b1dc7a" kind="dir"><name>erl3/src</name>
+  </compound>
+</doxygenindex>
