@@ -14,7 +14,21 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   smach
   smach_ros
+  cv_bridge
+  image_transport
+  aruco
+  aruco_msgs
+  sensor_msgs
+  # dynamic_reconfigure
 )
+
+find_package(OpenCV REQUIRED)
+
+# generate_dynamic_reconfigure_options(
+#   cfg/ArucoThreshold.cfg
+# )
+
+add_compile_options(-std=c++11)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -110,6 +124,7 @@ catkin_package(
 #  LIBRARIES erl_assignment_3
 #  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs
 #  DEPENDS system_lib
+   DEPENDS OpenCV
 )
 
 ###########
