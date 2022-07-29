@@ -1,7 +1,7 @@
-#include <ros/ros.h>
-#include <erl3/ErlOracle.h>
-#include <erl3/Oracle.h>
-#include <exp_assignment3/Marker.h>
+#include "ros/ros.h"
+#include "erl3/ErlOracle.h"
+#include "erl3/Oracle.h"
+#include "erl3/Marker.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -26,17 +26,17 @@ int uIDs[3]={-1,-1};
 int winID = -1;
  
 int markerID[30]; 
-erl2::ErlOracle oracle_msgs[30];
+erl3::ErlOracle oracle_msgs[30];
  
 
 
-bool oracleService(erl2::Oracle::Request &req, erl2::Oracle::Response &res)
+bool oracleService(erl3::Oracle::Request &req, erl3::Oracle::Response &res)
 	{
 		res.ID = winID;
 		return true;
 	}
 
-bool oracleCallback(exp_assignment3::Marker::Request &req, exp_assignment3::Marker::Response &res)
+bool oracleCallback(erl3::Marker::Request &req, erl3::Marker::Response &res)
 {
 	res.oracle_hint = oracle_msgs[req.markerId-11];
 	return true;
