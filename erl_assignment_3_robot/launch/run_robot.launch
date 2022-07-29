@@ -1,21 +1,25 @@
 <?xml version="1.0"?>
 <launch>
 	
-	  <!-- these are the arguments you can pass this launch file, for example paused:=true -->
+  <arg name="robot_name" default="detectibot" />
+  <arg name="model" default="$(find erl_assignment_3_robot)/urdf/robot.urdf" />
+  <arg name="gazebo_gui" default="true"/>
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
   <arg name="extra_gazebo_args" default=""/>
   <arg name="gui" default="true"/>
   <arg name="recording" default="false"/>
-  <arg name="world" default="assignment" />
+  <arg name="world" default="my_world" />
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
   <arg name="physics" default="ode"/>
   <arg name="verbose" default="false"/>
-  <arg name="world_name" value="$(find erl3)/worlds/$(arg world).world"/>
+  <arg name="world_name" value="$(find erl_assignment_3_robot)/world/$(arg world).world"/>
   <arg name="respawn_gazebo" default="false"/>
   <arg name="use_clock_frequency" default="false"/>
   <arg name="pub_clock_frequency" default="100"/>
+  <param name="use_gui" value="True"/>
+  <arg name="out" default="screen" />
 
   <!-- set use_sim_time flag -->
   <param name="/use_sim_time" value="$(arg use_sim_time)"/>
@@ -41,6 +45,24 @@
   <group if="$(arg gui)">
     <node name="gazebo_gui" pkg="gazebo_ros" type="gzclient" respawn="false" output="screen"/>
   </group>
+  
+  <param name="robot_description" textfile="$(arg model)"/>
+  
+  <node 
+		name="robot_state_publisher" pkg="robot_state_publisher" 
+		type="robot_state_publisher" output="$(arg out)"/>
+  <node 
+		name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" 
+		type="joint_state_publisher_gui" output="$(arg out)"/>
 
+  <!-- <node name="simulation" pkg ="erl_assignment_3_robot" type="simulation" output="screen" /> -->
+	
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find erl_assignment_3_robot)/config/sim.rviz" /> 
+  
+  <node 
+		pkg="gazebo_ros" name="urdf_spawner" type="spawn_model"
+		respawn="false" output="screen"
+		args="-urdf -model $(arg robot_name) -param robot_description" />
+	
 
 </launch>
