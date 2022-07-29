@@ -50,7 +50,7 @@ public:
 
     // Update GUI Window
     cv::imshow(OPENCV_WINDOW, cv_ptr->image);
-    cv::waitKey(3);
+    cv::waitKey(30);
 
     // Output modified video stream
     image_pub_.publish(cv_ptr->toImageMsg());

@@ -168,6 +168,10 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+add_executable( img_echo src/img_echo.cpp )
+add_dependencies( img_echo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( img_echo ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} )
+
 #############
 ## Install ##
 #############
