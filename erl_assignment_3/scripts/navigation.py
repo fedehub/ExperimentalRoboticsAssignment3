@@ -1,13 +1,12 @@
 
 import rospy
+import math
+
 from actionlib_msgs.msg import GoalID
 from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseWithCovariance, Pose, Point, Quaternion, Vector3, Twist
 from erl_assignment_3_msgs.srv import GoToPoint, GoToPointRequest, GoToPointResponse
 from erl_assignment_3_msgs.srv import TurnRobot, TurnRobotRequest, TurnRobotResponse
-
-import math
-
 from move_base_msgs.msg import MoveBaseActionGoal
 
 

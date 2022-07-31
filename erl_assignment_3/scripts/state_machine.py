@@ -22,6 +22,14 @@ room_idx = 0
 ''' current room to explore
 '''
 
+def next_room():
+	global rooms
+	global room_idx
+	
+	room_idx = room_idx + 1
+	if room_idx >= len(rooms):
+		room_idx = 0
+
 winnerID = -1
 ''' the id at the end of the case
 '''
@@ -151,6 +159,7 @@ class CHECK(smach.State):
 				return 'NEXT'
 			else:
 				rospy.loginfo("(CHECK) no consistent ID to show, retrying")
+				next_room()
 				return 'AGAIN'
 		else:
 			rospy.loginfo("(CHECK) all hypotheses discarded, FAIL")
@@ -178,12 +187,10 @@ class SHOW(smach.State):
 		if to_show == sol.ID:
 			rospy.loginfo("MYSTERY SOLVED")
 			return "SUCCESS"
+		
 		else:
 			rospy.loginfo("TRY AGAIN...")
-			
-			room_idx = room_idx + 1
-			if room_idx >= len(rooms):
-				room_idx = 0
+			next_room()
 			
 			return 'AGAIN'
 
