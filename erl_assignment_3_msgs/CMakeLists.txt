@@ -60,6 +60,8 @@ add_service_files(
   TurnRobot.srv
   GetArucoIds.srv
   AddHint.srv
+  MarkWrongId.srv
+  GetId.srv
 )
 
 ## Generate actions in the 'action' folder

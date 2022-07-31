@@ -43,6 +43,10 @@ cl_add_hint = None
 ''' client /add_hint : erl_assignment_3_msgs/AddHint
 '''
 
+cl_get_hint = None
+''' client /get_hint : erl_assignment_3_msgs/GetId
+'''
+
 cl_oracle_solution = None
 ''' client /oracle_solution : erl3/Oracle
 '''
@@ -131,6 +135,10 @@ if __name__ == "__main__":
 	# client knowledge base -- add hint
 	rospy.loginfo("cl add hint")
 	cl_add_hint = rospy.ServiceProxy("/add_hint", AddHint)
+	
+	# client get hint
+	rospy.loginfo("cl get id")
+	cl_get_hint = rospy.ServiceProxy("/get_id", GetId)
 	
 	# client oracle -- solution
 	rospy.loginfo("cl oracle solution")

@@ -190,6 +190,7 @@ target_link_libraries( detectibot_magnifier ${catkin_LIBRARIES} ${OpenCV_LIBRARI
 catkin_install_python(PROGRAMS
   scripts/navigation.py
   scripts/clueto_kb.py
+  scripts/state_machine.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

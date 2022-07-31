@@ -6,9 +6,9 @@
 import rospy
 from erl2.msg import ErlOracle
 from erl2.srv import Marker, MarkerRequest, MarkerResponse
-from erl_assignment_2_msgs.srv import GetId, GetIdRequest, GetIdResponse
-from erl_assignment_2_msgs.srv import MarkWrongId, MarkWrongIdRequest, MarkWrongIdResponse
-from erl_assignment_2_msgs.srv import AddHint, AddHintRequest, AddHintResponse
+from erl_assignment_3_msgs.srv import GetId, GetIdRequest, GetIdResponse
+from erl_assignment_3_msgs.srv import MarkWrongId, MarkWrongIdRequest, MarkWrongIdResponse
+from erl_assignment_3_msgs.srv import AddHint, AddHintRequest, AddHintResponse
 
 record_where = 0
 record_what = 1
