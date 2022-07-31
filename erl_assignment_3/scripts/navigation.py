@@ -5,7 +5,8 @@ from nav_msgs.msg import Odometry
 from geometry_msgs.msg import PoseWithCovariance, Pose, Point, Quaternion
 from geometry_msgs.msg import Point, Vector3
 from std_msgs.msg import String
-from erl_assignment_3_msgs.msg import GoToPoint, GoToPointRequest, GoToPointResponse
+from erl_assignment_3_msgs.srv import GoToPoint, GoToPointRequest, GoToPointResponse
+from actionlib_msgs.msg import GoalID
 
 import math
 
@@ -33,12 +34,13 @@ def read_odom(data):
 			the current odometry message
 	'''
 	global last_odometry
-	global las_pos
+	global last_pos
 	
 	last_odometry = data
 	last_pos = data.pose.pose.position
 	
 	# rospy.loginfo("pos(" + str(data.pose.pose.position.x) + ", " + str(data.pose.pose.position.y) + ")")
+
 
 
 def dist_vector(P1, P2):
@@ -75,6 +77,10 @@ pub_move_base = None
 ''' publisher to the /move_base/goal topic (move_base/MoveBaseGoal)
 '''
 
+pub_cancel_move_base = None
+''' publisher to /move_base/cancel (actionlib_msgs/GoalID)
+'''
+
 last_target = Point()
 ''' last required target (geometry_msgs/Point)
 '''
@@ -104,7 +110,7 @@ def send_move_base(x,y):
 	goal.goal.target_pose.pose.orientation.w = 1.0
 	
 	pub_move_base.publish(goal)
-	(rospy.Duration(1)).sleep()
+	rospy.sleep(rospy.Duration(1))
 	
 	last_target = goal.goal.target_pose.pose.position
 
@@ -125,18 +131,35 @@ def go_to_point(req):
 			whether the request succeeded or not. 
 	'''
 	
+	global last_target
+	global last_pos
+	global pub_cancel_move_base
+	
 	# make the request to the nav stack
+	read_id_from_movebase = True
+	rospy.loginfo("sending to movebase...")
 	send_move_base( req.target.x, req.target.y )
+	rospy.sleep(rospy.Duration(1))
 	
 	# wait for the request
 	r = rospy.Rate(10)
+	rospy.loginfo(f"moving to ({req.target.x}, {req.target.y}) ...")
 	while not rospy.is_shutdown():
 		r.sleep()
 		
-		if distance( last_target, last_pos ) < 0.01:
+		d = distance( last_target, last_pos )
+		
+		if d < 0.35:
 			# cancel the request
+			rospy.loginfo("target reached")
 			break
+		else:
+			rospy.loginfo(f"d={d}")
 	
+	rospy.loginfo("cancel movebase request")
+	pub_cancel_move_base.publish(GoalID())
+	
+	rospy.loginfo("done")
 	return GoToPointResponse(True)
 
 
@@ -146,13 +169,15 @@ if __name__ == "__main__":
 	
 	rospy.loginfo("pub movebase")
 	pub_move_base = rospy.Publisher(move_base_goal_topic, MoveBaseActionGoal, queue_size=100)
-	(rospy.Duration(1)).sleep()
+	rospy.loginfo("pub movebase cancellation")
+	pub_cancel_move_base = rospy.Publisher("/move_base/cancel", GoalID, queue_size=1000)
+	rospy.sleep(rospy.Duration(2))
 	
 	rospy.loginfo("sub odometry")
 	rospy.Subscriber(odometry_topic, Odometry, read_odom, queue_size=100)
 	
 	rospy.loginfo("srv go to point")
-	rospy.Service
+	rospy.Service("go_to_point", GoToPoint, go_to_point)
 	
 	rospy.loginfo("ros spin")
 	rospy.spin()
