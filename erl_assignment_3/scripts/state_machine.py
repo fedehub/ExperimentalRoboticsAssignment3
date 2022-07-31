@@ -2,6 +2,7 @@
 import rospy
 import smach
 import smach_ros
+import math
 
 from erl3.srv import Oracle, OracleRequest, OracleResponse
 from erl3.srv import Marker, MarkerRequest, MarkerResponse
@@ -23,6 +24,10 @@ room_idx = 0
 
 winnerID = -1
 ''' the id at the end of the case
+'''
+
+to_show = -1;
+''' the id to show to the Oracle in the SHOW status
 '''
 
 case_data = {"who":"", "where":"", "what":""}
@@ -97,6 +102,20 @@ class COLLECT(smach.State):
 		smach.State.__init__(self, outcomes=outcomes)
 	
 	def execute(self, userdata):
+		''' turn and gather the hints
+		
+		the robot turns areound itself and tries to grasp as many
+		markers as the camera can detect. 
+		'''
+		global cl_turn_robot
+		
+		rospy.loginfo("(COLLECT) collecting hints")
+		cmd = TurnRobotRequest()
+		cmd.angularVel = math.pi / 4
+		cmd.time = 6
+		cl_turn_robot(cmd)
+		
+		rospy.loginfo("(COLLECT) done")
 		return 'NEXT'
 
 
@@ -105,7 +124,37 @@ class CHECK(smach.State):
 		smach.State.__init__(self, outcomes=outcomes)
 	
 	def execute(self, userdata):
-		return 'NEXT'
+		''' ask if there are valid hints to the knowledge base
+		'''
+		global cl_aruco
+		global cl_add_hint
+		global cl_get_hint
+		global to_show
+		
+		# ask for hints to aruco
+		aruco_hints = cl_aruco()
+		if aruco_hints.isEmpty:
+			rospy.loginfo("(CHECK) empty from aruco, retry")
+		
+		# register the hints in the knowledge base
+		if not aruco_hints.isEmpty:
+			for id in aruco_hints.ids:
+				add_hint_req = AddHintRequest()
+				add_hint_req.ID = id
+				cl_add_hint(add_hint_req)
+		
+		# check for available hints
+		kb_res = cl_get_hint()
+		if kb_res.consistent_found:
+			if kb_res.consistent_id >= 0:
+				to_show = kb_res.consistent_id
+				return 'NEXT'
+			else:
+				rospy.loginfo("(CHECK) no consistent ID to show, retrying")
+				return 'AGAIN'
+		else:
+			rospy.loginfo("(CHECK) all hypotheses discarded, FAIL")
+			return 'IMPOSSIBLE'
 
 
 class SHOW(smach.State):
@@ -113,8 +162,30 @@ class SHOW(smach.State):
 		smach.State.__init__(self, outcomes=outcomes)
 	
 	def execute(self, userdata):
-		pass
-		return 'SUCCESS'
+		''' final checking: ask to the oracle, and try to show a solution.
+		'''
+		global cl_oracle_solution
+		global cl_delete_hint
+		global cl_marker
+		global to_show
+		global case_data
+		global room_idx
+		global rooms 
+		
+		sol = cl_oracle_solution()
+		rospy.loginfo(f"to_show={to_show} -- oracle={sol.ID}")
+		
+		if to_show == sol.ID:
+			rospy.loginfo("MYSTERY SOLVED")
+			return "SUCCESS"
+		else:
+			rospy.loginfo("TRY AGAIN...")
+			
+			room_idx = room_idx + 1
+			if room_idx >= len(rooms):
+				room_idx = 0
+			
+			return 'AGAIN'
 
 
 
@@ -143,7 +214,7 @@ if __name__ == "__main__":
 	
 	# client oracle -- solution
 	rospy.loginfo("cl oracle solution")
-	cl_add_hint = rospy.ServiceProxy("/oracle_solution", Oracle)
+	cl_oracle_solution = rospy.ServiceProxy("/oracle_solution", Oracle)
 	
 	# client kb -- delete hint
 	rospy.loginfo("cl delete hint")

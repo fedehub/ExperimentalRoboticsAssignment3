@@ -4,7 +4,7 @@
 
 ---
 
-# if there are yet consistent hypothese
+# if there are yet consistent hypotheses
 bool consistent_found
 
 # the ID of the selected consisten hp (chech consistent_found before)
