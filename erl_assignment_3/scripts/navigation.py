@@ -182,6 +182,9 @@ def turn_robot(req):
 	pub_cmd_vel.publish(tw)
 	rospy.loginfo(f"waiting dt={req.time}")
 	rospy.sleep(rospy.Duration(req.time))
+	rospy.loginfo("stopping robot")
+	tw.angular.z = 0.0
+	pub_cmd_vel.publish(tw)
 	
 	rospy.loginfo("done")
 	return TurnRobotResponse(True)
