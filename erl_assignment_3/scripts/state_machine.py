@@ -5,11 +5,12 @@ import smach_ros
 
 from erl3.srv import Oracle, OracleRequest, OracleResponse
 from erl3.srv import Marker, MarkerRequest, MarkerResponse
+from erl_assignment_3_msgs.srv import GetId, GetIdRequest, GetIdResponse
 from erl_assignment_3_msgs.srv import GoToPoint, GoToPointRequest, GoToPointResponse
 from erl_assignment_3_msgs.srv import TurnRobot, TurnRobotRequest, TurnRobotResponse
 from erl_assignment_3_msgs.srv import GetArucoIds, GetArucoIdsRequest, GetArucoIdsResponse
 from erl_assignment_3_msgs.srv import AddHint, AddHintRequest, AddHintResponse
-from erl_assignment_3_msgs.srv import MarkWrongId, MarkWrongIdrequest, MarkWrongIdResponse
+from erl_assignment_3_msgs.srv import MarkWrongId, MarkWrongIdRequest, MarkWrongIdResponse
 from geometry_msgs.msg import Point
 
 rooms = [(-4,-3), (-4,2), (-4,7), (5,-7), (5,-3), (5,1)]
@@ -25,7 +26,8 @@ winnerID = -1
 '''
 
 case_data = {"who":"", "where":"", "what":""}
-
+''' the final solution of the case
+'''
 
 cl_go_to_point = None
 ''' client /go_to_point : erl_assignment_3_msgs/GoToPoint
@@ -57,17 +59,16 @@ cl_delete_hint = None
 
 
 class MOVE(smach.State):
-	 def __init__(self, outcomes=['NEXT']):
-		pass
+	def __init__(self, outcomes=['NEXT']):
+		smach.State.__init__(self, outcomes=outcomes)
 
-	 def execute(self, userdata):
+	def execute(self, userdata):
 		''' move to the room, then increment the index.
 		
 		Note:
 			if the robot can't reach the correct result after having visited
 			every room, the exploration restart from the first room
 		'''
-		
 		global rooms
 		global room_idx
 		global cl_go_to_point
@@ -82,9 +83,9 @@ class MOVE(smach.State):
 		tg.target.z = 0.0
 		tgres = GoToPointResponse()
 		tgres.success = False
-		while not tg.success:
+		while not tgres.success:
 			tgres = cl_go_to_point(tg)
-			if not tg.success:
+			if not tgres.success:
 				rospy.loginfo("(MOVE) movement action failure; retrying")
 		
 		rospy.loginfo("(MOVE) on the target")
@@ -92,26 +93,26 @@ class MOVE(smach.State):
 
 
 class COLLECT(smach.State):
-	 def __init__(self, outcomes=['NEXT']):
-		pass
-
-	 def execute(self, userdata):
+	def __init__(self, outcomes=['NEXT']):
+		smach.State.__init__(self, outcomes=outcomes)
+	
+	def execute(self, userdata):
 		return 'NEXT'
 
 
 class CHECK(smach.State):
-	 def __init__(self, outcomes=['NEXT', 'IMPOSSIBLE', 'AGAIN']):
-		pass
-
-	 def execute(self, userdata):
+	def __init__(self, outcomes=['NEXT', 'IMPOSSIBLE', 'AGAIN']):
+		smach.State.__init__(self, outcomes=outcomes)
+	
+	def execute(self, userdata):
 		return 'NEXT'
 
 
 class SHOW(smach.State):
-	 def __init__(self, outcomes=['AGAIN', 'SUCCESS']):
-		pass
-
-	 def execute(self, userdata):
+	def __init__(self, outcomes=['AGAIN', 'SUCCESS']):
+		smach.State.__init__(self, outcomes=outcomes)
+	
+	def execute(self, userdata):
 		pass
 		return 'SUCCESS'
 
@@ -161,9 +162,9 @@ if __name__ == "__main__":
 		smach.StateMachine.add( 'SHOW', SHOW(), transitions={'AGAIN':'MOVE', 'SUCCESS':'mystery_solved'}, remapping={} )
 	
 	outcome = sm.execute()
-	if outcome=="":
-		rospy.loginfo(f"mystery solved! ID={winnerID} with data(who={case_data["who"]},where={case_data["where"]},what={case_data["what"]}")
+	if outcome=="mystery_solved":
+		rospy.loginfo(f"mystery solved! ID={winnerID} with data(who={case_data['who']},where={case_data['where']},what={case_data['what']}")
 	else:
 		rospy.logerr("mystery not solvable.")
 	
-	rospy.spin()
+	# rospy.spin()

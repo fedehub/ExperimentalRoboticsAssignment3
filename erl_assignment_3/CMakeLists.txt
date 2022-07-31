@@ -189,7 +189,7 @@ target_link_libraries( detectibot_magnifier ${catkin_LIBRARIES} ${OpenCV_LIBRARI
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
   scripts/navigation.py
-  scripts/clueto_kb.py
+  scripts/cluedo_kb.py
   scripts/state_machine.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

@@ -4,8 +4,8 @@
 '''
 
 import rospy
-from erl2.msg import ErlOracle
-from erl2.srv import Marker, MarkerRequest, MarkerResponse
+from erl3.msg import ErlOracle
+from erl3.srv import Marker, MarkerRequest, MarkerResponse
 from erl_assignment_3_msgs.srv import GetId, GetIdRequest, GetIdResponse
 from erl_assignment_3_msgs.srv import MarkWrongId, MarkWrongIdRequest, MarkWrongIdResponse
 from erl_assignment_3_msgs.srv import AddHint, AddHintRequest, AddHintResponse
