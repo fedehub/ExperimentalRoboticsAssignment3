@@ -6,7 +6,7 @@ Code docs -- *oracle_final.cpp*
 How to receive a hint
 ----------------------
 
-the robot goes around in search of a ArUco code containing the ID of the hint. When it finds one hint, it makes a service request to the Oracle declaring the found hint. This request is of type *erl3/Marker*, made as follows:
+the robot goes around in search of a ArUco code containing the ID of the hint. When it finds one hint, it makes a service request to the Oracle through ``/oracle_hint`` service,  declaring the found hint. This request is of type ``erl3/Marker``, made as follows:
 
 .. code-block::
 	
@@ -26,7 +26,7 @@ the field of type *erl3/ErlOracle* has these fields:
 How to check if the hint is valid
 ----------------------------------
 
-to check whether a specific ID is the solution of the mystery, call the service */oracle_solution* of type ``erl2/Oracle``. Here's the prototype of the service:
+to check whether a specific ID is the solution of the mystery, call the service ``/oracle_solution`` of type ``erl2/Oracle``. Here's the prototype of the service:
 
 .. code-block::
 	
