@@ -7,8 +7,8 @@
   <!-- We resume the logic in empty_world.launch -->
    <include file="$(find gazebo_ros)/launch/empty_world.launch"> 
     <arg name="paused" value="false"/>
-    <!-- <arg name="world_name" default="$(find erl3)/worlds/assignment.world"/> -->
-    <arg name="world_name" default="$(find erl3)/worlds/my_world.world"/>
+    <arg name="world_name" default="$(find erl3)/worlds/assignment.world"/>
+    <!-- <arg name="world_name" default="$(find erl3)/worlds/my_world.world"/> -->
   </include>
 
   <!-- Load the URDF into the ROS Parameter Server -->

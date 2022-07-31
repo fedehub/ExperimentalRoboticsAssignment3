@@ -174,6 +174,10 @@ add_executable( img_echo src/img_echo.cpp )
 add_dependencies( img_echo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 target_link_libraries( img_echo ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} )
 
+add_executable( detectibot_magnifier src/detectibot_magnifier.cpp )
+add_dependencies( detectibot_magnifier ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( detectibot_magnifier ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} )
+
 #############
 ## Install ##
 #############
