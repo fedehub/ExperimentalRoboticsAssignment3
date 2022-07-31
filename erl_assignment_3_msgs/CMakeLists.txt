@@ -59,6 +59,7 @@ add_service_files(
   GoToPoint.srv
   TurnRobot.srv
   GetArucoIds.srv
+  AddHint.srv
 )
 
 ## Generate actions in the 'action' folder
