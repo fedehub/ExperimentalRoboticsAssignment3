@@ -1,12 +1,10 @@
 
 import rospy
-
-from nav_msgs.msg import Odometry
-from geometry_msgs.msg import PoseWithCovariance, Pose, Point, Quaternion
-from geometry_msgs.msg import Point, Vector3
-from std_msgs.msg import String
-from erl_assignment_3_msgs.srv import GoToPoint, GoToPointRequest, GoToPointResponse
 from actionlib_msgs.msg import GoalID
+from nav_msgs.msg import Odometry
+from geometry_msgs.msg import PoseWithCovariance, Pose, Point, Quaternion, Vector3, Twist
+from erl_assignment_3_msgs.srv import GoToPoint, GoToPointRequest, GoToPointResponse
+from erl_assignment_3_msgs.srv import TurnRobot, TurnRobotRequest, TurnRobotResponse
 
 import math
 
@@ -164,6 +162,32 @@ def go_to_point(req):
 
 
 
+pub_cmd_vel = None
+''' velocity publisher (used by the turn_robot service)
+'''
+
+def turn_robot(req):
+	''' implementation of the service /turn_robot
+	
+	this service listens for a request containing the angular velocity around
+	x to keep, and the time during which the robot has to turn at that 
+	angular velocity. 
+	''' 
+	
+	global pub_cmd_vel
+	
+	rospy.loginfo(f"sending w={req.angularVel}")
+	tw = Twist()
+	tw.angular.z = req.angularVel
+	pub_cmd_vel.publish(tw)
+	rospy.loginfo(f"waiting dt={req.time}")
+	rospy.sleep(rospy.Duration(req.time))
+	
+	rospy.loginfo("done")
+	return TurnRobotResponse(True)
+
+
+
 if __name__ == "__main__":
 	rospy.init_node("navigation_node")
 	
@@ -171,6 +195,8 @@ if __name__ == "__main__":
 	pub_move_base = rospy.Publisher(move_base_goal_topic, MoveBaseActionGoal, queue_size=100)
 	rospy.loginfo("pub movebase cancellation")
 	pub_cancel_move_base = rospy.Publisher("/move_base/cancel", GoalID, queue_size=1000)
+	rospy.loginfo("pub cmd_vel")
+	pub_cmd_vel = rospy.Publisher("/cmd_vel", Twist, queue_size=1000)
 	rospy.sleep(rospy.Duration(2))
 	
 	rospy.loginfo("sub odometry")
@@ -178,6 +204,8 @@ if __name__ == "__main__":
 	
 	rospy.loginfo("srv go to point")
 	rospy.Service("go_to_point", GoToPoint, go_to_point)
+	rospy.loginfo("srv turn robot")
+	rospy.Service("turn_robot", TurnRobot, turn_robot)
 	
 	rospy.loginfo("ros spin")
 	rospy.spin()

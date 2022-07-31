@@ -24,6 +24,8 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   # dynamic_reconfigure
   erl_assignment_3_msgs
+  actionlib 
+  actionlib_msgs
 )
 
 # generate_dynamic_reconfigure_options(
