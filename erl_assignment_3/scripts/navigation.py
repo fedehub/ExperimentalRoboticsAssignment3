@@ -145,13 +145,14 @@ def go_to_point(req):
 		r.sleep()
 		
 		d = distance( last_target, last_pos )
-		
-		if d < 0.35:
+		if d <= 0.5:
 			# cancel the request
 			rospy.loginfo("target reached")
 			break
+		'''
 		else:
 			rospy.loginfo(f"d={d}")
+		'''
 	
 	rospy.loginfo("cancel movebase request")
 	pub_cancel_move_base.publish(GoalID())
@@ -178,9 +179,16 @@ def turn_robot(req):
 	rospy.loginfo(f"sending w={req.angularVel}")
 	tw = Twist()
 	tw.angular.z = req.angularVel
-	pub_cmd_vel.publish(tw)
 	rospy.loginfo(f"waiting dt={req.time}")
-	rospy.sleep(rospy.Duration(req.time))
+	
+	i = 0;
+	dt = req.time / 100.0
+	while i < 100:
+		pub_cmd_vel.publish(tw)
+		rospy.sleep(rospy.Duration(dt))
+		i=i+1
+	
+	
 	rospy.loginfo("stopping robot")
 	tw.angular.z = 0.0
 	pub_cmd_vel.publish(tw)

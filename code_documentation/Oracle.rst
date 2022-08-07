@@ -3,6 +3,18 @@ Code docs -- *oracle_final.cpp*
 =================================
 
 
+Observations
+--------------------
+
+- **the node contains up to 30 precomputed hints**, see in the code: ``erl3::ErlOracle oracle_msgs[30];``
+	sometimes in the space, the robot could find a ID greater than 30: *it must be discarded*. 
+	
+- the array ``int markerID[30];`` contains the ID associated to the respective message into ``erl3::ErlOracle oracle_msgs[30];``. For instance, the id of the i-th hint``oracle_msgs[i]`` is ``markerID[i]``
+- in particular, ``winID`` is the ID of the solution of the case
+- there are two types of ID: there's the one in the message *Marker* which is an index of the array of hints; and there's the ID of the other message *ErlOracle* that is an identifier of a hypothesis of the case. 
+- each hypothesis identifier goes from 0 up to 5
+
+
 How to receive a hint
 ----------------------
 

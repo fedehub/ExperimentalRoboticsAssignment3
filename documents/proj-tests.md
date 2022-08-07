@@ -41,7 +41,7 @@ rosrun erl_assignment_3 detectibot_magnifier
 shell 1:
 
 ```
-roslaunch erl_assignment_3_robot detectibot_environment.launch
+roslaunch erl_assignment_3_robot detectibot_environment.launch 2>/dev/null
 
 ```
 
@@ -64,6 +64,33 @@ rosrun erl_assignment_3 cluedo_kb.py
 shell 4:
 
 ```
+rosrun erl_assignment_3 state_machine.py
+
+```
+
+## The entire project
+
+shell 1:
+
+```bash
+roslaunch erl_assignment_3_robot detectibot_environment.launch 2>/dev/null
+
+```
+
+shell 2:
+
+```bash
+rosrun erl_assignment_3 img_echo &
+rosrun erl3 final_oracle &
+rosrun erl_assignment_3 navigation.py &
+rosrun erl_assignment_3 detectibot_magnifier
+
+```
+
+shell 3:
+
+```bash
+rosrun erl_assignment_3 cluedo_kb.py &
 rosrun erl_assignment_3 state_machine.py
 
 ```

@@ -44,7 +44,10 @@ def add_hint( hint ):
 	'''
 	
 	if is_valid_hint( hint ):
+		rospy.loginfo(f"evaluating hint with data (key={hint.key} , value={hint.value})")
 		add_hint_to_list( hint )
+	else:
+		rospy.loginfo(f"received a unvalid hint with data (key={hint.key} , value={hint.value})")
 
 
 
@@ -70,27 +73,39 @@ def add_hint_to_list( hint ):
 		if kb[hint.ID][record_where] == "" :
 			rospy.loginfo( f"adding hint ID={hint.ID} WHERE={hint.value}" )
 			kb[hint.ID][record_where] = hint.value;
-			
+		
+		elif kb[hint.ID][record_where] == hint.value :
+			rospy.loginfo( f"skipping hint ID={hint.ID} WHERE={hint.value}" )
+		
 		else:
 			# ID not consistent
+			rospy.loginfo( f"removing hint ID={hint.ID} WHERE={hint.value}" )
 			delete_that = True
 			
 	elif hint.key == "what":
 		if kb[hint.ID][record_what] == "" :
 			rospy.loginfo( f"adding hint ID={hint.ID} WHAT={hint.value}" )
 			kb[hint.ID][record_what] = hint.value;
+		
+		elif kb[hint.ID][record_what] == hint.value :
+			rospy.loginfo( f"skipping hint ID={hint.ID} WHAT={hint.value}" )
 			
 		else:
 			# ID not consistent
+			rospy.loginfo( f"deleting hint ID={hint.ID} WHAT={hint.value}" )
 			delete_that = True
 			
 	elif hint.key == "who":
 		if kb[hint.ID][record_who] == "" :
 			rospy.loginfo( f"adding hint ID={hint.ID} WHO={hint.value}" )
 			kb[hint.ID][record_who] = hint.value;
+		
+		elif kb[hint.ID][record_who] == hint.value :
+			rospy.loginfo( f"skipping hint ID={hint.ID} WHO={hint.value}" )
 			
 		else:
 			# ID not consistent
+			rospy.loginfo( f"deleting hint ID={hint.ID} WHO={hint.value}" )
 			delete_that = True
 			
 	else:
@@ -131,7 +146,7 @@ def is_valid_hint( hint ):
 		return False
 	if hint.key == "" or hint.key == "-1":
 		return False;
-	if hint.value == "" or hint.value == "":
+	if hint.value == "" or hint.value == "-1":
 		return False
 	
 	return True;
@@ -203,7 +218,7 @@ cl_oracle_hint = None
 ''' oracle client: get the infos from a hint ID
 '''
 
-def add_hint(req):
+def add_hint_service(req):
 	''' add a hint to th knowledge.
 	
 	th service calls the oracle and asks for a hint, then stores
@@ -212,8 +227,8 @@ def add_hint(req):
 	
 	global cl_oracle_hint
 	
-	hint = cl_oracle_hint(req)
-	add_hint(hint)
+	res = cl_oracle_hint(req.ID)
+	add_hint(res.oracle_hint)
 	
 	return AddHintResponse()
 
@@ -231,7 +246,7 @@ if __name__ == "__main__":
 	rospy.loginfo( "cluedo_kb initialization..." )
 	kb = list( )
 	kb_consistent = list( )
-	for i in range(0, 5):
+	for i in range(0, 6):
 		kb.append( ["", "", "", True, False] )
 		kb_consistent.append( i )
 	rospy.loginfo( "cluedo_kb initialization... done" )
@@ -239,9 +254,10 @@ if __name__ == "__main__":
 	# rospy.loginfo( "cluedo_kb subscriber /oracle_hint..." )
 	# rospy.Subscriber( "oracle_hint", ErlOracle, add_hint )
 	rospy.loginfo("srv add_hint")
-	rospy.Service("/add_hint", AddHint, add_hint)
+	rospy.Service("/add_hint", AddHint, add_hint_service)
+	
 	rospy.loginfo("client oracle_hint")
-	cl_oracle_hint = rospy.ServiceProxy("/oracle_hint", AddHint, add_hint)
+	cl_oracle_hint = rospy.ServiceProxy("/oracle_hint", Marker)
 	
 	rospy.loginfo( "cluedo_kb client /get_id..." )
 	srv_get_id = rospy.Service( "/get_id", GetId, get_id )

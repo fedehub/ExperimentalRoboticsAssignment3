@@ -146,10 +146,15 @@ class CHECK(smach.State):
 		
 		# register the hints in the knowledge base
 		if not aruco_hints.isEmpty:
-			for id in aruco_hints.ids:
-				add_hint_req = AddHintRequest()
-				add_hint_req.ID = id
-				cl_add_hint(add_hint_req)
+			rospy.loginfo(f"(CHECK) received {len(aruco_hints.ids)} hints from ArUco")
+			for idh in aruco_hints.ids:
+				if idh < 30:
+					rospy.loginfo(f"(CHECK) request for hint index={idh}")
+					add_hint_req = AddHintRequest()
+					add_hint_req.ID = idh
+					cl_add_hint(add_hint_req)
+				else:
+					rospy.loginfo(f"(CHECK) DISCARD request for hint index={idh}")
 		
 		# check for available hints
 		kb_res = cl_get_hint()

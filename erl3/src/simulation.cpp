@@ -31,14 +31,14 @@ erl3::ErlOracle oracle_msgs[30];
 
 
 bool oracleService(erl3::Oracle::Request &req, erl3::Oracle::Response &res)
-	{
-		res.ID = winID;
-		return true;
-	}
+{
+	res.ID = winID;
+	return true;
+}
 
 bool oracleCallback(erl3::Marker::Request &req, erl3::Marker::Response &res)
 {
-	res.oracle_hint = oracle_msgs[req.markerId-11];
+	res.oracle_hint = oracle_msgs[req.markerId];
 	return true;
 } 
 
