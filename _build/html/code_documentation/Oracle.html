@@ -19,7 +19,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Other Documentation for ExperimentalRoboticsAssignment2" href="../documents/index.html" />
-    <link rel="prev" title="Code Documentation for ExperimentalRoboticsAssignment2" href="index.html" /> 
+    <link rel="prev" title="Code docs – Navigation.py" href="Navigation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,7 +40,9 @@
               <p class="caption" role="heading"><span class="caption-text">Code documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Documentation for ExperimentalRoboticsAssignment2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Navigation.html">Code docs – <em>Navigation.py</em></a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Code docs – <em>oracle_final.cpp</em></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#observations">Observations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-receive-a-hint">How to receive a hint</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-check-if-the-hint-is-valid">How to check if the hint is valid</a></li>
 </ul>
@@ -80,9 +82,23 @@
              
   <div class="section" id="code-docs-oracle-final-cpp">
 <h1>Code docs – <em>oracle_final.cpp</em><a class="headerlink" href="#code-docs-oracle-final-cpp" title="Permalink to this headline"></a></h1>
+<div class="section" id="observations">
+<h2>Observations<a class="headerlink" href="#observations" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>the node contains up to 30 precomputed hints</strong>, see in the code: <code class="docutils literal notranslate"><span class="pre">erl3::ErlOracle</span> <span class="pre">oracle_msgs[30];</span></code></dt><dd><p>sometimes in the space, the robot could find a ID greater than 30: <em>it must be discarded</em>.</p>
+</dd>
+</dl>
+</li>
+<li><p>the array <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">markerID[30];</span></code> contains the ID associated to the respective message into <code class="docutils literal notranslate"><span class="pre">erl3::ErlOracle</span> <span class="pre">oracle_msgs[30];</span></code>. For instance, the id of the i-th hint``oracle_msgs[i]`` is <code class="docutils literal notranslate"><span class="pre">markerID[i]</span></code></p></li>
+<li><p>in particular, <code class="docutils literal notranslate"><span class="pre">winID</span></code> is the ID of the solution of the case</p></li>
+<li><p>there are two types of ID: there’s the one in the message <em>Marker</em> which is an index of the array of hints; and there’s the ID of the other message <em>ErlOracle</em> that is an identifier of a hypothesis of the case.</p></li>
+<li><p>each hypothesis identifier goes from 0 up to 5</p></li>
+</ul>
+</div>
 <div class="section" id="how-to-receive-a-hint">
 <h2>How to receive a hint<a class="headerlink" href="#how-to-receive-a-hint" title="Permalink to this headline"></a></h2>
-<p>the robot goes around in search of a ArUco code containing the ID of the hint. When it finds one hint, it makes a service request to the Oracle declaring the found hint. This request is of type <em>erl3/Marker</em>, made as follows:</p>
+<p>the robot goes around in search of a ArUco code containing the ID of the hint. When it finds one hint, it makes a service request to the Oracle through <code class="docutils literal notranslate"><span class="pre">/oracle_hint</span></code> service,  declaring the found hint. This request is of type <code class="docutils literal notranslate"><span class="pre">erl3/Marker</span></code>, made as follows:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">int32</span> <span class="n">markerId</span>
 <span class="c1">---</span>
 <span class="n">erl3</span><span class="o">/</span><span class="n">ErlOracle</span> <span class="n">oracle_hint</span>
@@ -97,7 +113,7 @@
 </div>
 <div class="section" id="how-to-check-if-the-hint-is-valid">
 <h2>How to check if the hint is valid<a class="headerlink" href="#how-to-check-if-the-hint-is-valid" title="Permalink to this headline"></a></h2>
-<p>to check whether a specific ID is the solution of the mystery, call the service <em>/oracle_solution</em> of type <code class="docutils literal notranslate"><span class="pre">erl2/Oracle</span></code>. Here’s the prototype of the service:</p>
+<p>to check whether a specific ID is the solution of the mystery, call the service <code class="docutils literal notranslate"><span class="pre">/oracle_solution</span></code> of type <code class="docutils literal notranslate"><span class="pre">erl2/Oracle</span></code>. Here’s the prototype of the service:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1">---</span>
 <span class="n">int32</span> <span class="n">ID</span>
 </pre></div>
@@ -109,7 +125,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Code Documentation for ExperimentalRoboticsAssignment2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Navigation.html" class="btn btn-neutral float-left" title="Code docs – Navigation.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../documents/index.html" class="btn btn-neutral float-right" title="Other Documentation for ExperimentalRoboticsAssignment2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

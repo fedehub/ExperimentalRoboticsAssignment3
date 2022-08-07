@@ -71,7 +71,9 @@
   <p>cmake_minimum_required(VERSION 3.0.2)
 project(erl_assignment_3)</p>
 <p>## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)</p>
+# add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)</p>
+<p>find_package(OpenCV REQUIRED)</p>
 <p>## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -80,9 +82,23 @@ find_package(catkin REQUIRED COMPONENTS</p>
 <div><p>geometry_msgs
 roscpp
 rospy
-std_msgs</p>
+std_msgs
+smach
+smach_ros
+cv_bridge
+image_transport
+aruco
+aruco_msgs
+sensor_msgs
+# dynamic_reconfigure
+erl_assignment_3_msgs
+actionlib
+actionlib_msgs</p>
 </div></blockquote>
 <p>)</p>
+<p># generate_dynamic_reconfigure_options(
+#   cfg/ArucoThreshold.cfg
+# )</p>
 <p>## System dependencies are found with CMake’s conventions
 # find_package(Boost REQUIRED COMPONENTS system)</p>
 <p>## Uncomment this if the package has a setup.py. This macro ensures
@@ -163,8 +179,11 @@ catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES erl_assignment_3
 #  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs
-#  DEPENDS system_lib
-)</p>
+#  DEPENDS system_lib</p>
+<blockquote>
+<div><p>DEPENDS OpenCV</p>
+</div></blockquote>
+<p>)</p>
 </div>
 <div class="section" id="build">
 <h1>## Build ##<a class="headerlink" href="#build" title="Permalink to this headline"></a></h1>
@@ -200,6 +219,12 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )</p>
+<p>add_executable( img_echo src/img_echo.cpp )
+add_dependencies( img_echo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( img_echo ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} )</p>
+<p>add_executable( detectibot_magnifier src/detectibot_magnifier.cpp )
+add_dependencies( detectibot_magnifier ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( detectibot_magnifier ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} )</p>
 </div>
 <div class="section" id="install">
 <h1>## Install ##<a class="headerlink" href="#install" title="Permalink to this headline"></a></h1>
@@ -207,10 +232,14 @@ include_directories(
 # See <a class="reference external" href="http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html">http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html</a></p>
 <p>## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )</p>
+catkin_install_python(PROGRAMS</p>
+<blockquote>
+<div><p>scripts/navigation.py
+scripts/cluedo_kb.py
+scripts/state_machine.py
+DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}</p>
+</div></blockquote>
+<p>)</p>
 <p>## Mark executables for installation
 ## See <a class="reference external" href="http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html">http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html</a>
 # install(TARGETS ${PROJECT_NAME}_node

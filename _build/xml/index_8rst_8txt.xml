@@ -15,6 +15,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="_build/html/_sources/index.rst.txt" line="1" column="55" bodyfile="_build/html/_sources/index.rst.txt" bodystart="1" bodyend="-1"/>
+        <referencedby refid="classaruco_1_1_camera_parameters_1aa648ee51d375fd3f74e45eecf1f489f4" compoundref="cameraparameters_8cpp" startline="137" endline="172">aruco::CameraParameters::saveToFile</referencedby>
+        <referencedby refid="classaruco_1_1_dictionary_1a30922d02184d4816b0fb9bb6d4f1e1c3" compoundref="dictionary_8cpp" startline="52" endline="105">aruco::Dictionary::loadFromFile</referencedby>
       </memberdef>
       <memberdef kind="variable" id="index_8rst_8txt_1aef3f652165d0d9f09dbe82f3ac90933a" prot="public" static="no" mutable="no">
         <type>ExperimentalRoboticsAssignment2 documentation master created by sphinx quickstart on Mon</type>

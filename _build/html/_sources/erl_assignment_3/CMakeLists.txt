@@ -3,6 +3,9 @@ project(erl_assignment_3)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
 # add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)
+
+find_package(OpenCV REQUIRED)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -12,7 +15,22 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  smach
+  smach_ros
+  cv_bridge
+  image_transport
+  aruco
+  aruco_msgs
+  sensor_msgs
+  # dynamic_reconfigure
+  erl_assignment_3_msgs
+  actionlib 
+  actionlib_msgs
 )
+
+# generate_dynamic_reconfigure_options(
+#   cfg/ArucoThreshold.cfg
+# )
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -108,6 +126,7 @@ catkin_package(
 #  LIBRARIES erl_assignment_3
 #  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs
 #  DEPENDS system_lib
+   DEPENDS OpenCV
 )
 
 ###########
@@ -151,6 +170,14 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
+add_executable( img_echo src/img_echo.cpp )
+add_dependencies( img_echo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( img_echo ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} )
+
+add_executable( detectibot_magnifier src/detectibot_magnifier.cpp )
+add_dependencies( detectibot_magnifier ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( detectibot_magnifier ${catkin_LIBRARIES} ${OpenCV_LIBRARIES} )
+
 #############
 ## Install ##
 #############
@@ -160,10 +187,12 @@ include_directories(
 
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )
+catkin_install_python(PROGRAMS
+  scripts/navigation.py
+  scripts/cluedo_kb.py
+  scripts/state_machine.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
 
 ## Mark executables for installation
 ## See http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html

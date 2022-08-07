@@ -4,7 +4,7 @@
     <compoundname>Oracle.rst.txt</compoundname>
       <sectiondef kind="var">
       <memberdef kind="variable" id="_oracle_8rst_8txt_1af607034ea585fd584d65128b9e2214d9" prot="public" static="no" mutable="no">
-        <type>Code docs *oracle_final cpp it makes a <ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref> request to the Oracle declaring the found hint This request <ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref> of type *erl3 Marker made as</type>
+        <type>Code docs *oracle_final cpp it makes a service request to the Oracle declaring the found hint This request is of type *erl3 Marker made as</type>
         <definition>Code docs* oracle_final cpp it makes a service request to the Oracle declaring the found hint This request is of type* erl3 Marker made as follows</definition>
         <argsstring></argsstring>
         <name>follows</name>
@@ -15,59 +15,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="_build/html/_sources/code_documentation/Oracle.rst.txt" line="9" column="111" bodyfile="_build/html/_sources/code_documentation/Oracle.rst.txt" bodystart="3" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" prot="public" static="no" mutable="no">
-        <type>Code docs *oracle_final cpp it makes a service request to the Oracle declaring the found hint This request <ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref> of type *erl3 Marker made as call the service *oracle_solution *of type erl2 Oracle Here s the prototype of the</type>
-        <definition>Code docs* oracle_final cpp it makes a service request to the Oracle declaring the found hint This request is of type* erl3 Marker made as call the service* oracle_solution* of type erl2 Oracle Here s the prototype of the service</definition>
-        <argsstring></argsstring>
-        <name>service</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="_build/html/_sources/code_documentation/Oracle.rst.txt" line="29" column="81" bodyfile="_build/html/_sources/code_documentation/Oracle.rst.txt" bodystart="40" bodyend="-1"/>
-        <referencedby refid="simulation_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="simulation_8cpp" startline="45" endline="140">main</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="_oracle_8rst_8txt_1af2ec23a2775c46fe35e7e79f662f4d1d" prot="public" static="no" mutable="no">
-        <type>Code docs *oracle_final cpp it makes a <ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref> request to the Oracle declaring the found hint This request <ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref> of type *erl3 Marker made as call the <ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref> *oracle_solution *of type erl2 Oracle Here s the prototype of the *the ID of the hint <ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref> from to *the orale knows only the IDs and not the corresponding solution in terms of</type>
-        <definition>Code docs* oracle_final cpp it makes a service request to the Oracle declaring the found hint This request is of type* erl3 Marker made as call the service* oracle_solution* of type erl2 Oracle Here s the prototype of the * the ID of the hint is from to* the orale knows only the IDs and not the corresponding solution in terms of where</definition>
-        <argsstring></argsstring>
-        <name>where</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="_build/html/_sources/code_documentation/Oracle.rst.txt" line="43" column="78" bodyfile="_build/html/_sources/code_documentation/Oracle.rst.txt" bodystart="43" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_oracle_8rst_8txt_1acdac552f2df9483a515e218c8bd5b1b4" prot="public" static="no" mutable="no">
-        <type>Code docs *oracle_final cpp it makes a <ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref> request to the Oracle declaring the found hint This request <ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref> of type *erl3 Marker made as call the <ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref> *oracle_solution *of type erl2 Oracle Here s the prototype of the *the ID of the hint <ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref> from to *the orale knows only the IDs and not the corresponding solution in terms of what and who in</type>
-        <definition>Code docs* oracle_final cpp it makes a service request to the Oracle declaring the found hint This request is of type* erl3 Marker made as call the service* oracle_solution* of type erl2 Oracle Here s the prototype of the * the ID of the hint is from to* the orale knows only the IDs and not the corresponding solution in terms of what and who in particular</definition>
-        <argsstring></argsstring>
-        <name>particular</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="_build/html/_sources/code_documentation/Oracle.rst.txt" line="45" column="4" bodyfile="_build/html/_sources/code_documentation/Oracle.rst.txt" bodystart="45" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="variable" id="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" prot="public" static="no" mutable="no">
-        <type>Code docs *oracle_final cpp it makes a <ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref> request to the Oracle declaring the found hint This request is of type *erl3 Marker made as call the <ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref> *oracle_solution *of type erl2 Oracle Here s the prototype of the *the ID of the hint is from to *the orale knows only the IDs and not the corresponding solution in terms of what and who in *the *<ref refid="simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" kindref="member">winID</ref> *</type>
-        <definition>Code docs* oracle_final cpp it makes a service request to the Oracle declaring the found hint This request is of type* erl3 Marker made as call the service* oracle_solution* of type erl2 Oracle Here s the prototype of the * the ID of the hint is from to* the orale knows only the IDs and not the corresponding solution in terms of what and who in * the* winID* is</definition>
-        <argsstring></argsstring>
-        <name>is</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="_build/html/_sources/code_documentation/Oracle.rst.txt" line="47" column="12" bodyfile="_build/html/_sources/code_documentation/Oracle.rst.txt" bodystart="47" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -83,7 +30,7 @@
 <codeline lineno="6"><highlight class="normal">How<sp/>to<sp/>receive<sp/>a<sp/>hint</highlight></codeline>
 <codeline lineno="7"><highlight class="normal">----------------------</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal">the<sp/>robot<sp/>goes<sp/>around<sp/>in<sp/>search<sp/>of<sp/>a<sp/>ArUco<sp/>code<sp/>containing<sp/>the<sp/>ID<sp/>of<sp/>the<sp/>hint.<sp/>When<sp/>it<sp/>finds<sp/>one<sp/>hint,<sp/>it<sp/>makes<sp/>a<sp/><ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref><sp/>request<sp/>to<sp/>the<sp/>Oracle<sp/>declaring<sp/>the<sp/>found<sp/>hint.<sp/>This<sp/>request<sp/><ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref><sp/>of<sp/>type<sp/>*erl3/Marker*,<sp/>made<sp/>as<sp/><ref refid="_oracle_8rst_8txt_1af607034ea585fd584d65128b9e2214d9" kindref="member">follows</ref>:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">the<sp/>robot<sp/>goes<sp/>around<sp/>in<sp/>search<sp/>of<sp/>a<sp/>ArUco<sp/>code<sp/>containing<sp/>the<sp/>ID<sp/>of<sp/>the<sp/>hint.<sp/>When<sp/>it<sp/>finds<sp/>one<sp/>hint,<sp/>it<sp/>makes<sp/>a<sp/>service<sp/>request<sp/>to<sp/>the<sp/>Oracle<sp/>declaring<sp/>the<sp/>found<sp/>hint.<sp/>This<sp/>request<sp/>is<sp/>of<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref><sp/>*erl3/Marker*,<sp/>made<sp/>as<sp/><ref refid="_oracle_8rst_8txt_1af607034ea585fd584d65128b9e2214d9" kindref="member">follows</ref>:</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal">..<sp/>code-block::</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -91,7 +38,7 @@
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>---</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>erl3/ErlOracle<sp/>oracle_hint</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal">the<sp/>field<sp/>of<sp/>type<sp/>*erl3/ErlOracle*<sp/>has<sp/>these<sp/>fields:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">the<sp/>field<sp/>of<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref><sp/>*erl3/ErlOracle*<sp/>has<sp/>these<sp/>fields:</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal">..<sp/>code-block::</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -100,10 +47,10 @@
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal">How<sp/>to<sp/>check<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>the<sp/>hint<sp/><ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref><sp/>valid</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">How<sp/>to<sp/>check<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>the<sp/>hint<sp/>is<sp/>valid</highlight></codeline>
 <codeline lineno="27"><highlight class="normal">----------------------------------</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal">to<sp/>check<sp/>whether<sp/>a<sp/>specific<sp/>ID<sp/><ref refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" kindref="member">is</ref><sp/>the<sp/>solution<sp/>of<sp/>the<sp/>mystery,<sp/>call<sp/>the<sp/><ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref><sp/>*/oracle_solution*<sp/>of<sp/>type<sp/>``erl2/Oracle``.<sp/>Here</highlight><highlight class="stringliteral">&apos;s<sp/>the<sp/>prototype<sp/>of<sp/>the<sp/>service:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">to<sp/>check<sp/>whether<sp/>a<sp/>specific<sp/>ID<sp/>is<sp/>the<sp/>solution<sp/>of<sp/>the<sp/>mystery,<sp/>call<sp/>the<sp/>service<sp/>*/oracle_solution*<sp/>of<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref><sp/>``erl2/Oracle``.<sp/>Here</highlight><highlight class="stringliteral">&apos;s<sp/>the<sp/>prototype<sp/>of<sp/>the<sp/>service:</highlight></codeline>
 <codeline lineno="30"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="31"><highlight class="stringliteral">..<sp/>code-block::</highlight></codeline>
 <codeline lineno="32"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -111,18 +58,6 @@
 <codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>int32<sp/>ID</highlight></codeline>
 <codeline lineno="35"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="36"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="37"><highlight class="stringliteral">Hints<sp/>generation</highlight></codeline>
-<codeline lineno="38"><highlight class="stringliteral">-----------------</highlight></codeline>
-<codeline lineno="39"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="40" refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" refkind="member"><highlight class="stringliteral">referring<sp/>to<sp/>the<sp/>code,<sp/></highlight></codeline>
-<codeline lineno="41"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="42"><highlight class="stringliteral">*<sp/>the<sp/>ID<sp/>of<sp/>the<sp/>hint<sp/>is<sp/>from<sp/>0<sp/>to<sp/>5</highlight></codeline>
-<codeline lineno="43" refid="_oracle_8rst_8txt_1af2ec23a2775c46fe35e7e79f662f4d1d" refkind="member"><highlight class="stringliteral">*<sp/>the<sp/>orale<sp/>knows<sp/>only<sp/>the<sp/>IDs<sp/>and<sp/>not<sp/>the<sp/>corresponding<sp/>solution<sp/>in<sp/>terms<sp/>of<sp/>where,<sp/>what<sp/>and<sp/>who</highlight></codeline>
-<codeline lineno="44"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="45" refid="_oracle_8rst_8txt_1acdac552f2df9483a515e218c8bd5b1b4" refkind="member"><highlight class="stringliteral">in<sp/>particular,</highlight></codeline>
-<codeline lineno="46"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="47" refid="_oracle_8rst_8txt_1a6706709b5461d47d503ae9c8e04aaf3c" refkind="member"><highlight class="stringliteral">*<sp/>the<sp/>*winID*<sp/>is,<sp/>randomly<sp/>choosen<sp/>from<sp/>0<sp/>to<sp/>5</highlight></codeline>
-<codeline lineno="48"><highlight class="stringliteral">*<sp/>the<sp/>array<sp/>*uIDs*<sp/>contains<sp/>the<sp/>inconsistent<sp/>IDs</highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/code_documentation/Oracle.rst.txt"/>
   </compounddef>

@@ -142,7 +142,7 @@
         <definition>const std::string key[3]</definition>
         <argsstring>[3]</argsstring>
         <name>key</name>
-        <initializer>= {&quot;who&quot;, &quot;what&quot;, &quot;<ref refid="_oracle_8rst_8txt_1af2ec23a2775c46fe35e7e79f662f4d1d" kindref="member">where</ref>&quot;}</initializer>
+        <initializer>= {&quot;who&quot;, &quot;what&quot;, &quot;where&quot;}</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -180,6 +180,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="erl3/src/simulation.cpp" line="22" column="19" bodyfile="erl3/src/simulation.cpp" bodystart="22" bodyend="-1"/>
+        <referencedby refid="module_8cpp_1a8c7ec70176ea133aefcb8643f6609953" compoundref="module_8cpp" startline="40" endline="51">cvtColor2Wrap</referencedby>
+        <referencedby refid="module_8cpp_1aa9d810d7cb2ab2982c77d0b44a4b13f3" compoundref="module_8cpp" startline="54" endline="75">cvtColorForDisplayWrap</referencedby>
       </memberdef>
       <memberdef kind="variable" id="simulation_8cpp_1a5e5bd50ead53d20df3f8ede527f47ce7" prot="public" static="no" mutable="no">
         <type>const std::string</type>
@@ -329,7 +331,6 @@
         <references refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" compoundref="simulation_8cpp" startline="33" endline="37">oracleService</references>
         <references refid="simulation_8cpp_1a68fa6a0c7a1208892294604263e23d92" compoundref="simulation_8cpp" startline="21">person</references>
         <references refid="simulation_8cpp_1a5e5bd50ead53d20df3f8ede527f47ce7" compoundref="simulation_8cpp" startline="23">place</references>
-        <references refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" compoundref="_oracle_8rst_8txt" startline="40">service</references>
         <references refid="simulation_8cpp_1a37d4a0b625b8b9583adf9362f5aae971" compoundref="simulation_8cpp" startline="25">uIDs</references>
         <references refid="simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" compoundref="simulation_8cpp" startline="26">winID</references>
       </memberdef>
@@ -372,14 +373,14 @@
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33" refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" kindref="member">oracleService</ref>(erl3::Oracle::Request<sp/>&amp;req,<sp/>erl3::Oracle::Response<sp/>&amp;res)</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res.ID<sp/>=<sp/><ref refid="simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" kindref="member">winID</ref>;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>res.ID<sp/>=<sp/><ref refid="simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" kindref="member">winID</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39" refid="simulation_8cpp_1ae03e072c5ab0129b0d05a862f394628c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="simulation_8cpp_1ae03e072c5ab0129b0d05a862f394628c" kindref="member">oracleCallback</ref>(erl3::Marker::Request<sp/>&amp;req,<sp/>erl3::Marker::Response<sp/>&amp;res)</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>res.oracle_hint<sp/>=<sp/><ref refid="simulation_8cpp_1a42b80e0b5892e0aba8cc512980770c1c" kindref="member">oracle_msgs</ref>[req.markerId-11];</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>res.oracle_hint<sp/>=<sp/><ref refid="simulation_8cpp_1a42b80e0b5892e0aba8cc512980770c1c" kindref="member">oracle_msgs</ref>[req.markerId];</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}<sp/></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
@@ -389,7 +390,7 @@
 <codeline lineno="48"><highlight class="normal">ros::init(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;assignment2&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">ros::NodeHandle<sp/>nh;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal">ros::ServiceServer<sp/>oracle<sp/>=<sp/>nh.advertiseService(<sp/></highlight><highlight class="stringliteral">&quot;/oracle_hint&quot;</highlight><highlight class="normal">,<sp/><ref refid="simulation_8cpp_1ae03e072c5ab0129b0d05a862f394628c" kindref="member">oracleCallback</ref>);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">ros::ServiceServer<sp/><ref refid="_oracle_8rst_8txt_1accff64734d0f09d5a63314544ef986bb" kindref="member">service</ref>=<sp/>nh.advertiseService(</highlight><highlight class="stringliteral">&quot;/oracle_solution&quot;</highlight><highlight class="normal">,<sp/><ref refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" kindref="member">oracleService</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">ros::ServiceServer<sp/>service=<sp/>nh.advertiseService(</highlight><highlight class="stringliteral">&quot;/oracle_solution&quot;</highlight><highlight class="normal">,<sp/><ref refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" kindref="member">oracleService</ref>);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">srand<sp/>(time(NULL));</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
