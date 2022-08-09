@@ -1,4 +1,6 @@
+'''file state_machine node
 
+'''
 import rospy
 import smach
 import smach_ros

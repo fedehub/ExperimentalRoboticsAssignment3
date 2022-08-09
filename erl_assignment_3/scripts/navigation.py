@@ -1,3 +1,6 @@
+'''file navigation node
+
+'''
 
 import rospy
 import math
