@@ -8,11 +8,20 @@
   <gazebo reference="link_chassis">
     <material>Gazebo/Orange</material>
   </gazebo>
-  <gazebo reference="link_left_wheel">
+  <gazebo reference="link_back_left_wheel">
     <material>Gazebo/Blue</material>
   </gazebo>
-  <gazebo reference="link_right_wheel">
+  <gazebo reference="link_back_right_wheel">
     <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="link_front_left_wheel">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="link_front_right_wheel">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  <gazebo reference="hokuyo_link">
+    <material>Gazebo/Red</material>
   </gazebo>
   <gazebo>
     <plugin filename="libgazebo_ros_skid_steer_drive.so" name="skid_steer_drive_controller">
@@ -107,7 +116,7 @@
         </noise>
       </ray>
       <plugin filename="libgazebo_ros_gpu_laser.so" name="gazebo_ros_head_hokuyo_controller">
-        <topicName>/laser/scan</topicName>
+        <topicName>scan</topicName>
         <frameName>hokuyo_link</frameName>
       </plugin>
     </sensor>
@@ -305,16 +314,18 @@
       <geometry>
         <box size="0.05 0.05 0.05"/>
       </geometry>
+       --&gt;
+	    
     </collision>
-    <visual>
-      <origin rpy="0 0 0" xyz="0 0 0.025"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-      <material name="red">
-        <color rgba="1 0 0 1"/>
-      </material>
-    </visual>
+    <!-- <visual>
+	      <origin xyz="0 0 0.025" rpy="0 0 0"/>
+	      <geometry>
+		<box size="0.05 0.05 0.05"/>
+	      </geometry>
+	      <material name="red">
+		<color rgba="1 0 0 1"/>
+	      </material>
+	    </visual>-->
     <inertial>
       <mass value="1e-5"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -323,7 +334,7 @@
   </link>
   <joint name="camera_joint" type="fixed">
     <axis xyz="0 1 0"/>
-    <origin rpy="0 0 0" xyz="0.23 0 0.0"/>
+    <origin rpy="0 0 0" xyz="0.23 0 0.25"/>
     <parent link="link_chassis"/>
     <child link="camera_link"/>
   </joint>

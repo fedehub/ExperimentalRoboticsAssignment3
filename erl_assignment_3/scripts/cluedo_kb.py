@@ -1,6 +1,41 @@
 
 '''file cluedo_kb node
 
+rosrun erl_assignment_3 cluedo_kb.py 
+rosrun erl3 final_oracle
+
+rosservice call /add_hint "ID: 0"
+rosservice call /add_hint "ID: 1"
+rosservice call /add_hint "ID: 2"
+rosservice call /add_hint "ID: 3"
+rosservice call /add_hint "ID: 4"
+rosservice call /add_hint "ID: 5"
+rosservice call /add_hint "ID: 6"
+rosservice call /add_hint "ID: 7"
+rosservice call /add_hint "ID: 8"
+rosservice call /add_hint "ID: 9"
+rosservice call /add_hint "ID: 10"
+rosservice call /add_hint "ID: 11"
+rosservice call /add_hint "ID: 12"
+rosservice call /add_hint "ID: 13"
+rosservice call /add_hint "ID: 14"
+rosservice call /add_hint "ID: 15"
+rosservice call /add_hint "ID: 16"
+rosservice call /add_hint "ID: 17"
+rosservice call /add_hint "ID: 18"
+rosservice call /add_hint "ID: 19"
+rosservice call /add_hint "ID: 20"
+rosservice call /add_hint "ID: 21"
+rosservice call /add_hint "ID: 22"
+rosservice call /add_hint "ID: 23"
+rosservice call /add_hint "ID: 24"
+rosservice call /add_hint "ID: 25"
+rosservice call /add_hint "ID: 26"
+rosservice call /add_hint "ID: 27"
+rosservice call /add_hint "ID: 28"
+rosservice call /add_hint "ID: 29"
+rosservice call /add_hint "ID: 30"
+
 '''
 
 import rospy
@@ -35,6 +70,34 @@ srv_get_id = None
 
 
 
+def print_kb_content():
+	''' print the content inside the ontology on screen
+	'''
+	
+	global kb, kb_consistent
+	global record_who, record_what, record_where
+	
+	# print consistent indexes
+	if len(kb_consistent) > 0:
+		rospy.loginfo(f"(kb) remaining active hints: {len(kb_consistent)}")
+		rospy.loginfo(f"(kb) values:")
+		for idx in kb_consistent:
+			rospy.loginfo(f"(kb) ID={idx}")
+		
+	rospy.loginfo(f"(kb) kb status: ({len(kb)} possible solutions)")
+	for i in range(0,len(kb)):
+		is_active_str = "false"
+		if kb[i][3]:
+			is_active_str = "true"
+		
+		is_complete_str = "false"
+		if kb[i][4]:
+			is_complete_str = "true"
+		
+		rospy.loginfo(f"(kb) ID={i} WHO={kb[i][record_who]} WHERE={kb[i][record_where]} WHAT={kb[i][record_what]} -- is_active={is_active_str} is_complete={is_complete_str}")
+
+
+
 def add_hint( hint ):
 	''' receive and store (if possible) the hint
 	
@@ -48,6 +111,8 @@ def add_hint( hint ):
 		add_hint_to_list( hint )
 	else:
 		rospy.loginfo(f"received a unvalid hint with data (key={hint.key} , value={hint.value})")
+	
+	print_kb_content()
 
 
 
@@ -66,8 +131,13 @@ def add_hint_to_list( hint ):
 	'''
 	
 	global kb, kb_consistent
+	global record_who, record_what, record_where
+	global is_active, is_complete
 	
 	delete_that = False;
+	
+	if not kb[hint.ID][is_active]:
+		return
 	
 	if hint.key == "where":
 		if kb[hint.ID][record_where] == "" :
@@ -111,6 +181,15 @@ def add_hint_to_list( hint ):
 	else:
 		rospy.logwarn( f"(cluedo_kb -> add_hint_to_list) received a unknown hint.key : {hint.key}" )
 	
+	# rospy.loginfo(f"empty WHO? {kb[hint.ID][record_who] == ''}")
+	# rospy.loginfo(f"empty WHERE? {kb[hint.ID][record_where] == ''}")
+	# rospy.loginfo(f"empty WHAT? {kb[hint.ID][record_what] == ''}")
+	if (kb[hint.ID][record_where] != "") and (kb[hint.ID][record_what] != "") and (kb[hint.ID][record_who] != ""):
+		# rospy.loginfo(f"ID{hint.ID} is complete")
+		kb[hint.ID][is_complete] = True 
+	else:
+		# rospy.loginfo(f"ID{hint.ID} is not complete")
+		pass
 	
 	if delete_that and len(kb_consistent) > 0:
 		rospy.loginfo( f"discard hypothesis with ID={hint.ID}" )
@@ -120,7 +199,8 @@ def add_hint_to_list( hint ):
 		kb[hint.ID][is_complete] = False
 		
 		# delete that from the index list
-		kb_consistent.remove( hint.ID );
+		if hint.ID in kb_consistent:
+			kb_consistent.remove( hint.ID );
 	elif len(kb_consistent) == 0:
 		rospy.loginfo( f"nothing to discard (received a unconsistent ID={hint.ID})" )
 
@@ -175,17 +255,26 @@ def get_id( req ):
 	'''
 	
 	global kb, kb_consistent
+	global record_who, record_what, record_where
+	global is_active, is_complete
 	
 	res = GetIdResponse( )
 	res.consistent_found = ( len( kb_consistent ) > 0 )
 	res.consistent_id = -1
 	
+	rospy.logwarn("called get_id() -- kb content:")
+	print_kb_content()
+	
 	if res.consistent_found:
 		for id in kb_consistent:
 			if kb[id][is_complete]:
 				res.consistent_id = id
+				rospy.logwarn(f"called get_id() -- found consistent hypothesis with ID={res.consistent_id}")
 				break
+	else:
+		rospy.logwarn("called get_id() -- no consistent hypotheses!")
 	
+	rospy.logwarn(f"called get_id() -- returning res with res.consistent_found={res.consistent_found} res.consistent_id={res.consistent_id}")
 	return res
 
 
@@ -202,13 +291,16 @@ def mark_wrong_id( req ):
 	'''
 	
 	global kb, kb_consistent
+	global record_who, record_what, record_where
+	global is_active, is_complete
 	
 	# delete the ID from the index list
 	if len( kb_consistent ) > 0 :
 		kb[req.ID][is_active] = False
 		kb[req.ID][is_complete] = False
 		
-		kb_consistent.remove( req.ID )
+		if hint.ID in kb_consistent:
+			kb_consistent.remove( req.ID )
 		
 		rospy.loginfo( f"(mark_wrong_id) discarded ID={req.ID}" )
 

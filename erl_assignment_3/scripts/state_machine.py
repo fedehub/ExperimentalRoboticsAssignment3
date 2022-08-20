@@ -1,10 +1,10 @@
-'''file state_machine node
 
-'''
 import rospy
 import smach
 import smach_ros
 import math
+from random import seed
+from random import random
 
 from erl3.srv import Oracle, OracleRequest, OracleResponse
 from erl3.srv import Marker, MarkerRequest, MarkerResponse
@@ -72,6 +72,11 @@ cl_delete_hint = None
 ''' client /mark_wrong_id : erl_assignment_3_msgs/MarkWrongId
 '''
 
+max_r = 1.0
+''' for the movement target (maximum distance from the target)
+'''
+
+
 
 class MOVE(smach.State):
 	def __init__(self, outcomes=['NEXT']):
@@ -89,12 +94,16 @@ class MOVE(smach.State):
 		global cl_go_to_point
 		
 		room = rooms[room_idx]
-		rospy.loginfo(f"(MOVE) target=({room[0]}, {room[1]}) idx={room_idx}")
+		th = 2.0 * math.pi * random()
+		radius = max_r * random()
+		x = room[0] + radius * math.cos(th)
+		y = room[1] + radius * math.sin(th)
+		rospy.loginfo(f"(MOVE) target=({x}, {y}) idx={room_idx}")
 		
 		# send request and wait
 		tg = GoToPointRequest()
-		tg.target.x = room[0]
-		tg.target.y = room[1]
+		tg.target.x = x
+		tg.target.y = y
 		tg.target.z = 0.0
 		tgres = GoToPointResponse()
 		tgres.success = False
@@ -121,8 +130,8 @@ class COLLECT(smach.State):
 		
 		rospy.loginfo("(COLLECT) collecting hints")
 		cmd = TurnRobotRequest()
-		cmd.angularVel = math.pi / 4
-		cmd.time = 6
+		cmd.angularVel = math.pi / 3
+		cmd.time = 10
 		cl_turn_robot(cmd)
 		
 		rospy.loginfo("(COLLECT) done")
@@ -205,6 +214,8 @@ class SHOW(smach.State):
 
 if __name__ == "__main__":
 	rospy.init_node("state_machine")
+	
+	seed(82749387492)
 	
 	# client navigation service -- go to point
 	rospy.loginfo("cl go_to_point")
