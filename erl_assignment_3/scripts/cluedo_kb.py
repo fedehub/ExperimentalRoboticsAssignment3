@@ -112,7 +112,7 @@ def add_hint( hint ):
 	else:
 		rospy.loginfo(f"received a unvalid hint with data (key={hint.key} , value={hint.value})")
 	
-	print_kb_content()
+	# print_kb_content()
 
 
 
