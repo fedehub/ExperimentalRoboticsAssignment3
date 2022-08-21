@@ -397,7 +397,7 @@ rosrun smach_viewer smach_viewer.py
 
 it is possible to see how the logic is implemented and how the transitions take place
 
-![image][106]
+
 
 <!-- USAGE EXAMPLES -->
 ## Usage
