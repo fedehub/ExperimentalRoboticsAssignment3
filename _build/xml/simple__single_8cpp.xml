@@ -317,6 +317,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco_ros/src/simple_single.cpp" line="335" column="5" bodyfile="aruco_ros/aruco_ros/src/simple_single.cpp" bodystart="335" bodyend="342"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a747c4ab470b1450f008b1f5ab8321b70" compoundref="_r_e_a_d_m_e_8md_8txt" startline="347">node</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -459,7 +460,7 @@
 <codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>pose_pub<sp/>=<sp/>nh.advertise&lt;geometry_msgs::PoseStamped&gt;(</highlight><highlight class="stringliteral">&quot;pose&quot;</highlight><highlight class="normal">,<sp/>100);</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>transform_pub<sp/>=<sp/>nh.advertise&lt;geometry_msgs::TransformStamped&gt;(</highlight><highlight class="stringliteral">&quot;transform&quot;</highlight><highlight class="normal">,<sp/>100);</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>position_pub<sp/>=<sp/>nh.advertise&lt;geometry_msgs::Vector3Stamped&gt;(</highlight><highlight class="stringliteral">&quot;position&quot;</highlight><highlight class="normal">,<sp/>100);</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>marker_pub<sp/>=<sp/>nh.advertise&lt;visualization_msgs::Marker&gt;(</highlight><highlight class="stringliteral">&quot;marker&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>marker_pub<sp/>=<sp/>nh.advertise&lt;<ref refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" kindref="member">visualization_msgs::Marker</ref>&gt;(</highlight><highlight class="stringliteral">&quot;marker&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>pixel_pub<sp/>=<sp/>nh.advertise&lt;geometry_msgs::PointStamped&gt;(</highlight><highlight class="stringliteral">&quot;pixel&quot;</highlight><highlight class="normal">,<sp/>10);</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>nh.param&lt;</highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&gt;(</highlight><highlight class="stringliteral">&quot;marker_size&quot;</highlight><highlight class="normal">,<sp/><ref refid="simple__double_8cpp_1a46ba90e214408b92c4329be16a5cd5d0" kindref="member">marker_size</ref>,<sp/>0.05);</highlight></codeline>
@@ -576,7 +577,7 @@
 <codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pixel_pub.publish(pixelMsg);</highlight></codeline>
 <codeline lineno="251"><highlight class="normal"></highlight></codeline>
 <codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>publish<sp/>rviz<sp/>marker<sp/>representing<sp/>the<sp/>ArUco<sp/>marker<sp/>patch</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visualization_msgs::Marker<sp/>visMarker;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" kindref="member">visualization_msgs::Marker</ref><sp/>visMarker;</highlight></codeline>
 <codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visMarker.header<sp/>=<sp/>transformMsg.header;</highlight></codeline>
 <codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visMarker.id<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>visMarker.type<sp/>=<sp/>visualization_msgs::Marker::CUBE;</highlight></codeline>
@@ -662,7 +663,7 @@
 <codeline lineno="336"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="337"><highlight class="normal"><sp/><sp/>ros::init(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;aruco_simple&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="338"><highlight class="normal"></highlight></codeline>
-<codeline lineno="339"><highlight class="normal"><sp/><sp/><ref refid="class_aruco_simple" kindref="compound">ArucoSimple</ref><sp/>node;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><ref refid="class_aruco_simple" kindref="compound">ArucoSimple</ref><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a747c4ab470b1450f008b1f5ab8321b70" kindref="member">node</ref>;</highlight></codeline>
 <codeline lineno="340"><highlight class="normal"></highlight></codeline>
 <codeline lineno="341"><highlight class="normal"><sp/><sp/>ros::spin();</highlight></codeline>
 <codeline lineno="342"><highlight class="normal">}</highlight></codeline>

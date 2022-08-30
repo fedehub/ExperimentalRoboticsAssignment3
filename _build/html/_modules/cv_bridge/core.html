@@ -14,6 +14,7 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -190,11 +191,11 @@
 <span class="sd">        If the image only has one channel, the shape has size 2 (width and height)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">import</span> <span class="nn">cv2</span>
-        <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
         <span class="n">str_msg</span> <span class="o">=</span> <span class="n">cmprs_img_msg</span><span class="o">.</span><span class="n">data</span>
         <span class="n">buf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">str_msg</span><span class="p">)),</span>
-                          <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span> <span class="nb">buffer</span><span class="o">=</span><span class="n">cmprs_img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+                          <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">cmprs_img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
         <span class="n">im</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">imdecode</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">cv2</span><span class="o">.</span><span class="n">IMREAD_UNCHANGED</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">desired_encoding</span> <span class="o">==</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">:</span>
@@ -230,20 +231,20 @@
 <span class="sd">        If the image only has one channel, the shape has size 2 (width and height)</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">import</span> <span class="nn">cv2</span>
-        <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
         <span class="n">dtype</span><span class="p">,</span> <span class="n">n_channels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">encoding_to_dtype_with_channels</span><span class="p">(</span><span class="n">img_msg</span><span class="o">.</span><span class="n">encoding</span><span class="p">)</span>
         <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtype</span><span class="p">)</span>
         <span class="n">dtype</span> <span class="o">=</span> <span class="n">dtype</span><span class="o">.</span><span class="n">newbyteorder</span><span class="p">(</span><span class="s1">&#39;&gt;&#39;</span> <span class="k">if</span> <span class="n">img_msg</span><span class="o">.</span><span class="n">is_bigendian</span> <span class="k">else</span> <span class="s1">&#39;&lt;&#39;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">n_channels</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
             <span class="n">im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_msg</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">img_msg</span><span class="o">.</span><span class="n">width</span><span class="p">),</span>
-                           <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">buffer</span><span class="o">=</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+                           <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">if</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">):</span>
                 <span class="n">im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_msg</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">img_msg</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">n_channels</span><span class="p">),</span>
-                               <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">buffer</span><span class="o">=</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+                               <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">im</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">img_msg</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="n">img_msg</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="n">n_channels</span><span class="p">),</span>
-                               <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="nb">buffer</span><span class="o">=</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+                               <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">buffer</span><span class="o">=</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
         <span class="c1"># If the byt order is different between the message and the system.</span>
         <span class="k">if</span> <span class="n">img_msg</span><span class="o">.</span><span class="n">is_bigendian</span> <span class="o">==</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;little&#39;</span><span class="p">):</span>
             <span class="n">im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">byteswap</span><span class="p">()</span><span class="o">.</span><span class="n">newbyteorder</span><span class="p">()</span>
@@ -284,7 +285,7 @@
 <span class="sd">        This function returns a sensor_msgs::Image message on success, or raises :exc:`cv_bridge.CvBridgeError` on failure.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">import</span> <span class="nn">cv2</span>
-        <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cvim</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">generic</span><span class="p">)):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Your input type is not a numpy array&#39;</span><span class="p">)</span>
         <span class="n">cmprs_img_msg</span> <span class="o">=</span> <span class="n">sensor_msgs</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">CompressedImage</span><span class="p">()</span>
@@ -297,7 +298,7 @@
 
         <span class="k">return</span> <span class="n">cmprs_img_msg</span></div>
 
-<div class="viewcode-block" id="CvBridge.cv2_to_imgmsg"><a class="viewcode-back" href="../../vision_opencv/cv_bridge/doc/index.html#cv_bridge.CvBridge.cv2_to_imgmsg">[docs]</a>    <span class="k">def</span> <span class="nf">cv2_to_imgmsg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cvim</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="bp">None</span><span class="p">):</span>
+<div class="viewcode-block" id="CvBridge.cv2_to_imgmsg"><a class="viewcode-back" href="../../vision_opencv/cv_bridge/doc/index.html#cv_bridge.CvBridge.cv2_to_imgmsg">[docs]</a>    <span class="k">def</span> <span class="nf">cv2_to_imgmsg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cvim</span><span class="p">,</span> <span class="n">encoding</span> <span class="o">=</span> <span class="s2">&quot;passthrough&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Convert an OpenCV :cpp:type:`cv::Mat` type to a ROS sensor_msgs::Image message.</span>
 
@@ -317,13 +318,13 @@
 <span class="sd">        This function returns a sensor_msgs::Image message on success, or raises :exc:`cv_bridge.CvBridgeError` on failure.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="kn">import</span> <span class="nn">cv2</span>
-        <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">cvim</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">generic</span><span class="p">)):</span>
             <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Your input type is not a numpy array&#39;</span><span class="p">)</span>
         <span class="n">img_msg</span> <span class="o">=</span> <span class="n">sensor_msgs</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">Image</span><span class="p">()</span>
         <span class="n">img_msg</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">cvim</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
         <span class="n">img_msg</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">cvim</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">header</span> <span class="ow">is</span> <span class="ow">not</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">header</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">img_msg</span><span class="o">.</span><span class="n">header</span> <span class="o">=</span> <span class="n">header</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">cvim</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
             <span class="n">cv_type</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dtype_with_channels_to_cvtype2</span><span class="p">(</span><span class="n">cvim</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
@@ -337,7 +338,7 @@
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cvtype_to_name</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">encoding_to_cvtype2</span><span class="p">(</span><span class="n">encoding</span><span class="p">)]</span> <span class="o">!=</span> <span class="n">cv_type</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="n">CvBridgeError</span><span class="p">(</span><span class="s2">&quot;encoding specified as </span><span class="si">%s</span><span class="s2">, but image has incompatible type </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">encoding</span><span class="p">,</span> <span class="n">cv_type</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cvim</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">byteorder</span> <span class="o">==</span> <span class="s1">&#39;&gt;&#39;</span><span class="p">:</span>
-            <span class="n">img_msg</span><span class="o">.</span><span class="n">is_bigendian</span> <span class="o">=</span> <span class="bp">True</span>
+            <span class="n">img_msg</span><span class="o">.</span><span class="n">is_bigendian</span> <span class="o">=</span> <span class="kc">True</span>
         <span class="n">img_msg</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">cvim</span><span class="o">.</span><span class="n">tostring</span><span class="p">()</span>
         <span class="n">img_msg</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">img_msg</span><span class="o">.</span><span class="n">data</span><span class="p">)</span> <span class="o">//</span> <span class="n">img_msg</span><span class="o">.</span><span class="n">height</span>
 

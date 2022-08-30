@@ -7,7 +7,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="normal"><ref refid="aruco__ros_2aruco_2_c_make_lists_8txt_1a568106bac57c72cd74c219299b3a2994" kindref="member">cmake_minimum_required</ref>(VERSION<sp/>3.0.2)</highlight></codeline>
+<codeline lineno="1"><highlight class="normal"><ref refid="__build_2html_2__sources_2armetectibot_2_c_make_lists_8txt_1ad51d1c33c57188917637899fe27c1e5c" kindref="member">cmake_minimum_required</ref>(VERSION<sp/>3.0.2)</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"><ref refid="namespaceconf_1aa2c6aefbed1597a70cfb45a760e5977c" kindref="member">project</ref>(erl_assignment_3_msgs)</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Compile<sp/>as<sp/>C++11,<sp/>supported<sp/>in<sp/>ROS<sp/>Kinetic<sp/>and<sp/>newer</highlight><highlight class="normal"></highlight></codeline>
@@ -112,7 +112,7 @@
 <codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>LIBRARIES:<sp/>libraries<sp/>you<sp/>create<sp/>in<sp/>this<sp/>project<sp/>that<sp/>dependent<sp/>projects<sp/>also<sp/>need</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>CATKIN_DEPENDS:<sp/>catkin_packages<sp/>dependent<sp/>projects<sp/>also<sp/>need</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>DEPENDS:<sp/>system<sp/>dependencies<sp/>of<sp/>this<sp/>project<sp/>that<sp/>dependent<sp/>projects<sp/>also<sp/>need</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><ref refid="vision__opencv_2cv__bridge_2_c_make_lists_8txt_1aadf77ead1ce9ef9ce0b6ac5f1617614d" kindref="member">catkin_package</ref>(</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><ref refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2_c_make_lists_8txt_1aadf77ead1ce9ef9ce0b6ac5f1617614d" kindref="member">catkin_package</ref>(</highlight></codeline>
 <codeline lineno="107"><highlight class="normal">#<sp/><sp/>INCLUDE_DIRS<sp/>include</highlight></codeline>
 <codeline lineno="108"><highlight class="normal">#<sp/><sp/>LIBRARIES<sp/>erl_assignment_3_msgs</highlight></codeline>
 <codeline lineno="109"><highlight class="normal">#<sp/><sp/>CATKIN_DEPENDS<sp/>geometry_msgs<sp/>std_msgs</highlight></codeline>
@@ -125,7 +125,7 @@
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Specify<sp/>additional<sp/>locations<sp/>of<sp/>header<sp/>files</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Your<sp/>package<sp/>locations<sp/>should<sp/>be<sp/>listed<sp/>before<sp/>other<sp/>locations</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><ref refid="vision__opencv_2cv__bridge_2src_2_c_make_lists_8txt_1a241f405a0e38dc1e387380b7e39ec7d8" kindref="member">include_directories</ref>(</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><ref refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2src_2_c_make_lists_8txt_1a241f405a0e38dc1e387380b7e39ec7d8" kindref="member">include_directories</ref>(</highlight></codeline>
 <codeline lineno="120"><highlight class="normal">#<sp/>include</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"><sp/><sp/>${catkin_INCLUDE_DIRS}</highlight></codeline>
 <codeline lineno="122"><highlight class="normal">)</highlight></codeline>

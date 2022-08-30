@@ -936,6 +936,7 @@
     <member refid="namespacecluedo__kb_1a335d9858030dee0238a6f2fc67a05023" kind="variable"><name>kb_consistent</name></member>
     <member refid="namespacecluedo__kb_1a1c63dfe724e4e24b2985ef2adb3bbfbb" kind="variable"><name>srv_get_id</name></member>
     <member refid="namespacecluedo__kb_1aa138c12c38a471ab81561c0a1b3606cf" kind="variable"><name>cl_oracle_hint</name></member>
+    <member refid="namespacecluedo__kb_1ac2ce9f31fe1875079d6cdbaa539122f6" kind="function"><name>print_kb_content</name></member>
     <member refid="namespacecluedo__kb_1a1d7f88bfe0321a672bdef29136ac817f" kind="function"><name>add_hint</name></member>
     <member refid="namespacecluedo__kb_1a5b22ff3cf204215f52ecb6c13d8a806d" kind="function"><name>add_hint_to_list</name></member>
     <member refid="namespacecluedo__kb_1a8f44cecf16139c1d94cbf2a2bfc193cb" kind="function"><name>is_valid_hint</name></member>
@@ -1256,6 +1257,7 @@
     <member refid="namespacestate__machine_1ad5face4951be519a2ec365d46bce4162" kind="variable"><name>cl_get_hint</name></member>
     <member refid="namespacestate__machine_1a3c3b5ea8c574a68329796bac67a0b562" kind="variable"><name>cl_oracle_solution</name></member>
     <member refid="namespacestate__machine_1a96656c15d01281a447073b8c3f67acba" kind="variable"><name>cl_delete_hint</name></member>
+    <member refid="namespacestate__machine_1a36cf2be5ca5c54b410eebbd4ac82c1b2" kind="variable"><name>max_r</name></member>
     <member refid="namespacestate__machine_1aa0222cedd1894200b1cb7d79c710213c" kind="variable"><name>cl_marker</name></member>
     <member refid="namespacestate__machine_1a6793c4913a1241bddf256328c9a01028" kind="variable"><name>sm</name></member>
     <member refid="namespacestate__machine_1a372490be06dbd069bfafaa476a4f9f0b" kind="variable"><name>transitions</name></member>
@@ -1263,20 +1265,58 @@
     <member refid="namespacestate__machine_1acbf2f3b4f08f91ac415d0c496d674e03" kind="variable"><name>outcome</name></member>
     <member refid="namespacestate__machine_1ae1b578fc9d502ebdbfb09a0ff78bf0da" kind="function"><name>next_room</name></member>
   </compound>
-  <compound refid="code__documentation_2index_8md_8txt" kind="file"><name>index.md.txt</name>
+  <compound refid="__build_2html_2__sources_2armetectibot_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2armetectibot_2_c_make_lists_8txt_1ad51d1c33c57188917637899fe27c1e5c" kind="function"><name>cmake_minimum_required</name></member>
   </compound>
-  <compound refid="documents_2index_8md_8txt" kind="file"><name>index.md.txt</name>
+  <compound refid="__build_2html_2__sources_2aruco__ros_2aruco_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2aruco__ros_2aruco_2_c_make_lists_8txt_1a568106bac57c72cd74c219299b3a2994" kind="function"><name>cmake_minimum_required</name></member>
   </compound>
-  <compound refid="_oracle_8rst_8txt" kind="file"><name>Oracle.rst.txt</name>
-    <member refid="_oracle_8rst_8txt_1af607034ea585fd584d65128b9e2214d9" kind="variable"><name>follows</name></member>
+  <compound refid="__build_2html_2__sources_2aruco__ros_2aruco_2src_2aruco_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2aruco__ros_2aruco_2src_2aruco_2_c_make_lists_8txt_1a490557a10016e2cc08409075b58fae6f" kind="function"><name>set</name></member>
   </compound>
-  <compound refid="markdown-vs-rest_8md_8txt" kind="file"><name>markdown-vs-rest.md.txt</name>
+  <compound refid="__build_2html_2__sources_2aruco__ros_2aruco__msgs_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2aruco__ros_2aruco__ros_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2bridge__example_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
   <compound refid="__build_2html_2__sources_2erl3_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
   <compound refid="__build_2html_2__sources_2erl__assignment__3_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
   <compound refid="__build_2html_2__sources_2erl__assignment__3__msgs_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2erl__assignment__3__robot_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2_c_make_lists_8txt_1a71d617500e3f2741963b56be4d0fb94a" kind="function"><name>cmake_minimum_required</name></member>
+    <member refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2_c_make_lists_8txt_1ae327ecbeb73df2f6640391f6d8775b50" kind="function"><name>set</name></member>
+    <member refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2_c_make_lists_8txt_1aadf77ead1ce9ef9ce0b6ac5f1617614d" kind="function"><name>catkin_package</name></member>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2python_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2python_2_c_make_lists_8txt_1af716a1c6bf2805f6227c5b68e6e5944c" kind="function"><name>configure_file</name></member>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2src_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2src_2_c_make_lists_8txt_1a241f405a0e38dc1e387380b7e39ec7d8" kind="function"><name>include_directories</name></member>
+    <member refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2src_2_c_make_lists_8txt_1a3fc5a59643df1fdad4b47bf627460f9c" kind="function"><name>add_dependencies</name></member>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2test_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2vision__opencv_2cv__bridge_2test_2_c_make_lists_8txt_1abee660cb6e35a22e421a1eef6f0e30e2" kind="function"><name>include_directories</name></member>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2_c_make_lists_8txt_1adc916ffae1b1fe87ad12f47741d14cf1" kind="function"><name>cmake_minimum_required</name></member>
+    <member refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2_c_make_lists_8txt_1ac0501a4c5e5c791634d48ae1b5e45174" kind="function"><name>catkin_python_setup</name></member>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2test_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1a4b42f14c2129f24b05c38de267eea2bf" kind="function"><name>catkin_add_nosetests</name></member>
+    <member refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1ae52e1693c2fb9f99471b9cb9caa26588" kind="function"><name>target_link_libraries</name></member>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2opencv__tests_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="__build_2html_2__sources_2vision__opencv_2vision__opencv_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
+  <compound refid="armetectibot_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="armetectibot_2_c_make_lists_8txt_1ad51d1c33c57188917637899fe27c1e5c" kind="function"><name>cmake_minimum_required</name></member>
   </compound>
   <compound refid="aruco__ros_2aruco_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
     <member refid="aruco__ros_2aruco_2_c_make_lists_8txt_1a568106bac57c72cd74c219299b3a2994" kind="function"><name>cmake_minimum_required</name></member>
@@ -1325,11 +1365,95 @@
   </compound>
   <compound refid="vision__opencv_2vision__opencv_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
+  <compound refid="aruco__ros_2aruco_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
+  </compound>
+  <compound refid="aruco__ros_2aruco__msgs_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
+  </compound>
+  <compound refid="aruco__ros_2aruco__ros_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
+  </compound>
+  <compound refid="vision__opencv_2cv__bridge_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
+  </compound>
+  <compound refid="vision__opencv_2image__geometry_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
+  </compound>
+  <compound refid="vision__opencv_2opencv__tests_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
+  </compound>
+  <compound refid="vision__opencv_2vision__opencv_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
+  </compound>
+  <compound refid="code__documentation_2index_8md_8txt" kind="file"><name>index.md.txt</name>
+  </compound>
+  <compound refid="documents_2index_8md_8txt" kind="file"><name>index.md.txt</name>
+  </compound>
+  <compound refid="_navigation_8rst_8txt" kind="file"><name>Navigation.rst.txt</name>
+  </compound>
+  <compound refid="_oracle_8rst_8txt" kind="file"><name>Oracle.rst.txt</name>
+    <member refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kind="variable"><name>code</name></member>
+    <member refid="_oracle_8rst_8txt_1a19e3c62854c506eb9993730f963d146d" kind="variable"><name>space</name></member>
+    <member refid="_oracle_8rst_8txt_1a82d55e07a4a4f63b0d123ed5a37c27ce" kind="variable"><name>than</name></member>
+    <member refid="_oracle_8rst_8txt_1a055f013165feb3c8b64fe722e5692938" kind="variable"><name>oracle_msgs</name></member>
+    <member refid="_oracle_8rst_8txt_1a2e94796893680fbb8b060a0e483a1d7c" kind="variable"><name>instance</name></member>
+    <member refid="_oracle_8rst_8txt_1a3d397519c2d9adf8283ffa3045d32aaf" kind="variable"><name>particular</name></member>
+    <member refid="_oracle_8rst_8txt_1acc5905728f3f1ab997990f9b4ccaa13b" kind="variable"><name>ID</name></member>
+    <member refid="_oracle_8rst_8txt_1a31598fc9ace12f0c15d34780665fbcf9" kind="variable"><name>hint</name></member>
+    <member refid="_oracle_8rst_8txt_1a9c60414e0116ebf318b07fc7945c3652" kind="variable"><name>service</name></member>
+    <member refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" kind="variable"><name>Marker</name></member>
+    <member refid="_oracle_8rst_8txt_1ae9e73c5f55a667c884e25c3bdf1101b6" kind="variable"><name>follows</name></member>
+  </compound>
+  <compound refid="markdown-vs-rest_8md_8txt" kind="file"><name>markdown-vs-rest.md.txt</name>
+  </compound>
+  <compound refid="proj-tests_8md_8txt" kind="file"><name>proj-tests.md.txt</name>
+  </compound>
   <compound refid="index_8rst_8txt" kind="file"><name>index.rst.txt</name>
     <member refid="index_8rst_8txt_1ae5bb300954830ede9da67440dcb4b2b5" kind="variable"><name>file</name></member>
     <member refid="index_8rst_8txt_1aef3f652165d0d9f09dbe82f3ac90933a" kind="variable"><name>Jul</name></member>
   </compound>
+  <compound refid="vision__opencv_2cv__bridge_2doc_2index_8rst_8txt" kind="file"><name>index.rst.txt</name>
+  </compound>
+  <compound refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt" kind="file"><name>index.rst.txt</name>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1a11a6ba5b5c2e4c6f25bc49435229c537" kind="variable"><name>image_geometry</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1ae2d1541fcceef8e83221726fcd9b5c26" kind="variable"><name>rectifyImage</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1ad1d920a994361476b564374598ced134" kind="variable"><name>rectifyPoint</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1a561fa967e48f35102de57af3a4ac52eb" kind="variable"><name>tfFrame</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1abff9391df2e5f156e26654a5fd58794d" kind="variable"><name>project3dToPixel</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1ac367e76ffcaac9230123347681102b18" kind="variable"><name>projectPixelTo3dRay</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1a07348b3d671364a056ebb104b09be8b6" kind="variable"><name>distortionCoeffs</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1aa0e9b6679e2d1e3175fe237aaca4375f" kind="variable"><name>intrinsicMatrix</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1aeef1cdbef95dbcc36d62e00cbcb759ca" kind="variable"><name>projectionMatrix</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1aff6683ac78637c8793559883d29a7f18" kind="variable"><name>rotationMatrix</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1ac6018b746835ced81445d633fcbd75be" kind="variable"><name>cx</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1a84aa7492d91fb680c50ef076eeac03c8" kind="variable"><name>cy</name></member>
+    <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1a6a891e907fcb9e482a0c3e6edcdae360" kind="variable"><name>fx</name></member>
+  </compound>
   <compound refid="_r_e_a_d_m_e_8md_8txt" kind="file"><name>README.md.txt</name>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1ac6e8065e6053bcc4ccbf83026ef61a59" kind="variable"><name>is</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a4e2943fe68aab0ed3cff5599c6c0057d" kind="variable"><name>ID2_1</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1afee02f61923a55f0e4607cfef7adffae" kind="variable"><name>ID2_2</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1abfcf4550afcb4a8d6ecdbd5196fdb740" kind="variable"><name>ID2_3</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a358916b3595c2318ef2c5ff102e87096" kind="variable"><name>hypothesis</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a58f322226df79214c202526ebf74ac29" kind="variable"><name>ID4_1</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a98c01d4fca8ca4b5dafd8e175b0aa660" kind="variable"><name>ID4_2</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a10734599183cc0ea14dcb882317e001c" kind="variable"><name>ID4_3</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1aa5516cc1877ee021702b5d58420446c7" kind="variable"><name>ID4_4</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1aeebd95ae61f4a97188f83103e2e31678" kind="variable"><name>folder</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1aeab6238076b2b1a75d29328d62a3ea1c" kind="variable"><name>listed</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1adfcedc19c0edd440d2eba68add0ab1f6" kind="variable"><name>below</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1af4e5ea58be79f4dd4ac44bf3377e8868" kind="variable"><name>instead</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a50303c5a7476330458c995afdf6c83f9" kind="variable"><name>https</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1af455a43cbed60c6fd55093096274e9f7" kind="variable"><name>terminal</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kind="variable"><name>p</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a4500f6927956acf4563d5436fc7f739a" kind="variable"><name>all</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a747c4ab470b1450f008b1f5ab8321b70" kind="variable"><name>node</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a9bd4e2768a116aeb2dbe43ef546c7366" kind="variable"><name>sequentially</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1acf77567deaf8d1e80acf73a1aa16e376" kind="variable"><name>roscore</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a344ad6e34c976b6aa139375def35f8c2" kind="variable"><name>follows</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a000149c8f25eaf82da99e4db7f42addb" kind="variable"><name>then</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1ae0f217649da21562028ca559c4b6137a" kind="variable"><name>finally</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1acd7383e8199446b79fce2b440e895408" kind="variable"><name>priori</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a44a26e7477784eb84207c62ba25404ab" kind="variable"><name>end</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a4c32f466e6a3383f61e0e39652750544" kind="variable"><name>this</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a9c2d2c99bf88ebdabbe6a37d365a9cb7" kind="variable"><name>diagrams</name></member>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8rst_8txt" kind="file"><name>README.rst.txt</name>
+    <member refid="_r_e_a_d_m_e_8rst_8txt_1aac93e586127c0fc4e733e2d01bcda438" kind="variable"><name>vision_opencv</name></member>
   </compound>
   <compound refid="aruco_8h" kind="file"><name>aruco.h</name>
     <member refid="aruco_8h_1a8c978c9f9a61adf1685211a4f9ae9c77" kind="define"><name>ARUCO_VERSION_MAJOR</name></member>
@@ -1761,23 +1885,39 @@
   </compound>
   <compound refid="dir_02bdb4005edb5055ba0ef39c3e2b4a3d" kind="dir"><name>_build/html/_sources</name>
   </compound>
+  <compound refid="dir_a6630cccf965a2fe08f29b63a35dbcd4" kind="dir"><name>_build/html/_sources/armetectibot</name>
+  </compound>
+  <compound refid="dir_edc6d721cbd9bde1299fc8dc5c544cc9" kind="dir"><name>armetectibot</name>
+  </compound>
+  <compound refid="dir_c140281fa1788ed353cd1b0513f84991" kind="dir"><name>_build/html/_sources/aruco_ros/aruco/src/aruco</name>
+  </compound>
+  <compound refid="dir_6cfb007eea82d656f095c25329a8133a" kind="dir"><name>_build/html/_sources/aruco_ros/aruco</name>
+  </compound>
+  <compound refid="dir_55434c3d32e5824cf6fcea5d63cb7053" kind="dir"><name>aruco_ros/aruco/include/aruco</name>
+  </compound>
   <compound refid="dir_c96833ec69e5d153a7927e790f765ccf" kind="dir"><name>aruco_ros/aruco</name>
   </compound>
   <compound refid="dir_41ddc396a94ce2b6c7df9d8e1b6c61a4" kind="dir"><name>aruco_ros/aruco/src/aruco</name>
   </compound>
-  <compound refid="dir_55434c3d32e5824cf6fcea5d63cb7053" kind="dir"><name>aruco_ros/aruco/include/aruco</name>
+  <compound refid="dir_5c1668e3560806b44d82bb5087e6e127" kind="dir"><name>_build/html/_sources/aruco_ros/aruco_msgs</name>
   </compound>
   <compound refid="dir_9fe4adf88796342f6a16b5600624a386" kind="dir"><name>aruco_ros/aruco_msgs</name>
   </compound>
-  <compound refid="dir_d11c0bfc89fc550fabb4a72b71115364" kind="dir"><name>aruco_ros/aruco_ros/include/aruco_ros</name>
+  <compound refid="dir_d67fbd47a273efb57c9852a8c53fee1f" kind="dir"><name>_build/html/_sources/aruco_ros</name>
+  </compound>
+  <compound refid="dir_ad635fdf6f7cf71c573cd87c999692ba" kind="dir"><name>_build/html/_sources/aruco_ros/aruco_ros</name>
   </compound>
   <compound refid="dir_f3943b26ff311151f15efa388b51f622" kind="dir"><name>aruco_ros</name>
+  </compound>
+  <compound refid="dir_d11c0bfc89fc550fabb4a72b71115364" kind="dir"><name>aruco_ros/aruco_ros/include/aruco_ros</name>
   </compound>
   <compound refid="dir_3e8f19c710def292de402344e20d78e1" kind="dir"><name>aruco_ros/aruco_ros</name>
   </compound>
   <compound refid="dir_0c19e554827fe01af78b60796f263924" kind="dir"><name>vision_opencv/cv_bridge/src/boost</name>
   </compound>
   <compound refid="dir_51eb43b3720616926314a6d894165d01" kind="dir"><name>bridge_example</name>
+  </compound>
+  <compound refid="dir_e54b6d0d1981af8de7cdab24fd6d1c39" kind="dir"><name>_build/html/_sources/bridge_example</name>
   </compound>
   <compound refid="dir_6563863b6061b746c82def1c37fa3382" kind="dir"><name>vision_opencv/cv_bridge/src/boost/predef/os/bsd</name>
   </compound>
@@ -1789,9 +1929,11 @@
   </compound>
   <compound refid="dir_15fb3e0b8fc7ed123561a083c14f6ae9" kind="dir"><name>vision_opencv/cv_bridge/src/boost/core</name>
   </compound>
-  <compound refid="dir_2ce1e7b6f8d4d6fab94729ab5ce3f45c" kind="dir"><name>vision_opencv/cv_bridge</name>
+  <compound refid="dir_afc6fb07f2d7c147cde149a9308d73b2" kind="dir"><name>_build/html/_sources/vision_opencv/cv_bridge</name>
   </compound>
   <compound refid="dir_55319ba7dabe6bd7c24e713b9f4a79f8" kind="dir"><name>vision_opencv/cv_bridge/include/cv_bridge</name>
+  </compound>
+  <compound refid="dir_2ce1e7b6f8d4d6fab94729ab5ce3f45c" kind="dir"><name>vision_opencv/cv_bridge</name>
   </compound>
   <compound refid="dir_9e2361a83ad7d03efa0a6a2fad8ac5ce" kind="dir"><name>vision_opencv/cv_bridge/python/cv_bridge</name>
   </compound>
@@ -1799,13 +1941,17 @@
   </compound>
   <compound refid="dir_6de194429d2a9c938640ae4a7f55a7cd" kind="dir"><name>vision_opencv/cv_bridge/src/boost/predef/detail</name>
   </compound>
+  <compound refid="dir_6cad456feb5b739f47c48906f733bd2c" kind="dir"><name>_build/html/_sources/vision_opencv/cv_bridge/doc</name>
+  </compound>
+  <compound refid="dir_98ef64b1340f3888855bcd5336899817" kind="dir"><name>_build/html/_sources/vision_opencv/image_geometry/doc</name>
+  </compound>
   <compound refid="dir_f1865cd747a00d6c6129fa1a86019929" kind="dir"><name>vision_opencv/cv_bridge/doc</name>
   </compound>
   <compound refid="dir_0b906f2be17fe9cbcb56681d41f81b78" kind="dir"><name>vision_opencv/image_geometry/doc</name>
   </compound>
-  <compound refid="dir_8dd08f2658aa08180a5d08d0b206f839" kind="dir"><name>documents</name>
-  </compound>
   <compound refid="dir_38e8b9ed5b7b9416573615062e91436d" kind="dir"><name>_build/html/_sources/documents</name>
+  </compound>
+  <compound refid="dir_8dd08f2658aa08180a5d08d0b206f839" kind="dir"><name>documents</name>
   </compound>
   <compound refid="dir_c875891a740d69441598c8240a6a3129" kind="dir"><name>vision_opencv/cv_bridge/src/boost/endian</name>
   </compound>
@@ -1817,27 +1963,31 @@
   </compound>
   <compound refid="dir_2c6d378fa091dc5c5fe7a020ff0110d1" kind="dir"><name>_build/html/_sources/erl_assignment_3</name>
   </compound>
-  <compound refid="dir_e3b1a7ba9d2f276774d5aea8135240df" kind="dir"><name>_build/html/_sources/erl_assignment_3_msgs</name>
-  </compound>
   <compound refid="dir_47e65dd551f63c3d1c659a9857b22197" kind="dir"><name>erl_assignment_3_msgs</name>
+  </compound>
+  <compound refid="dir_e3b1a7ba9d2f276774d5aea8135240df" kind="dir"><name>_build/html/_sources/erl_assignment_3_msgs</name>
   </compound>
   <compound refid="dir_5a98cf3c0567c19bd839df7cb0f110ac" kind="dir"><name>erl_assignment_3_robot</name>
   </compound>
-  <compound refid="dir_63358181ce567149a79d24bdd45b3e93" kind="dir"><name>_build/html</name>
+  <compound refid="dir_da68b58fb177a3d9891eeb8e86722158" kind="dir"><name>_build/html/_sources/erl_assignment_3_robot</name>
   </compound>
-  <compound refid="dir_dd876c1bee27c7bec48bad83b1ac23cf" kind="dir"><name>vision_opencv/image_geometry/include/image_geometry</name>
+  <compound refid="dir_63358181ce567149a79d24bdd45b3e93" kind="dir"><name>_build/html</name>
   </compound>
   <compound refid="dir_885b43350add1a57c10a8ac85739d0ce" kind="dir"><name>vision_opencv/image_geometry/src/image_geometry</name>
   </compound>
-  <compound refid="dir_d160065f9cdbdeb38af5bbfcd84128d0" kind="dir"><name>vision_opencv/image_geometry</name>
+  <compound refid="dir_dd876c1bee27c7bec48bad83b1ac23cf" kind="dir"><name>vision_opencv/image_geometry/include/image_geometry</name>
   </compound>
-  <compound refid="dir_324471aff79e58983d43e9586f092582" kind="dir"><name>aruco_ros/aruco_ros/include</name>
+  <compound refid="dir_20cd518b2d776a5d717088eae1d482bd" kind="dir"><name>_build/html/_sources/vision_opencv/image_geometry</name>
+  </compound>
+  <compound refid="dir_d160065f9cdbdeb38af5bbfcd84128d0" kind="dir"><name>vision_opencv/image_geometry</name>
   </compound>
   <compound refid="dir_7f73d67e22a3d69b351ee8dd6b950335" kind="dir"><name>vision_opencv/cv_bridge/include</name>
   </compound>
+  <compound refid="dir_4a72f1274c9f1d15fbfde0710c9be354" kind="dir"><name>vision_opencv/image_geometry/include</name>
+  </compound>
   <compound refid="dir_697faaa43993fb7b3fb9965eaaec09b2" kind="dir"><name>aruco_ros/aruco/include</name>
   </compound>
-  <compound refid="dir_4a72f1274c9f1d15fbfde0710c9be354" kind="dir"><name>vision_opencv/image_geometry/include</name>
+  <compound refid="dir_324471aff79e58983d43e9586f092582" kind="dir"><name>aruco_ros/aruco_ros/include</name>
   </compound>
   <compound refid="dir_eb888e2fb81ed1861a86c1e7ceb9abba" kind="dir"><name>vision_opencv/cv_bridge/src/boost/predef/library</name>
   </compound>
@@ -1847,39 +1997,55 @@
   </compound>
   <compound refid="dir_0fc571af50ccc985e620dc5bcbea8da2" kind="dir"><name>vision_opencv/opencv_tests</name>
   </compound>
+  <compound refid="dir_db10e3259c995a08d4f769b9e8efcfc8" kind="dir"><name>_build/html/_sources/vision_opencv/opencv_tests</name>
+  </compound>
   <compound refid="dir_2debafecf895b417bc89e2a43eefe967" kind="dir"><name>vision_opencv/cv_bridge/src/boost/predef/os</name>
   </compound>
   <compound refid="dir_0542ce5e37039b604060d427d6441195" kind="dir"><name>vision_opencv/cv_bridge/src/boost/predef/other</name>
   </compound>
   <compound refid="dir_1548618fca1154a9664c9a9defcc2a9f" kind="dir"><name>vision_opencv/cv_bridge/src/boost/predef</name>
   </compound>
-  <compound refid="dir_6b4b7ffa5ed4d37255eabaf1c356cc45" kind="dir"><name>vision_opencv/cv_bridge/python</name>
+  <compound refid="dir_efbe73e19cba007026a68c751dde1bdd" kind="dir"><name>_build/html/_sources/vision_opencv/cv_bridge/python</name>
   </compound>
-  <compound refid="dir_7e0926457bab4397fd3defb6fd08e375" kind="dir"><name>bridge_example/scripts</name>
+  <compound refid="dir_6b4b7ffa5ed4d37255eabaf1c356cc45" kind="dir"><name>vision_opencv/cv_bridge/python</name>
   </compound>
   <compound refid="dir_21fd3bb0b693941ef66fb7e134d05004" kind="dir"><name>erl_assignment_3/scripts</name>
   </compound>
-  <compound refid="dir_3138c29cff513990550bb2d5e7a9541d" kind="dir"><name>bridge_example/src</name>
-  </compound>
-  <compound refid="dir_42d473c946a6df0f7aea755e6e0bad62" kind="dir"><name>vision_opencv/image_geometry/src</name>
-  </compound>
-  <compound refid="dir_22422a982b8564588243ff05d2777655" kind="dir"><name>aruco_ros/aruco/src</name>
-  </compound>
-  <compound refid="dir_5195e5e948f2da0db02d96deada615c8" kind="dir"><name>vision_opencv/cv_bridge/src</name>
-  </compound>
-  <compound refid="dir_012ccd603ba4e60a1cab583bd0627077" kind="dir"><name>erl_assignment_3/src</name>
-  </compound>
-  <compound refid="dir_935e8cbcc0134fa0e1b68b8355b1dc7a" kind="dir"><name>erl3/src</name>
+  <compound refid="dir_7e0926457bab4397fd3defb6fd08e375" kind="dir"><name>bridge_example/scripts</name>
   </compound>
   <compound refid="dir_fd843b7c277051a10667414cd4a0302f" kind="dir"><name>aruco_ros/aruco_ros/src</name>
   </compound>
-  <compound refid="dir_5b2c6bd70c97f6cff7b2f62d89e61a56" kind="dir"><name>vision_opencv/image_geometry/test</name>
+  <compound refid="dir_22422a982b8564588243ff05d2777655" kind="dir"><name>aruco_ros/aruco/src</name>
+  </compound>
+  <compound refid="dir_9c1804c2b82e1fc544dab5d79f7a13cc" kind="dir"><name>_build/html/_sources/vision_opencv/cv_bridge/src</name>
+  </compound>
+  <compound refid="dir_36058f892416b90d21adbdc707a36f31" kind="dir"><name>_build/html/_sources/aruco_ros/aruco/src</name>
+  </compound>
+  <compound refid="dir_935e8cbcc0134fa0e1b68b8355b1dc7a" kind="dir"><name>erl3/src</name>
+  </compound>
+  <compound refid="dir_3138c29cff513990550bb2d5e7a9541d" kind="dir"><name>bridge_example/src</name>
+  </compound>
+  <compound refid="dir_012ccd603ba4e60a1cab583bd0627077" kind="dir"><name>erl_assignment_3/src</name>
+  </compound>
+  <compound refid="dir_5195e5e948f2da0db02d96deada615c8" kind="dir"><name>vision_opencv/cv_bridge/src</name>
+  </compound>
+  <compound refid="dir_42d473c946a6df0f7aea755e6e0bad62" kind="dir"><name>vision_opencv/image_geometry/src</name>
   </compound>
   <compound refid="dir_75d7e0f1619e10dfa95ceeaddf88dfce" kind="dir"><name>vision_opencv/cv_bridge/test</name>
   </compound>
-  <compound refid="dir_3ac51109f9f28780e973b1cb667ca999" kind="dir"><name>vision_opencv/vision_opencv</name>
+  <compound refid="dir_5b2c6bd70c97f6cff7b2f62d89e61a56" kind="dir"><name>vision_opencv/image_geometry/test</name>
+  </compound>
+  <compound refid="dir_13b1d794a9214d68f978156dff3b5b5d" kind="dir"><name>_build/html/_sources/vision_opencv/image_geometry/test</name>
+  </compound>
+  <compound refid="dir_09b9860452be4c33a6429e87c00a321d" kind="dir"><name>_build/html/_sources/vision_opencv/cv_bridge/test</name>
   </compound>
   <compound refid="dir_bac3f3c938acd5c69a2a49efc04c34f0" kind="dir"><name>vision_opencv</name>
+  </compound>
+  <compound refid="dir_3ac51109f9f28780e973b1cb667ca999" kind="dir"><name>vision_opencv/vision_opencv</name>
+  </compound>
+  <compound refid="dir_1b151a4f6542cc09e46a716fbd68bb94" kind="dir"><name>_build/html/_sources/vision_opencv</name>
+  </compound>
+  <compound refid="dir_fa224897ebc7f5f7b1bffef02c70b508" kind="dir"><name>_build/html/_sources/vision_opencv/vision_opencv</name>
   </compound>
   <compound refid="indexpage" kind="page"><name>index</name>
   </compound>

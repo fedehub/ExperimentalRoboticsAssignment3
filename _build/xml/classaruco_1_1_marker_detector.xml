@@ -706,6 +706,7 @@
         <references refid="structaruco_1_1_marker_detector_1_1_params_1a0916c04a7beeee1be77c10557055b66e" compoundref="markerdetector_8h" startline="86">aruco::MarkerDetector::Params::minSize</references>
         <references refid="structaruco_1_1_marker_detector_1_1_params_1a358967d73173b4107064a92cb439d254" compoundref="markerdetector_8h" startline="109">aruco::MarkerDetector::Params::NAttemptsAutoThresFix</references>
         <references refid="namespacearuco_1ace63f972e86ac736bd95d0bb4e5c2bb8" compoundref="markerdetector_8cpp" startline="508" endline="547">aruco::Otsu</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" compoundref="_r_e_a_d_m_e_8md_8txt" startline="341">p</references>
         <references refid="classaruco_1_1_marker_detector_1a81f933a8be90d0f39b196bf93a3f5cdaaf2bae099c4f1d5c013b252f822a72b22" compoundref="markerdetector_8h" startline="65">THRES_AUTO_FIXED</references>
         <references refid="classaruco_1_1_marker_detector_1aedcd73ff274bad9885b3086d3b216b08" compoundref="markerdetector_8cpp" startline="972" endline="989">warp</references>
       </memberdef>

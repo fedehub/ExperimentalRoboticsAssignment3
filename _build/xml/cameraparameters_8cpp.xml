@@ -303,7 +303,7 @@
 <codeline lineno="306"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="307"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>icpara[3][4];</highlight></codeline>
 <codeline lineno="308"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>trans[3][4];</highlight></codeline>
-<codeline lineno="309"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>p[3][3],<sp/>q[4][4];</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>[3][3],<sp/>q[4][4];</highlight></codeline>
 <codeline lineno="310"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i,<sp/>j;</highlight></codeline>
 <codeline lineno="311"><highlight class="normal"></highlight></codeline>
 <codeline lineno="312"><highlight class="normal"><sp/><sp/>cparam[0][2]<sp/>*=<sp/>-1.0;</highlight></codeline>
@@ -317,17 +317,17 @@
 <codeline lineno="320"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>3;<sp/>j++)</highlight></codeline>
 <codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p[i][j]<sp/>=<sp/>icpara[i][j]<sp/>/<sp/>icpara[2][2];</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>[i][j]<sp/>=<sp/>icpara[i][j]<sp/>/<sp/>icpara[2][2];</highlight></codeline>
 <codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="325"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="326"><highlight class="normal"><sp/><sp/>q[0][0]<sp/>=<sp/>(2.0<sp/>*<sp/>p[0][0]<sp/>/<sp/>width);</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/>q[0][1]<sp/>=<sp/>(2.0<sp/>*<sp/>p[0][1]<sp/>/<sp/>width);</highlight></codeline>
-<codeline lineno="328"><highlight class="normal"><sp/><sp/>q[0][2]<sp/>=<sp/>((2.0<sp/>*<sp/>p[0][2]<sp/>/<sp/>width)<sp/>-<sp/>1.0);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/>q[0][0]<sp/>=<sp/>(2.0<sp/>*<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>[0][0]<sp/>/<sp/>width);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/>q[0][1]<sp/>=<sp/>(2.0<sp/>*<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>[0][1]<sp/>/<sp/>width);</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/>q[0][2]<sp/>=<sp/>((2.0<sp/>*<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>[0][2]<sp/>/<sp/>width)<sp/>-<sp/>1.0);</highlight></codeline>
 <codeline lineno="329"><highlight class="normal"><sp/><sp/>q[0][3]<sp/>=<sp/>0.0;</highlight></codeline>
 <codeline lineno="330"><highlight class="normal"></highlight></codeline>
 <codeline lineno="331"><highlight class="normal"><sp/><sp/>q[1][0]<sp/>=<sp/>0.0;</highlight></codeline>
-<codeline lineno="332"><highlight class="normal"><sp/><sp/>q[1][1]<sp/>=<sp/>(2.0<sp/>*<sp/>p[1][1]<sp/>/<sp/>height);</highlight></codeline>
-<codeline lineno="333"><highlight class="normal"><sp/><sp/>q[1][2]<sp/>=<sp/>((2.0<sp/>*<sp/>p[1][2]<sp/>/<sp/>height)<sp/>-<sp/>1.0);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/>q[1][1]<sp/>=<sp/>(2.0<sp/>*<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>[1][1]<sp/>/<sp/>height);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/>q[1][2]<sp/>=<sp/>((2.0<sp/>*<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>[1][2]<sp/>/<sp/>height)<sp/>-<sp/>1.0);</highlight></codeline>
 <codeline lineno="334"><highlight class="normal"><sp/><sp/>q[1][3]<sp/>=<sp/>0.0;</highlight></codeline>
 <codeline lineno="335"><highlight class="normal"></highlight></codeline>
 <codeline lineno="336"><highlight class="normal"><sp/><sp/>q[2][0]<sp/>=<sp/>0.0;</highlight></codeline>

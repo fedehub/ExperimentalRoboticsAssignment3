@@ -2,11 +2,434 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="md__r_e_a_d_m_e" kind="page">
     <compoundname>md_README</compoundname>
-    <title>Experimental Robotics Assignment 3 – README</title>
+    <title>README</title>
     <briefdescription>
+<para>Table of Contents </para>
     </briefdescription>
     <detaileddescription>
-<para>project for E.R.L. </para>
+<para>Table of Contents</para>
+<para></para>
+<para><ulink url="https://github.com/fedehub/ExperimentalRoboticsAssignment3/network/members"><image type="html" name="ExperimentalRoboticsAssignment3" inline="yes"></image>
+</ulink> <ulink url="https://github.com/fedehub/ExperimentalRoboticsAssignment3/stargazers"><image type="html" name="ExperimentalRoboticsAssignment3" inline="yes"></image>
+</ulink> <ulink url="https://github.com/fedehub/expTest/issues"><image type="html" name="ExperimentalRoboticsAssignment3" inline="yes"></image>
+</ulink></para>
+<para><linebreak/>
+  <ulink url="https://github.com/fedehub/expTest"><image type="html" name="logo-black.png" inline="yes"></image>
+ </ulink></para>
+<para> <heading level="3">Experimental Robotics Laboratory</heading>
+</para>
+<para></para>
+<para> </para>
+<para> First assignment for the Experimental Robotics laboratory course <linebreak/>
+ <ulink url="https://github.com/fedehub/expTest/doc"><bold>Explore the docs »</bold></ulink> <linebreak/>
+ <linebreak/>
+ <ulink url="https://github.com/fedehub/expTest/demo">View Demo</ulink> · <ulink url="https://github.com/fedehub/expTest/issues">Report Bug</ulink> · <ulink url="https://github.com/fedehub/expTest/issues">Request Feature</ulink> </para>
+<para> </para>
+<para>&lt;details&gt;</para>
+<para><orderedlist>
+<listitem>
+<para><ulink url="#about-the-project">About The Project</ulink> <itemizedlist>
+<listitem>
+<para><ulink url="#built-with">Built With</ulink> </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para><ulink url="#getting-started">Getting Started</ulink> <itemizedlist>
+<listitem>
+<para><ulink url="#software architechture">Software architechture</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#ROS node description">ROS node description</ulink> <itemizedlist>
+<listitem>
+<para><ulink url="#rossrv">rossrv</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#rosmsg">rosmsg</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#rostopic">rostopic</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#rosparam">rosparam</ulink> </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para><ulink url="#rqt_graph">rqt_graph</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#installation">Installation</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#running procedure">Running procedure</ulink> </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para><ulink url="#usage">Usage</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#Working hypothesis and environment">Working hypothesis and environment</ulink> <itemizedlist>
+<listitem>
+<para><ulink url="#System&apos;s features">System&apos;s features</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#System&apos;s limitations">System&apos;s limitations</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#Possible technical Improvements">Possible technical Improvements</ulink> </para>
+</listitem>
+</itemizedlist>
+</para>
+</listitem>
+<listitem>
+<para><ulink url="#roadmap">Roadmap</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#contributing">Contributing</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#license">License</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#contact">Contact</ulink> </para>
+</listitem>
+<listitem>
+<para><ulink url="#acknowledgments">Acknowledgments</ulink> </para>
+</listitem>
+</orderedlist>
+&lt;/details&gt;</para>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md12">
+<title>About The Project</title>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md13">
+<title>Built With</title>
+<para><itemizedlist>
+<listitem><para><ulink url="http://wiki.ros.org/smach">Smach</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/EmaroLab/armor">Armor</ulink></para>
+</listitem><listitem><para><ulink url="http://wiki.ros.org">ROS</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+</sect3>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md14">
+<title>Getting Started</title>
+<para>Under the following sections, the software architecture is briefly introduced, along with the prerequisites and installation procedures. Then, a quick video demonstration showing the overall functioning is provided and system’s limitations are discussed</para>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md15">
+<title>Software architechture</title>
+<para>Please consider that <bold>consistent hypothesis</bold> have been defined as COMPLETED but NOT INCONSISTENT</para>
+<para><blockquote><para><emphasis>REMARK</emphasis> A consistent hypothesis is defined as <emphasis>completed</emphasis> when there occurs one role for each class (i.e., one occourence of what, one occourence for who, one occourence for where ). </para>
+</blockquote>A straightforward example of such hypothesis is [ID2][12], whose definition is here below reported</para>
+<para><programlisting><codeline><highlight class="normal">ID2_1:<sp/>[&apos;where&apos;,<sp/>&apos;Study&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID2_2:<sp/>[&apos;who&apos;,<sp/>&apos;Col.Mustard&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID2_3:<sp/>[&apos;what&apos;,<sp/>&apos;Rope&apos;]</highlight></codeline>
+</programlisting></para>
+<para><blockquote><para><emphasis>REMARK</emphasis> An hypothesis, is defined as <emphasis>inconsistent</emphasis> when there occurs more than one role for each class (i.e. 2 or more occourences of who, where, what) </para>
+</blockquote></para>
+<para>A clear example of such hypothesis is [ID4][12], whose definition is here below reported</para>
+<para><programlisting><codeline><highlight class="normal">ID4_1:<sp/>[&apos;where&apos;,<sp/>&apos;Library&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID4_2:<sp/>[&apos;who&apos;,<sp/>&apos;Mrs.White&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID4_3:<sp/>[&apos;what&apos;,<sp/>&apos;LeadPipe&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID4_4:<sp/>[&apos;where&apos;,<sp/>&apos;Diningoom&apos;]</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md16">
+<title>ROS node description</title>
+<para>Within the scripts folder, the following nodes are listed: <linebreak/>
+<itemizedlist>
+<listitem><para><ulink url="sherlbotH_holes.py&gt;">Nodo1.py</ulink>:</para>
+</listitem><listitem><para>[robotcontroller.py][6]:</para>
+</listitem><listitem><para>[<ref refid="navigation_8py" kindref="compound">navigation.py</ref>][7]:</para>
+</listitem><listitem><para>[oracle.py][8]:</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md17">
+<title>rossrv</title>
+<para><itemizedlist>
+<listitem><para><bold>query_oracle</bold>:</para>
+</listitem></itemizedlist>
+</para>
+<para><blockquote><para>msg type: </para>
+</blockquote></para>
+<para><itemizedlist>
+<listitem><para><bold>ask_for_hint</bold>:</para>
+</listitem></itemizedlist>
+</para>
+<para><blockquote><para>msg type: </para>
+</blockquote></para>
+<para><itemizedlist>
+<listitem><para><bold>detectiBotSwitch</bold>:</para>
+</listitem></itemizedlist>
+</para>
+<para><blockquote><para>msg type </para>
+</blockquote></para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md18">
+<title>rosmsg</title>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md19">
+<title>rostopic</title>
+<para>The aforementioned message type use the <computeroutput>/robotPose</computeroutput> topic. It presents as:<itemizedlist>
+<listitem><para><bold>Publishers:</bold><itemizedlist>
+<listitem><para>[/navigation][7]</para>
+</listitem><listitem><para>[/controller][6]</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Subscribers:</bold><itemizedlist>
+<listitem><para>[/navigation][7]</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md20">
+<title>rosparameters</title>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md21">
+<title>rqt_graph</title>
+<para>The <emphasis>rqt_graph</emphasis> is a tool that shows the correlation among active nodes and messages being transmitted on the ROS network as a diagram. After executing all nodes (or after launching the roslaunch file), launch the <bold>rqt_graph</bold> through</para>
+<para><programlisting><codeline><highlight class="normal">rosrun<sp/>rqt_graph<sp/>rqt_graph</highlight></codeline>
+</programlisting></para>
+<para>In the figure below, circles represent nodes and squares represent topic messages. The arrow instead, indicates the transmission of the message!</para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md22">
+<title>Installation procedure</title>
+</sect3>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md23">
+<title>The fastest way</title>
+<para><orderedlist>
+<listitem><para>Clone the repo</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/fedehub/ExperimentalRoboticsAssignment3.git</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para>Move to the directory and enable permissions</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">cd<sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">chmod<sp/>+x<sp/>&quot;./compile,sh</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para>launch the <computeroutput>compile.sh</computeroutput> file</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para>launch the project simulation</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+</programlisting></para>
+<para><orderedlist>
+<listitem><para>pub a message from terminal, when prompted</para>
+</listitem></orderedlist>
+</para>
+<para><programlisting filename=".python"><codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md24">
+<title>step by step</title>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">docker<sp/>pull<sp/>carms84/exproblab</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">docker<sp/>run<sp/>-it<sp/>--name<sp/>exprob<sp/>-p<sp/>6080:80<sp/>-p<sp/>5900:5900<sp/>carms84/exproblab</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">cd<sp/>ros_ws/src<sp/></highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/fedehub/ExperimentalRoboticsAssignment3.git</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"></programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"></programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"></programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"></programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"></programlisting></para>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md25">
+<title>further changes ...</title>
+</sect3>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md26">
+<title>Workspace building e launch</title>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">cd<sp/>/home/ros_ws/</highlight></codeline>
+<codeline><highlight class="normal">catkin_make</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".python"></programlisting></para>
+<para><itemizedlist>
+<listitem><para>type here ...</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".python"></programlisting></para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md27">
+<title>Running procedure</title>
+<para>To appreciate the robot&apos;s behaviour, first of all:</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">roslaunch<sp/>...</highlight></codeline>
+</programlisting></para>
+<para>Alternatively, it is also possible to launch each node, sequentially, after having started the <computeroutput>roscore</computeroutput>:</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">roscore<sp/>&amp;</highlight></codeline>
+</programlisting></para>
+<para>type here ...</para>
+<para><programlisting filename=".sh"></programlisting></para>
+<para>Then,</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">rosrun<sp/>expTest<sp/>oracle.py</highlight></codeline>
+</programlisting></para>
+<para>It follows,</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">rosrun<sp/>expTest<sp/>navigation.py</highlight></codeline>
+</programlisting></para>
+<para>then,</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">rosrun<sp/>expTest<sp/>detectiBot.py</highlight></codeline>
+</programlisting></para>
+<para>and finally,</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">rosrun<sp/>expTest<sp/>robotController.py</highlight></codeline>
+</programlisting></para>
+<para>By starting the smach_viewer node</para>
+<para><programlisting filename=".sh"><codeline><highlight class="normal">rosrun<sp/>smach_viewer<sp/>smach_viewer.py</highlight></codeline>
+</programlisting></para>
+<para>it is possible to see how the logic is implemented and how the transitions take place</para>
+</sect3>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md28">
+<title>Usage</title>
+<para>The most relevant aspects of the project and a brief video tutorial on how to launch the simulation can be found [here][105]</para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md29">
+<title>Working hypothesis and environment</title>
+<para>The architecture is designed for providing a raw simplification of the Cluedo Game. Hints are set a-priori, as well as true hypothesis that leads to the game’s end, once collected.</para>
+<para>All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite unrealistic but functional.</para>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md30">
+<title>System&apos;s features</title>
+<para>Most of them have been already discussed in the Software architecture’s section. The most relevant one is that of having a robot capable of exploiting an ontology to solve a problem.</para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md31">
+<title>System&apos;s limitations</title>
+<para>type here ...</para>
+</sect3>
+<sect3 id="md__r_e_a_d_m_e_1autotoc_md32">
+<title>Possible technical Improvements</title>
+<para>type here ...</para>
+</sect3>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md33">
+<title>Roadmap</title>
+<para><itemizedlist>
+<listitem><para>[x] Complete the introduction of the template</para>
+</listitem><listitem><para>[ ] Describe the software architechture<itemizedlist>
+<listitem><para>[ ] Component diagram (<emphasis>not mandatory</emphasis>)</para>
+</listitem><listitem><para>[ ] Temporal diagram + comments</para>
+</listitem><listitem><para>[ ] States diagrams, whether applicable + comments</para>
+</listitem><listitem><para>[ ] Create a list describing ROS messages and parameters</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>[ ] Describe the installation steps and the running procedures<itemizedlist>
+<listitem><para>[ ] Create a dedicated paragraph</para>
+</listitem><listitem><para>[ ] Include all the steps to display the robot&apos;s behaviour</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>[ ] Show in the &quot;usage&quot; section the running code<itemizedlist>
+<listitem><para>[ ] Create a small video tutorial of the launch</para>
+</listitem><listitem><para>[ ] Create a small animated gif of the terminal while running code</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>[ ] Describe the Working hypothesis and environment<itemizedlist>
+<listitem><para>[ ] Dedicated section for System&apos;s features</para>
+</listitem><listitem><para>[ ] Dedicated section for System&apos;s limitations</para>
+</listitem><listitem><para>[ ] Dedicated section for Possible technical improvements</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>See the <ulink url="https://github.com/fedehub/expTest/issues">open issues</ulink> for a full list of proposed features (and known issues).</para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md34">
+<title>Contributing</title>
+<para>If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag &quot;enhancement&quot;</para>
+<para><orderedlist>
+<listitem><para>Fork the Project</para>
+</listitem><listitem><para>Create your Feature Branch (<computeroutput>git checkout -b feature/AmazingFeature</computeroutput>)</para>
+</listitem><listitem><para>Commit your Changes (<lsquo/>git commit -m &apos;Add some AmazingFeature<rsquo/><computeroutput>)</computeroutput></para>
+</listitem><listitem><para><computeroutput>Push to the Branch (</computeroutput>git push origin feature/AmazingFeature`)</para>
+</listitem><listitem><para>Open a Pull Request</para>
+</listitem></orderedlist>
+</para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md35">
+<title>License</title>
+<para>Distributed under none License.</para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md36">
+<title>Contact</title>
+<para>Federico Civetta - <ulink url="mailto:s4194543@studenti.unige.it">s4194543@studenti.unige.it</ulink></para>
+<para>Project Link: <ulink url="https://github.com/fedehub/expTest">https://github.com/fedehub/expTest</ulink></para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+</sect2>
+<sect2 id="md__r_e_a_d_m_e_1autotoc_md37">
+<title>List of resources</title>
+<para><itemizedlist>
+<listitem><para><ulink url="http://wiki.ros.org/smach/Tutorials/Smach%20Viewer">Viewing state machine</ulink></para>
+</listitem><listitem><para><ulink url="http://wiki.ros.org/smach">Smach</ulink></para>
+</listitem><listitem><para><ulink url="https://github.com/EmaroLab/armor">Armor</ulink></para>
+</listitem><listitem><para><ulink url="https://protege.stanford.edu">Protègè</ulink></para>
+</listitem></itemizedlist>
+</para>
+<para>(<ulink url="#top">back to top</ulink>)</para>
+<para>[12]: &lt;param.yaml file&gt; </para>
+</sect2>
     </detaileddescription>
   </compounddef>
 </doxygen>

@@ -220,6 +220,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/include/aruco/dictionary.h" line="74" column="8" bodyfile="aruco_ros/aruco/include/aruco/dictionary.h" bodystart="74" bodyend="77"/>
+        <references refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" compoundref="_oracle_8rst_8txt" startline="3">code</references>
       </memberdef>
       <memberdef kind="function" id="classaruco_1_1_dictionary_1a9ffa66333c3f1fa4ee840b1d344df2c0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classaruco_1_1_dictionary_1ab854c54cccb529c9351ab5fbbf92b7b4" kindref="member">DICT_TYPES</ref></type>
@@ -320,6 +321,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/include/aruco/dictionary.h" line="115" column="7" bodyfile="aruco_ros/aruco/include/aruco/dictionary.h" bodystart="115" bodyend="118"/>
+        <references refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" compoundref="_oracle_8rst_8txt" startline="3">code</references>
       </memberdef>
       <memberdef kind="function" id="classaruco_1_1_dictionary_1a1f653dc4ee1b62982a2d82ba4c11db75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -337,6 +339,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/include/aruco/dictionary.h" line="121" column="7" bodyfile="aruco_ros/aruco/include/aruco/dictionary.h" bodystart="121" bodyend="124"/>
+        <references refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" compoundref="_oracle_8rst_8txt" startline="3">code</references>
       </memberdef>
       <memberdef kind="function" id="classaruco_1_1_dictionary_1a285798638893f5f3069d322afbe8efa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>cv::Mat</type>
@@ -411,6 +414,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/include/aruco/dictionary.h" line="133" column="11" bodyfile="aruco_ros/aruco/src/aruco/dictionary.cpp" bodystart="2503" bodyend="2585"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a4500f6927956acf4563d5436fc7f739a" compoundref="_r_e_a_d_m_e_8md_8txt" startline="347">all</references>
+        <references refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" compoundref="_oracle_8rst_8txt" startline="3">code</references>
         <references refid="classaruco_1_1_dictionary_1af2a95bf6aae3ef53b74d8b1bb314a047" compoundref="dictionary_8h" startline="91" endline="94">nbits</references>
       </memberdef>
       <memberdef kind="function" id="classaruco_1_1_dictionary_1a283574d1fa128c868902ec6ac3a49735" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -453,6 +458,7 @@
         <references refid="classaruco_1_1_marker_1a047a6cfac4e5bbca087273618ac1fd52" compoundref="marker_8h" startline="204" endline="207">aruco::Marker::get3DPoints</references>
         <references refid="classaruco_1_1_dictionary_1ae42944fd1d2e9d744b66c0bf85c5d8a0" compoundref="dictionary_8cpp" startline="2587" endline="2624">getTypeString</references>
         <references refid="classaruco_1_1_marker_map_1aee23774bb36c828c351c5c09f6e76c80" compoundref="markermap_8h" startline="222">aruco::MarkerMap::mInfoType</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" compoundref="_r_e_a_d_m_e_8md_8txt" startline="341">p</references>
         <references refid="classaruco_1_1_marker_map_1a9736596e94b88d0e5d3ee231c8983058a4e2a453d5f8a044dce3ec9586b30d0e8" compoundref="markermap_8h" startline="211">aruco::MarkerMap::PIX</references>
         <references refid="classaruco_1_1_marker_map_1ade0533891f1f4a19c80c32346e0387a5" compoundref="markermap_8h" startline="215" endline="218">aruco::MarkerMap::setDictionary</references>
       </memberdef>

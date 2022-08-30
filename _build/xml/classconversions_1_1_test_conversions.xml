@@ -71,6 +71,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="vision_opencv/cv_bridge/test/conversions.py" line="76" column="1" bodyfile="vision_opencv/cv_bridge/test/conversions.py" bodystart="76" bodyend="85"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a4500f6927956acf4563d5436fc7f739a" compoundref="_r_e_a_d_m_e_8md_8txt" startline="347">all</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

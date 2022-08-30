@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="17" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="17" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="19" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a2bd9fd1920d2bc42dc4731864d652717" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="21" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="21" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="23" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a9eae712143c08f3491a16d4ee6451750" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="33" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="33" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="35" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a789fc3e10c22b001717ce1b7892fbe97" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="37" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="37" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="39" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a6a475cbf752498b2299eecd2b68d3514" prot="public" static="no" mutable="no">
         <type>dictionary</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="41" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="41" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="43" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a603958986e96759744716f54f97c0da5" prot="public" static="no" mutable="no">
         <type></type>
@@ -89,8 +89,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="45" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="45" bodyend="-1"/>
-        <referencedby refid="classstate__machine_1_1_m_o_v_e_1a08f985b53335e8d21c9c387ab48b6872" compoundref="state__machine_8py" startline="78" endline="107">state_machine.MOVE.execute</referencedby>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="47" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classstate__machine_1_1_m_o_v_e_1a08f985b53335e8d21c9c387ab48b6872" compoundref="state__machine_8py" startline="85" endline="118">state_machine.MOVE.execute</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a15d8b0fa02e1fe70d6bdd9d7ca123442" prot="public" static="no" mutable="no">
         <type></type>
@@ -104,8 +104,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="49" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="49" bodyend="-1"/>
-        <referencedby refid="classstate__machine_1_1_c_o_l_l_e_c_t_1afc9c7daa29434ed9f4b7b13b3a1c9665" compoundref="state__machine_8py" startline="112" endline="129">state_machine.COLLECT.execute</referencedby>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="51" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classstate__machine_1_1_c_o_l_l_e_c_t_1afc9c7daa29434ed9f4b7b13b3a1c9665" compoundref="state__machine_8py" startline="123" endline="140">state_machine.COLLECT.execute</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a3beeedfafde415df2974a2a5dda69d6d" prot="public" static="no" mutable="no">
         <type></type>
@@ -119,8 +119,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="53" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="53" bodyend="-1"/>
-        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="134" endline="173">state_machine.CHECK.execute</referencedby>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="55" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="145" endline="184">state_machine.CHECK.execute</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a61ad2d7f7796d9a8207ee7c2be7b6835" prot="public" static="no" mutable="no">
         <type></type>
@@ -134,8 +134,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="57" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="57" bodyend="-1"/>
-        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="134" endline="173">state_machine.CHECK.execute</referencedby>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="59" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="145" endline="184">state_machine.CHECK.execute</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1ad5face4951be519a2ec365d46bce4162" prot="public" static="no" mutable="no">
         <type></type>
@@ -149,8 +149,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="61" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="61" bodyend="-1"/>
-        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="134" endline="173">state_machine.CHECK.execute</referencedby>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="63" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="145" endline="184">state_machine.CHECK.execute</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a3c3b5ea8c574a68329796bac67a0b562" prot="public" static="no" mutable="no">
         <type></type>
@@ -164,8 +164,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="65" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="65" bodyend="-1"/>
-        <referencedby refid="classstate__machine_1_1_s_h_o_w_1a14d2726508e9b2dbb5c2a33589dd5b47" compoundref="state__machine_8py" startline="178" endline="203">state_machine.SHOW.execute</referencedby>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="67" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="67" bodyend="-1"/>
+        <referencedby refid="classstate__machine_1_1_s_h_o_w_1a14d2726508e9b2dbb5c2a33589dd5b47" compoundref="state__machine_8py" startline="189" endline="214">state_machine.SHOW.execute</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a96656c15d01281a447073b8c3f67acba" prot="public" static="no" mutable="no">
         <type></type>
@@ -179,7 +179,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="69" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="69" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="71" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacestate__machine_1a36cf2be5ca5c54b410eebbd4ac82c1b2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float state_machine.max_r</definition>
+        <argsstring></argsstring>
+        <name>max_r</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="75" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1aa0222cedd1894200b1cb7d79c710213c" prot="public" static="no" mutable="no">
         <type></type>
@@ -193,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="237" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="237" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="250" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="250" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a6793c4913a1241bddf256328c9a01028" prot="public" static="no" mutable="no">
         <type></type>
@@ -207,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="240" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="240" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="253" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="253" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a372490be06dbd069bfafaa476a4f9f0b" prot="public" static="no" mutable="no">
         <type></type>
@@ -220,7 +234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="242" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="242" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="255" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="255" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1a79821721f66b54a385a27e6c1004f57c" prot="public" static="no" mutable="no">
         <type></type>
@@ -233,7 +247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="242" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="242" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="255" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="255" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacestate__machine_1acbf2f3b4f08f91ac415d0c496d674e03" prot="public" static="no" mutable="no">
         <type></type>
@@ -247,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="247" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="247" bodyend="-1"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="260" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="260" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -262,9 +276,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="25" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="25" bodyend="32"/>
-        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="134" endline="173">state_machine.CHECK.execute</referencedby>
-        <referencedby refid="classstate__machine_1_1_s_h_o_w_1a14d2726508e9b2dbb5c2a33589dd5b47" compoundref="state__machine_8py" startline="178" endline="203">state_machine.SHOW.execute</referencedby>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="27" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="27" bodyend="34"/>
+        <referencedby refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" compoundref="state__machine_8py" startline="145" endline="184">state_machine.CHECK.execute</referencedby>
+        <referencedby refid="classstate__machine_1_1_s_h_o_w_1a14d2726508e9b2dbb5c2a33589dd5b47" compoundref="state__machine_8py" startline="189" endline="214">state_machine.SHOW.execute</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>

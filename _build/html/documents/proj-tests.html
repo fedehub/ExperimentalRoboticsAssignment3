@@ -132,19 +132,15 @@
 <div class="section" id="the-entire-project">
 <h2>The entire project<a class="headerlink" href="#the-entire-project" title="Permalink to this headline"></a></h2>
 <p>shell 1:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch erl_assignment_3_robot detectibot_environment.launch <span class="m">2</span>&gt;/dev/null
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch erl_assignment_3_robot detectibot_environment_2.launch <span class="m">2</span>&gt;/dev/null
 </pre></div>
 </div>
 <p>shell 2:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 img_echo <span class="p">&amp;</span>
-rosrun erl3 final_oracle <span class="p">&amp;</span>
-rosrun erl_assignment_3 navigation.py <span class="p">&amp;</span>
-rosrun erl_assignment_3 detectibot_magnifier
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch erl_assignment_3 launch_nodes.launch
 </pre></div>
 </div>
 <p>shell 3:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 cluedo_kb.py <span class="p">&amp;</span>
-rosrun erl_assignment_3 state_machine.py
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 state_machine.py
 </pre></div>
 </div>
 </div>

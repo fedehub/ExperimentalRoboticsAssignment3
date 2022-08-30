@@ -131,7 +131,7 @@
         <references refid="simple__double_8cpp_1ad3609934b55a628fdda977ca8724ce34" compoundref="simple__double_8cpp" startline="57">markers</references>
       </memberdef>
       <memberdef kind="function" id="namespacearuco__ros_1a6a2e5c678137b0ca8b0cad20a7f8d019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>visualization_msgs::Marker</type>
+        <type><ref refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" kindref="member">visualization_msgs::Marker</ref></type>
         <definition>visualization_msgs::Marker aruco_ros::visMarkerFromPose</definition>
         <argsstring>(const geometry_msgs::PoseStamped &amp;pose, double marker_size, int marker_id=1)</argsstring>
         <name>visMarkerFromPose</name>
@@ -155,6 +155,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco_ros/include/aruco_ros/aruco_ros_utils.h" line="34" column="28" bodyfile="aruco_ros/aruco_ros/src/aruco_ros_utils.cpp" bodystart="122" bodyend="139" declfile="aruco_ros/aruco_ros/include/aruco_ros/aruco_ros_utils.h" declline="34" declcolumn="28"/>
+        <references refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" compoundref="_oracle_8rst_8txt" startline="21">Marker</references>
         <references refid="simple__double_8cpp_1a46ba90e214408b92c4329be16a5cd5d0" compoundref="simple__double_8cpp" startline="68">marker_size</references>
       </memberdef>
       </sectiondef>

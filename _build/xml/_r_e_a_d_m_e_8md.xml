@@ -7,10 +7,558 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline><highlight class="normal">&lt;div<sp/>id=&quot;top&quot;&gt;&lt;/div&gt;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>Experimental<sp/>Robotics<sp/>Assignment<sp/>3<sp/>--<sp/>README</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">project<sp/>for<sp/>E.R.L.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PROJECT<sp/>SHIELDS<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>I&apos;m<sp/>using<sp/>markdown<sp/>&quot;reference<sp/>style&quot;<sp/>links<sp/>for<sp/>readability.</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>Reference<sp/>links<sp/>are<sp/>enclosed<sp/>in<sp/>brackets<sp/>[<sp/>]<sp/>instead<sp/>of<sp/>parentheses<sp/>(<sp/>).</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>See<sp/>the<sp/>bottom<sp/>of<sp/>this<sp/>document<sp/>for<sp/>the<sp/>declaration<sp/>of<sp/>the<sp/>reference<sp/>variables</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>for<sp/>contributors-url,<sp/>forks-url,<sp/>etc.<sp/>This<sp/>is<sp/>an<sp/>optional,<sp/>concise<sp/>syntax<sp/>you<sp/>may<sp/>use.</highlight></codeline>
+<codeline><highlight class="normal">***<sp/>https://www.markdownguide.org/basic-syntax/#reference-style-links</highlight></codeline>
+<codeline><highlight class="normal">--&gt;</highlight></codeline>
+<codeline><highlight class="normal">[![Forks][forks-shield]][forks-url]</highlight></codeline>
+<codeline><highlight class="normal">[![Stargazers][stars-shield]][stars-url]</highlight></codeline>
+<codeline><highlight class="normal">[![Issues][issues-shield]][issues-url]</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PROJECT<sp/>LOGO<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;div<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/fedehub/expTest&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;img<sp/>src=&quot;media/miscellaneous/logo-black.png&quot;<sp/>alt=&quot;Logo&quot;<sp/>width=&quot;200&quot;<sp/>height=&quot;100&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/a&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;h3<sp/>align=&quot;center&quot;&gt;Experimental<sp/>Robotics<sp/>Laboratory&lt;/h3&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;p<sp/>align=&quot;center&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>First<sp/>assignment<sp/>for<sp/>the<sp/>Experimental<sp/>Robotics<sp/>laboratory<sp/>course<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/fedehub/expTest/doc&quot;&gt;&lt;strong&gt;Explore<sp/>the<sp/>docs<sp/>»&lt;/strong&gt;&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;br<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/fedehub/expTest/demo&quot;&gt;View<sp/>Demo&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>·</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/fedehub/expTest/issues&quot;&gt;Report<sp/>Bug&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>·</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;https://github.com/fedehub/expTest/issues&quot;&gt;Request<sp/>Feature&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/p&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/div&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>TABLE<sp/>OF<sp/>CONTENTS<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;details&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;summary&gt;Table<sp/>of<sp/>Contents&lt;/summary&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;ol&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;#about-the-project&quot;&gt;About<sp/>The<sp/>Project&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#built-with&quot;&gt;Built<sp/>With&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;#getting-started&quot;&gt;Getting<sp/>Started&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#software<sp/>architechture&quot;&gt;Software<sp/>architechture&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#ROS<sp/>node<sp/>description&quot;&gt;ROS<sp/>node<sp/>description&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=#rossrv&gt;rossrv&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=#rosmsg&gt;rosmsg&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=#rostopic&gt;rostopic&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=#rosparam&gt;rosparam&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#rqt_graph&quot;&gt;rqt_graph&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#installation&quot;&gt;Installation&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#running<sp/>procedure&quot;&gt;Running<sp/>procedure&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#usage&quot;&gt;Usage&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;a<sp/>href=&quot;#Working<sp/>hypothesis<sp/>and<sp/>environment&quot;&gt;Working<sp/>hypothesis<sp/>and<sp/>environment&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#System&apos;s<sp/>features&quot;&gt;System&apos;s<sp/>features&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#System&apos;s<sp/>limitations&quot;&gt;System&apos;s<sp/>limitations&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#Possible<sp/>technical<sp/>Improvements&quot;&gt;Possible<sp/>technical<sp/>Improvements&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;/ul&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#roadmap&quot;&gt;Roadmap&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#contributing&quot;&gt;Contributing&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#license&quot;&gt;License&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;li&gt;&lt;a<sp/>href=&quot;#acknowledgments&quot;&gt;Acknowledgments&lt;/a&gt;&lt;/li&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/ol&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;/details&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ABOUT<sp/>THE<sp/>PROJECT<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>About<sp/>The<sp/>Project</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Built<sp/>With</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[Smach][1]</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Armor][2]</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[ROS][4]</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>GETTING<sp/>STARTED<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Getting<sp/>Started</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Under<sp/>the<sp/>following<sp/>sections,<sp/>the<sp/>software<sp/>architecture<sp/>is<sp/>briefly<sp/>introduced,<sp/>along<sp/>with<sp/>the<sp/>prerequisites<sp/>and<sp/>installation<sp/>procedures.<sp/>Then,<sp/>a<sp/>quick<sp/>video<sp/>demonstration<sp/>showing<sp/>the<sp/>overall<sp/>functioning<sp/>is<sp/>provided<sp/>and<sp/>system’s<sp/>limitations<sp/>are<sp/>discussed</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Software<sp/>architechture</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>how<sp/>to<sp/>make<sp/>a<sp/>ref<sp/>to<sp/>a<sp/>specific<sp/>section<sp/></highlight></codeline>
+<codeline><highlight class="normal">the<sp/>**rqt_graph**<sp/>&lt;a<sp/>href=&quot;#rqt_graph&quot;&gt;section&lt;/a&gt;</highlight></codeline>
+<codeline><highlight class="normal">--&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/>Please<sp/>consider<sp/>that<sp/>**consistent<sp/>hypothesis**<sp/>have<sp/>been<sp/>defined<sp/>as<sp/>COMPLETED<sp/>but<sp/>NOT<sp/>INCONSISTENT<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>*REMARK*<sp/>A<sp/>consistent<sp/>hypothesis<sp/>is<sp/><sp/>defined<sp/>as<sp/>*completed*<sp/>when<sp/>there<sp/>occurs<sp/>one<sp/>role<sp/>for<sp/>each<sp/>class<sp/>(i.e.,<sp/>one<sp/>occourence<sp/>of<sp/>what,<sp/>one<sp/>occourence<sp/>for<sp/>who,<sp/>one<sp/>occourence<sp/>for<sp/>where<sp/>).<sp/></highlight></codeline>
+<codeline><highlight class="normal">A<sp/>straightforward<sp/>example<sp/>of<sp/>such<sp/>hypothesis<sp/>is<sp/>[ID2][12],<sp/>whose<sp/>definition<sp/>is<sp/>here<sp/>below<sp/>reported</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">ID2_1:<sp/>[&apos;where&apos;,<sp/>&apos;Study&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID2_2:<sp/>[&apos;who&apos;,<sp/>&apos;Col.Mustard&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID2_3:<sp/>[&apos;what&apos;,<sp/>&apos;Rope&apos;]</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&gt;<sp/>*REMARK*<sp/>An<sp/>hypothesis,<sp/>is<sp/>defined<sp/>as<sp/>*inconsistent*<sp/>when<sp/>there<sp/>occurs<sp/>more<sp/>than<sp/>one<sp/>role<sp/>for<sp/>each<sp/>class<sp/>(i.e.<sp/>2<sp/>or<sp/>more<sp/>occourences<sp/>of<sp/>who,<sp/>where,<sp/>what)<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">A<sp/>clear<sp/>example<sp/>of<sp/>such<sp/>hypothesis<sp/>is<sp/>[ID4][12],<sp/>whose<sp/>definition<sp/>is<sp/>here<sp/>below<sp/>reported</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">ID4_1:<sp/>[&apos;where&apos;,<sp/>&apos;Library&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID4_2:<sp/>[&apos;who&apos;,<sp/>&apos;Mrs.White&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID4_3:<sp/>[&apos;what&apos;,<sp/>&apos;LeadPipe&apos;]</highlight></codeline>
+<codeline><highlight class="normal">ID4_4:<sp/>[&apos;where&apos;,<sp/>&apos;Diningoom&apos;]</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>Software<sp/>architecture,<sp/>temporal<sp/>diagram<sp/>and<sp/>states<sp/>diagrams<sp/>(if<sp/>applicable).<sp/>Each<sp/>diagram<sp/>should<sp/>be<sp/>commented<sp/>with<sp/>a<sp/>paragraph,<sp/>plus<sp/>a<sp/>list<sp/>describing<sp/>ROS<sp/>messages<sp/>and<sp/>parameters.<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>ROS<sp/>node<sp/>description</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Within<sp/>the<sp/>scripts<sp/>folder,<sp/>the<sp/>following<sp/>nodes<sp/>are<sp/>listed:<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[Nodo1.py][5]:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[robotcontroller.py][6]:<sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[navigation.py][7]:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[oracle.py][8]:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>rossrv<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**query_oracle**:<sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&gt;<sp/>msg<sp/>type:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ask_for_hint**:<sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&gt;<sp/>msg<sp/>type:<sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**detectiBotSwitch**:<sp/><sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&gt;<sp/>msg<sp/>type<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>rosmsg</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>rostopic</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>aforementioned<sp/>message<sp/>type<sp/>use<sp/>the<sp/>`/robotPose`<sp/>topic.<sp/>It<sp/>presents<sp/>as:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Publishers:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[/navigation][7]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[/controller][6]<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Subscribers:**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[/navigation][7]</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>rosparameters<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>rqt_graph</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>*rqt_graph*<sp/>is<sp/>a<sp/>tool<sp/>that<sp/>shows<sp/>the<sp/>correlation<sp/>among<sp/>active<sp/>nodes<sp/>and<sp/>messages<sp/>being<sp/>transmitted<sp/>on<sp/>the<sp/>ROS<sp/>network<sp/>as<sp/>a<sp/>diagram.<sp/>After<sp/>executing<sp/>all<sp/>nodes<sp/>(or<sp/>after<sp/>launching<sp/>the<sp/>roslaunch<sp/>file),<sp/>launch<sp/>the<sp/>**rqt_graph**<sp/>through<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>rqt_graph<sp/>rqt_graph</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>the<sp/>figure<sp/>below,<sp/>circles<sp/>represent<sp/>nodes<sp/>and<sp/>squares<sp/>represent<sp/>topic<sp/>messages.<sp/>The<sp/>arrow<sp/>instead,<sp/>indicates<sp/>the<sp/>transmission<sp/>of<sp/>the<sp/>message!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Installation<sp/>procedure</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>The<sp/>fastest<sp/>way</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Clone<sp/>the<sp/>repo</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/fedehub/ExperimentalRoboticsAssignment3.git</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Move<sp/>to<sp/>the<sp/>directory<sp/>and<sp/>enable<sp/>permissions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>cd<sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>chmod<sp/>+x<sp/>&quot;./compile,sh</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>launch<sp/>the<sp/>`compile.sh`<sp/>file</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>launch<sp/>the<sp/>project<sp/>simulation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">5.<sp/>pub<sp/>a<sp/>message<sp/>from<sp/>terminal,<sp/>when<sp/>prompted</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>step<sp/>by<sp/>step<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">docker<sp/>pull<sp/>carms84/exproblab</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">docker<sp/>run<sp/>-it<sp/>--name<sp/>exprob<sp/>-p<sp/>6080:80<sp/>-p<sp/>5900:5900<sp/>carms84/exproblab</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>ros_ws/src<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/fedehub/ExperimentalRoboticsAssignment3.git</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>further<sp/>changes<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>PLEASE<sp/>INSERT<sp/>HERE<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Workspace<sp/>building<sp/>e<sp/>launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>/home/ros_ws/</highlight></codeline>
+<codeline><highlight class="normal">catkin_make</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```python</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Running<sp/>procedure</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>including<sp/>all<sp/>the<sp/>steps<sp/>to<sp/>display<sp/>the<sp/>robot&apos;s<sp/>behavior<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">To<sp/>appreciate<sp/>the<sp/>robot&apos;s<sp/>behaviour,<sp/>first<sp/>of<sp/>all:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Alternatively,<sp/>it<sp/>is<sp/>also<sp/>possible<sp/>to<sp/>launch<sp/>each<sp/>node,<sp/>sequentially,<sp/>after<sp/>having<sp/>started<sp/>the<sp/>`roscore`:</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">roscore<sp/>&amp;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Then,</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>expTest<sp/>oracle.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">It<sp/>follows,</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>expTest<sp/>navigation.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">then,<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>expTest<sp/>detectiBot.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">and<sp/>finally,</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>expTest<sp/>robotController.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">By<sp/>starting<sp/>the<sp/>smach_viewer<sp/>node</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>smach_viewer<sp/>smach_viewer.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">it<sp/>is<sp/>possible<sp/>to<sp/>see<sp/>how<sp/>the<sp/>logic<sp/>is<sp/>implemented<sp/>and<sp/>how<sp/>the<sp/>transitions<sp/>take<sp/>place</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>USAGE<sp/>EXAMPLES<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>most<sp/>relevant<sp/>aspects<sp/>of<sp/>the<sp/>project<sp/>and<sp/>a<sp/>brief<sp/>video<sp/>tutorial<sp/>on<sp/>how<sp/>to<sp/>launch<sp/>the<sp/>simulation<sp/>can<sp/>be<sp/>found<sp/>[here][105]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>A<sp/>commented<sp/>small<sp/>video,<sp/>a<sp/>GIF<sp/>or<sp/>screenshots<sp/>showing<sp/>the<sp/>relevant<sp/>parts<sp/>of<sp/>the<sp/>running<sp/>code.<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Working<sp/>hypothesis<sp/>and<sp/>environment<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/><sp/>architecture<sp/><sp/>is<sp/>designed<sp/>for<sp/>providing<sp/>a<sp/>raw<sp/>simplification<sp/>of<sp/>the<sp/>Cluedo<sp/>Game.<sp/>Hints<sp/>are<sp/>set<sp/>a-priori,<sp/>as<sp/>well<sp/>as<sp/>true<sp/>hypothesis<sp/>that<sp/>leads<sp/>to<sp/>the<sp/>game’s<sp/>end,<sp/>once<sp/>collected.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">All<sp/>choices<sp/>were<sp/>made<sp/>with<sp/>the<sp/>aim<sp/>of<sp/>making<sp/>the<sp/>system<sp/>as<sp/>modular<sp/>and<sp/>flexible<sp/>as<sp/>possible.<sp/>Despite<sp/>this,<sp/>certain<sp/>limitations<sp/>make<sp/>the<sp/>system<sp/>quite<sp/>unrealistic<sp/>but<sp/>functional.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>System&apos;s<sp/>features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Most<sp/>of<sp/>them<sp/>have<sp/>been<sp/>already<sp/>discussed<sp/>in<sp/>the<sp/>Software<sp/>architecture’s<sp/>section.<sp/>The<sp/>most<sp/>relevant<sp/>one<sp/>is<sp/>that<sp/>of<sp/>having<sp/>a<sp/>robot<sp/>capable<sp/>of<sp/>exploiting<sp/>an<sp/>ontology<sp/>to<sp/>solve<sp/><sp/>a<sp/>problem.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>System&apos;s<sp/>limitations</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Possible<sp/>technical<sp/>Improvements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">type<sp/>here<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ROADMAP<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Roadmap</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[x]<sp/>Complete<sp/>the<sp/>introduction<sp/>of<sp/>the<sp/>template<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[<sp/>]<sp/>Describe<sp/>the<sp/>software<sp/>architechture</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Component<sp/>diagram<sp/>(*not<sp/>mandatory*)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Temporal<sp/>diagram<sp/>+<sp/>comments</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>States<sp/>diagrams,<sp/>whether<sp/>applicable<sp/>+<sp/>comments</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Create<sp/>a<sp/>list<sp/>describing<sp/>ROS<sp/>messages<sp/>and<sp/>parameters<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[<sp/>]<sp/>Describe<sp/>the<sp/>installation<sp/>steps<sp/>and<sp/>the<sp/>running<sp/>procedures</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[<sp/>]<sp/>Create<sp/>a<sp/>dedicated<sp/>paragraph</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>[<sp/>]<sp/>Include<sp/>all<sp/>the<sp/>steps<sp/>to<sp/>display<sp/>the<sp/>robot&apos;s<sp/>behaviour</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[<sp/>]<sp/>Show<sp/>in<sp/>the<sp/>&quot;usage&quot;<sp/>section<sp/>the<sp/>running<sp/>code</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Create<sp/>a<sp/>small<sp/>video<sp/>tutorial<sp/>of<sp/>the<sp/>launch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Create<sp/>a<sp/>small<sp/>animated<sp/>gif<sp/>of<sp/>the<sp/>terminal<sp/>while<sp/>running<sp/>code</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>[<sp/>]<sp/>Describe<sp/>the<sp/>Working<sp/>hypothesis<sp/>and<sp/>environment</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Dedicated<sp/>section<sp/>for<sp/>System&apos;s<sp/>features</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Dedicated<sp/>section<sp/>for<sp/>System&apos;s<sp/>limitations</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>[<sp/>]<sp/>Dedicated<sp/>section<sp/>for<sp/>Possible<sp/>technical<sp/>improvements</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">See<sp/>the<sp/>[open<sp/>issues](https://github.com/fedehub/expTest/issues)<sp/>for<sp/>a<sp/>full<sp/>list<sp/>of<sp/>proposed<sp/>features<sp/>(and<sp/>known<sp/>issues).</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>CONTRIBUTING<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Contributing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>have<sp/>a<sp/>suggestion<sp/>that<sp/>would<sp/>make<sp/>this<sp/>better,<sp/>please<sp/>fork<sp/>the<sp/>repo<sp/>and<sp/>create<sp/>a<sp/>pull<sp/>request.<sp/>You<sp/>can<sp/>also<sp/>simply<sp/>open<sp/>an<sp/>issue<sp/>with<sp/>the<sp/>tag<sp/>&quot;enhancement&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Fork<sp/>the<sp/>Project</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Create<sp/>your<sp/>Feature<sp/>Branch<sp/>(`git<sp/>checkout<sp/>-b<sp/>feature/AmazingFeature`)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>Commit<sp/>your<sp/>Changes<sp/>(`git<sp/>commit<sp/>-m<sp/>&apos;Add<sp/>some<sp/>AmazingFeature&apos;`)</highlight></codeline>
+<codeline><highlight class="normal">4.<sp/>Push<sp/>to<sp/>the<sp/>Branch<sp/>(`git<sp/>push<sp/>origin<sp/>feature/AmazingFeature`)</highlight></codeline>
+<codeline><highlight class="normal">5.<sp/>Open<sp/>a<sp/>Pull<sp/>Request</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>LICENSE<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>License</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Distributed<sp/>under<sp/>none<sp/>License.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>CONTACT<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Contact</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Federico<sp/>Civetta<sp/>-<sp/>s4194543@studenti.unige.it</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Project<sp/>Link:<sp/>[https://github.com/fedehub/expTest](https://github.com/fedehub/expTest)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>ACKNOWLEDGMENTS<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>List<sp/>of<sp/>resources</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*<sp/>[Viewing<sp/>state<sp/>machine](http://wiki.ros.org/smach/Tutorials/Smach%20Viewer)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Smach](http://wiki.ros.org/smach)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Armor](https://github.com/EmaroLab/armor)</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>[Protègè](https://protege.stanford.edu)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;p<sp/>align=&quot;right&quot;&gt;(&lt;a<sp/>href=&quot;#top&quot;&gt;back<sp/>to<sp/>top&lt;/a&gt;)&lt;/p&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>MARKDOWN<sp/>LINKS<sp/>&amp;<sp/>IMAGES<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;!--<sp/>https://www.markdownguide.org/basic-syntax/#reference-style-links<sp/>--&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[forks-shield]:<sp/><sp/><sp/><sp/><sp/>https://img.shields.io/github/forks/fedehub/ExperimentalRoboticsAssignment3</highlight></codeline>
+<codeline><highlight class="normal">[forks-url]:<sp/>https://github.com/fedehub/ExperimentalRoboticsAssignment3/network/members</highlight></codeline>
+<codeline><highlight class="normal">[stars-shield]:<sp/><sp/><sp/><sp/><sp/>https://img.shields.io/github/stars/fedehub/ExperimentalRoboticsAssignment3</highlight></codeline>
+<codeline><highlight class="normal">[stars-url]:<sp/>https://github.com/fedehub/ExperimentalRoboticsAssignment3/stargazers</highlight></codeline>
+<codeline><highlight class="normal">[issues-shield]:<sp/><sp/><sp/><sp/>https://img.shields.io/github/issues/fedehub/ExperimentalRoboticsAssignment3</highlight></codeline>
+<codeline><highlight class="normal">[issues-url]:<sp/>https://github.com/fedehub/expTest/issues</highlight></codeline>
+<codeline><highlight class="normal">[license-shield]:<sp/>https://img.shields.io/github/license/fedehub/ExperimentalRoboticsAssignment3</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[1]:<sp/>http://wiki.ros.org/smach</highlight></codeline>
+<codeline><highlight class="normal">[2]:<sp/>https://github.com/EmaroLab/armor</highlight></codeline>
+<codeline><highlight class="normal">[3]:<sp/>http://wiki.ros.org/smach/Tutorials/Smach%20Viewer</highlight></codeline>
+<codeline><highlight class="normal">[4]:<sp/>http://wiki.ros.org</highlight></codeline>
+<codeline><highlight class="normal">[5]:<sp/>&lt;sherlbotH_holes.py&gt;</highlight></codeline>
+<codeline><highlight class="normal">[6]:<sp/>&lt;robotcontrolelr&gt;</highlight></codeline>
+<codeline><highlight class="normal">[7]:<sp/>&lt;navigation&gt;</highlight></codeline>
+<codeline><highlight class="normal">[8]:<sp/>&lt;oracle&gt;</highlight></codeline>
+<codeline><highlight class="normal">[9]:<sp/>&lt;HypoID_Msg&gt;</highlight></codeline>
+<codeline><highlight class="normal">[10]:<sp/>&lt;Hint_Msg&gt;</highlight></codeline>
+<codeline><highlight class="normal">[11]:<sp/>&lt;BotMsg_Msg&gt;</highlight></codeline>
+<codeline><highlight class="normal">[12]:<sp/>&lt;param.yaml<sp/>file&gt;</highlight></codeline>
+<codeline><highlight class="normal">[13]:<sp/>&lt;msgFolder&gt;</highlight></codeline>
+<codeline><highlight class="normal">[14]:<sp/>&lt;robotPose.msg&gt;</highlight></codeline>
+<codeline><highlight class="normal">[15]:<sp/>armor_manipulation_client.py</highlight></codeline>
+<codeline><highlight class="normal">[16]:<sp/>https://ontogenesis.knowledgeblog.org/1260/</highlight></codeline>
+<codeline><highlight class="normal">[17]:<sp/>http://emarolab.github.io/armor_py_api/armor_utils_client.html</highlight></codeline>
+<codeline><highlight class="normal">[18]:<sp/>https://docs.python.org/3/library/queue.html</highlight></codeline>
+<codeline><highlight class="normal">[19]:<sp/>https://protege.stanford.edu</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[100]:<sp/>https://github.com/fedehub/expTest/blob/main/media/componentDiagram/componentDiagram.jpg</highlight></codeline>
+<codeline><highlight class="normal">[101]:<sp/>https://github.com/fedehub/expTest/blob/main/media/rqt/rosgraph.svg</highlight></codeline>
+<codeline><highlight class="normal">[102]:<sp/>https://github.com/fedehub/expTest/blob/main/media/sequenceDiagram/sequenceDiagram.jpg</highlight></codeline>
+<codeline><highlight class="normal">[103]:<sp/>https://github.com/fedehub/expTest/blob/main/media/stateDiagram/stateDiagram.jpg</highlight></codeline>
+<codeline><highlight class="normal">[104]:<sp/>https://github.com/fedehub/expTest/blob/main/media/entity_graph.jpg</highlight></codeline>
+<codeline><highlight class="normal">[105]:<sp/>&lt;youTubeVideo&gt;</highlight></codeline>
+<codeline><highlight class="normal">[106]:<sp/>https://github.com/fedehub/expTest/blob/main/media/gifs/smach.gif</highlight></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

@@ -47,17 +47,13 @@
 <sect1 id="md_documents_proj-tests_1autotoc_md11">
 <title>The entire project</title>
 <para>shell 1:</para>
-<para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>erl_assignment_3_robot<sp/>detectibot_environment.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>erl_assignment_3_robot<sp/>detectibot_environment_2.launch<sp/>2&gt;/dev/null</highlight></codeline>
 </programlisting></para>
 <para>shell 2:</para>
-<para><programlisting filename=".bash"><codeline><highlight class="normal">rosrun<sp/>erl_assignment_3<sp/>img_echo<sp/>&amp;</highlight></codeline>
-<codeline><highlight class="normal">rosrun<sp/>erl3<sp/>final_oracle<sp/>&amp;</highlight></codeline>
-<codeline><highlight class="normal">rosrun<sp/>erl_assignment_3<sp/>navigation.py<sp/>&amp;</highlight></codeline>
-<codeline><highlight class="normal">rosrun<sp/>erl_assignment_3<sp/>detectibot_magnifier</highlight></codeline>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>erl_assignment_3<sp/>launch_nodes.launch</highlight></codeline>
 </programlisting></para>
 <para>shell 3:</para>
-<para><programlisting filename=".bash"><codeline><highlight class="normal">rosrun<sp/>erl_assignment_3<sp/>cluedo_kb.py<sp/>&amp;</highlight></codeline>
-<codeline><highlight class="normal">rosrun<sp/>erl_assignment_3<sp/>state_machine.py</highlight></codeline>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">rosrun<sp/>erl_assignment_3<sp/>state_machine.py</highlight></codeline>
 </programlisting> </para>
 </sect1>
     </detaileddescription>

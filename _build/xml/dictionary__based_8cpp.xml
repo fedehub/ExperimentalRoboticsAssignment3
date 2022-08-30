@@ -142,10 +142,10 @@
 <codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dicttypename;</highlight></codeline>
 <codeline lineno="64"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DictionaryBased::toMat(uint64_t<sp/>code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbits_sq,<sp/>cv::Mat&amp;<sp/>out)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DictionaryBased::toMat(uint64_t<sp/><ref refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kindref="member">code</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nbits_sq,<sp/>cv::Mat&amp;<sp/>out)</highlight></codeline>
 <codeline lineno="67"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/>out.create(nbits_sq,<sp/>nbits_sq,<sp/>CV_8UC1);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::bitset&lt;64&gt;<sp/>bs(code);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>std::bitset&lt;64&gt;<sp/>bs(<ref refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kindref="member">code</ref>);</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>curbit<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>r<sp/>=<sp/>0;<sp/>r<sp/>&lt;<sp/>nbits_sq;<sp/>r++)</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
@@ -247,8 +247,8 @@
 <codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>external<sp/>border<sp/>should<sp/>be<sp/>entirely<sp/>black</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/>cv::Mat<sp/>nonZeros(bits_withborder,<sp/>bits_withborder,<sp/>CV_32SC1);</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/>cv::Mat<sp/>nValues(bits_withborder,<sp/>bits_withborder,<sp/>CV_32SC1);</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/>nonZeros.setTo(cv::Scalar::all(0));</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/>nValues.setTo(cv::Scalar::all(0));</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/>nonZeros.setTo(<ref refid="_r_e_a_d_m_e_8md_8txt_1a4500f6927956acf4563d5436fc7f739a" kindref="member">cv::Scalar::all</ref>(0));</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>nValues.setTo(<ref refid="_r_e_a_d_m_e_8md_8txt_1a4500f6927956acf4563d5436fc7f739a" kindref="member">cv::Scalar::all</ref>(0));</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>thres_img.rows;<sp/>y++)</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uchar<sp/>*ptr<sp/>=<sp/>thres_img.ptr&lt;uchar&gt;(y);</highlight></codeline>
@@ -357,13 +357,13 @@
 <codeline lineno="278"><highlight class="normal"></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="279"><highlight class="normal"></highlight></codeline>
 <codeline lineno="280"><highlight class="normal"></highlight><highlight class="comment">//<sp/>convert<sp/>matrix<sp/>of<sp/>(0,<sp/>1)s<sp/>in<sp/>a<sp/>64<sp/>bit<sp/>value</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="281"><highlight class="normal">uint64_t<sp/>DictionaryBased::touulong(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/>code)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">uint64_t<sp/>DictionaryBased::touulong(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>cv::Mat&amp;<sp/><ref refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kindref="member">code</ref>)</highlight></codeline>
 <codeline lineno="282"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="283"><highlight class="normal"><sp/><sp/>std::bitset&lt;64&gt;<sp/>bits;</highlight></codeline>
 <codeline lineno="284"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bidx<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>code.rows<sp/>-<sp/>1;<sp/>y<sp/>&gt;=<sp/>0;<sp/>y--)</highlight></codeline>
-<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>code.cols<sp/>-<sp/>1;<sp/>x<sp/>&gt;=<sp/>0;<sp/>x--)</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bits[bidx++]<sp/>=<sp/>code.at&lt;uchar&gt;(y,<sp/>x);</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kindref="member">code</ref>.rows<sp/>-<sp/>1;<sp/>y<sp/>&gt;=<sp/>0;<sp/>y--)</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kindref="member">code</ref>.cols<sp/>-<sp/>1;<sp/>x<sp/>&gt;=<sp/>0;<sp/>x--)</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>bits[bidx++]<sp/>=<sp/><ref refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kindref="member">code</ref>.at&lt;uchar&gt;(y,<sp/>x);</highlight></codeline>
 <codeline lineno="288"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>bits.to_ullong();</highlight></codeline>
 <codeline lineno="289"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"></highlight></codeline>

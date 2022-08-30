@@ -664,6 +664,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/src/aruco/ippe.cpp" line="422" column="6" bodyfile="aruco_ros/aruco/src/aruco/ippe.cpp" bodystart="422" bodyend="531" declfile="aruco_ros/aruco/include/aruco/ippe.h" declline="160" declcolumn="6"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" compoundref="_r_e_a_d_m_e_8md_8txt" startline="341">p</references>
         <referencedby refid="namespacearuco_1ada065824d7de806dcd082f8a8ebd1e75" compoundref="ippe_8cpp" startline="134" endline="216">solvePoseOfCentredSquare</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacearuco_1a8cd5a905cfcdfe4362406b9c7a6ab079" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -824,6 +825,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/src/aruco/marker.cpp" line="322" column="6" bodyfile="aruco_ros/aruco/src/aruco/marker.cpp" bodystart="322" bodyend="325"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" compoundref="_r_e_a_d_m_e_8md_8txt" startline="341">p</references>
         <referencedby refid="classexample__py_1_1image__converter_1a8eb0095c652c0dd58e92dbfa3831bcea" compoundref="example__py_8py" startline="21" endline="39">example_py.image_converter.callback</referencedby>
         <referencedby refid="classexample__t_1_1image__feature_1a60a162ed0cac939db1c2bccd3d884ca6" compoundref="example__t_8py" startline="38" endline="64">example_t.image_feature.callback</referencedby>
         <referencedby refid="namespaceexample__py_1aae694318dd62975323ca7eda7f0b8723" compoundref="example__py_8py" startline="40" endline="49">example_py.main</referencedby>

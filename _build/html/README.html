@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Experimental Robotics Assignment 3 – README &mdash; ExperimentalRoboticsAssignment3 v1.0.0 documentation</title>
+  <title>About The Project &mdash; ExperimentalRoboticsAssignment3 v1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -58,7 +58,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Experimental Robotics Assignment 3 – README</li>
+      <li>About The Project</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/README.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -68,9 +68,452 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="tex2jax_ignore mathjax_ignore section" id="experimental-robotics-assignment-3-readme">
-<h1>Experimental Robotics Assignment 3 – README<a class="headerlink" href="#experimental-robotics-assignment-3-readme" title="Permalink to this headline"></a></h1>
-<p>project for E.R.L.</p>
+  <div id="top"></div>
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+<p><a class="reference external" href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/network/members"><img alt="Forks" src="https://img.shields.io/github/forks/fedehub/ExperimentalRoboticsAssignment3" /></a>
+<a class="reference external" href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/stargazers"><img alt="Stargazers" src="https://img.shields.io/github/stars/fedehub/ExperimentalRoboticsAssignment3" /></a>
+<a class="reference external" href="https://github.com/fedehub/expTest/issues"><img alt="Issues" src="https://img.shields.io/github/issues/fedehub/ExperimentalRoboticsAssignment3" /></a></p>
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/fedehub/expTest">
+    <img src="media/miscellaneous/logo-black.png" alt="Logo" width="200" height="100">
+  </a>
+  <h3 align="center">Experimental Robotics Laboratory</h3>
+  <p align="center">
+    First assignment for the Experimental Robotics laboratory course 
+    <br />
+    <a href="https://github.com/fedehub/expTest/doc"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/fedehub/expTest/demo">View Demo</a>
+    ·
+    <a href="https://github.com/fedehub/expTest/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/fedehub/expTest/issues">Request Feature</a>
+  </p>
+</div>
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#software architechture">Software architechture</a></li>
+        <li><a href="#ROS node description">ROS node description</a></li>
+          <ul>
+            <li><a href=#rossrv>rossrv</a></li>
+            <li><a href=#rosmsg>rosmsg</a></li>
+            <li><a href=#rostopic>rostopic</a></li>
+            <li><a href=#rosparam>rosparam</a></li>
+          </ul>
+        <li><a href="#rqt_graph">rqt_graph</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#running procedure">Running procedure</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li>
+      <a href="#Working hypothesis and environment">Working hypothesis and environment</a>
+      <ul>
+        <li><a href="#System's features">System's features</a></li>
+        <li><a href="#System's limitations">System's limitations</a></li>
+        <li><a href="#Possible technical Improvements">Possible technical Improvements</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
+<!-- ABOUT THE PROJECT -->
+<div class="section" id="about-the-project">
+<h1>About The Project<a class="headerlink" href="#about-the-project" title="Permalink to this headline"></a></h1>
+<!-- PLEASE INSERT HERE -->
+<p align="right">(<a href="#top">back to top</a>)</p>
+<div class="section" id="built-with">
+<h2>Built With<a class="headerlink" href="#built-with" title="Permalink to this headline"></a></h2>
+<!-- PLEASE INSERT HERE -->
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/smach">Smach</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EmaroLab/armor">Armor</a></p></li>
+<li><p><a class="reference external" href="http://wiki.ros.org">ROS</a></p></li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- GETTING STARTED -->
+</div>
+</div>
+<div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h1>
+<p>Under the following sections, the software architecture is briefly introduced, along with the prerequisites and installation procedures. Then, a quick video demonstration showing the overall functioning is provided and system’s limitations are discussed</p>
+<div class="section" id="software-architechture">
+<h2>Software architechture<a class="headerlink" href="#software-architechture" title="Permalink to this headline"></a></h2>
+<!-- how to make a ref to a specific section 
+the **rqt_graph** <a href="#rqt_graph">section</a>
+-->
+<p>Please consider that <strong>consistent hypothesis</strong> have been defined as COMPLETED but NOT INCONSISTENT</p>
+<blockquote>
+<div><p><em>REMARK</em> A consistent hypothesis is  defined as <em>completed</em> when there occurs one role for each class (i.e., one occourence of what, one occourence for who, one occourence for where ).
+A straightforward example of such hypothesis is <span class="xref myst">ID2</span>, whose definition is here below reported</p>
+</div></blockquote>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">ID2_1</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;where&#39;</span><span class="p">,</span> <span class="s1">&#39;Study&#39;</span><span class="p">]</span>
+<span class="n">ID2_2</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;who&#39;</span><span class="p">,</span> <span class="s1">&#39;Col.Mustard&#39;</span><span class="p">]</span>
+<span class="n">ID2_3</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;what&#39;</span><span class="p">,</span> <span class="s1">&#39;Rope&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p><em>REMARK</em> An hypothesis, is defined as <em>inconsistent</em> when there occurs more than one role for each class (i.e. 2 or more occourences of who, where, what)</p>
+</div></blockquote>
+<p>A clear example of such hypothesis is <span class="xref myst">ID4</span>, whose definition is here below reported</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">ID4_1</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;where&#39;</span><span class="p">,</span> <span class="s1">&#39;Library&#39;</span><span class="p">]</span>
+<span class="n">ID4_2</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;who&#39;</span><span class="p">,</span> <span class="s1">&#39;Mrs.White&#39;</span><span class="p">]</span>
+<span class="n">ID4_3</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;what&#39;</span><span class="p">,</span> <span class="s1">&#39;LeadPipe&#39;</span><span class="p">]</span>
+<span class="n">ID4_4</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;where&#39;</span><span class="p">,</span> <span class="s1">&#39;Diningoom&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<!-- PLEASE INSERT HERE -->
+<!-- Software architecture, temporal diagram and states diagrams (if applicable). Each diagram should be commented with a paragraph, plus a list describing ROS messages and parameters. -->
+</div>
+<div class="section" id="ros-node-description">
+<h2>ROS node description<a class="headerlink" href="#ros-node-description" title="Permalink to this headline"></a></h2>
+<p>Within the scripts folder, the following nodes are listed:</p>
+<ul class="simple">
+<li><p><span class="xref myst">Nodo1.py</span>:              <!-- PLEASE INSERT HERE --></p></li>
+<li><p><span class="xref myst">robotcontroller.py</span>:    <!-- PLEASE INSERT HERE --></p></li>
+<li><p><span class="xref myst">navigation.py</span>:         <!-- PLEASE INSERT HERE --></p></li>
+<li><p><span class="xref myst">oracle.py</span>:             <!-- PLEASE INSERT HERE --></p></li>
+</ul>
+</div>
+<div class="section" id="rossrv">
+<h2>rossrv<a class="headerlink" href="#rossrv" title="Permalink to this headline"></a></h2>
+<ul>
+<li><p><strong>query_oracle</strong>: <!-- PLEASE INSERT HERE --></p>
+<blockquote>
+<div><p>msg type:       <!-- PLEASE INSERT HERE --></p>
+</div></blockquote>
+</li>
+<li><p><strong>ask_for_hint</strong>: <!-- PLEASE INSERT HERE --></p>
+<blockquote>
+<div><p>msg type:       <!-- PLEASE INSERT HERE --></p>
+</div></blockquote>
+</li>
+<li><p><strong>detectiBotSwitch</strong>:     <!-- PLEASE INSERT HERE --></p>
+<blockquote>
+<div><p>msg type                <!-- PLEASE INSERT HERE --></p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="rosmsg">
+<h2>rosmsg<a class="headerlink" href="#rosmsg" title="Permalink to this headline"></a></h2>
+<!-- PLEASE INSERT HERE -->
+</div>
+<div class="section" id="rostopic">
+<h2>rostopic<a class="headerlink" href="#rostopic" title="Permalink to this headline"></a></h2>
+<p>The aforementioned message type use the <code class="docutils literal notranslate"><span class="pre">/robotPose</span></code> topic. It presents as:</p>
+<ul class="simple">
+<li><p><strong>Publishers:</strong></p>
+<ul>
+<li><p><span class="xref myst">/navigation</span></p></li>
+<li><p><span class="xref myst">/controller</span></p></li>
+</ul>
+</li>
+<li><p><strong>Subscribers:</strong></p>
+<ul>
+<li><p><span class="xref myst">/navigation</span></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="rosparameters">
+<h2>rosparameters<a class="headerlink" href="#rosparameters" title="Permalink to this headline"></a></h2>
+<!-- PLEASE INSERT HERE -->
+</div>
+<div class="section" id="rqt-graph">
+<h2>rqt_graph<a class="headerlink" href="#rqt-graph" title="Permalink to this headline"></a></h2>
+<p>The <em>rqt_graph</em> is a tool that shows the correlation among active nodes and messages being transmitted on the ROS network as a diagram. After executing all nodes (or after launching the roslaunch file), launch the <strong>rqt_graph</strong> through</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">rqt_graph</span> <span class="n">rqt_graph</span>
+</pre></div>
+</div>
+<p>In the figure below, circles represent nodes and squares represent topic messages. The arrow instead, indicates the transmission of the message!</p>
+<!-- PLEASE INSERT HERE -->
+</div>
+<div class="section" id="installation-procedure">
+<h2>Installation procedure<a class="headerlink" href="#installation-procedure" title="Permalink to this headline"></a></h2>
+</div>
+</div>
+<div class="section" id="the-fastest-way">
+<h1>The fastest way<a class="headerlink" href="#the-fastest-way" title="Permalink to this headline"></a></h1>
+<ol class="arabic simple">
+<li><p>Clone the repo</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   git clone https://github.com/fedehub/ExperimentalRoboticsAssignment3.git
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Move to the directory and enable permissions</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   <span class="nb">cd</span> &lt;!-- PLEASE INSERT HERE --&gt;
+
+   chmod +x <span class="s2">&quot;./compile,sh</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>launch the <code class="docutils literal notranslate"><span class="pre">compile.sh</span></code> file</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   &lt;!-- PLEASE INSERT HERE --&gt;
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>launch the project simulation</p></li>
+</ol>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>   &lt;!-- PLEASE INSERT HERE --&gt;
+</pre></div>
+</div>
+<ol class="arabic simple" start="5">
+<li><p>pub a message from terminal, when prompted</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>&lt;!-- PLEASE INSERT HERE --&gt;
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-by-step">
+<h1>step by step<a class="headerlink" href="#step-by-step" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker pull carms84/exproblab
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker run -it --name exprob -p <span class="m">6080</span>:80 -p <span class="m">5900</span>:5900 carms84/exproblab
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ros_ws/src 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/fedehub/ExperimentalRoboticsAssignment3.git
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="section" id="further-changes">
+<h2>further changes …<a class="headerlink" href="#further-changes" title="Permalink to this headline"></a></h2>
+<!-- PLEASE INSERT HERE -->
+</div>
+</div>
+<div class="section" id="workspace-building-e-launch">
+<h1>Workspace building e launch<a class="headerlink" href="#workspace-building-e-launch" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /home/ros_ws/
+catkin_make
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>type here …</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p align="right">(<a href="#top">back to top</a>)</p>
+<div class="section" id="running-procedure">
+<h2>Running procedure<a class="headerlink" href="#running-procedure" title="Permalink to this headline"></a></h2>
+<!-- including all the steps to display the robot's behavior -->
+<p>To appreciate the robot’s behaviour, first of all:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roslaunch ...
+</pre></div>
+</div>
+<p>Alternatively, it is also possible to launch each node, sequentially, after having started the <code class="docutils literal notranslate"><span class="pre">roscore</span></code>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>roscore <span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>type here …</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<p>Then,</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosrun expTest oracle.py
+</pre></div>
+</div>
+<p>It follows,</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosrun expTest navigation.py
+</pre></div>
+</div>
+<p>then,</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosrun expTest detectiBot.py
+</pre></div>
+</div>
+<p>and finally,</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosrun expTest robotController.py
+</pre></div>
+</div>
+<p>By starting the smach_viewer node</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>rosrun smach_viewer smach_viewer.py
+</pre></div>
+</div>
+<p>it is possible to see how the logic is implemented and how the transitions take place</p>
+<!-- USAGE EXAMPLES -->
+</div>
+</div>
+<div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h1>
+<p>The most relevant aspects of the project and a brief video tutorial on how to launch the simulation can be found <span class="xref myst">here</span></p>
+<!-- A commented small video, a GIF or screenshots showing the relevant parts of the running code. -->
+<p align="right">(<a href="#top">back to top</a>)</p>
+</div>
+<div class="section" id="working-hypothesis-and-environment">
+<h1>Working hypothesis and environment<a class="headerlink" href="#working-hypothesis-and-environment" title="Permalink to this headline"></a></h1>
+<p>The  architecture  is designed for providing a raw simplification of the Cluedo Game. Hints are set a-priori, as well as true hypothesis that leads to the game’s end, once collected.</p>
+<p>All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite unrealistic but functional.</p>
+<div class="section" id="systems-features">
+<h2>System’s features<a class="headerlink" href="#systems-features" title="Permalink to this headline"></a></h2>
+<p>Most of them have been already discussed in the Software architecture’s section. The most relevant one is that of having a robot capable of exploiting an ontology to solve  a problem.</p>
+</div>
+<div class="section" id="systems-limitations">
+<h2>System’s limitations<a class="headerlink" href="#systems-limitations" title="Permalink to this headline"></a></h2>
+<p>type here …</p>
+</div>
+<div class="section" id="possible-technical-improvements">
+<h2>Possible technical Improvements<a class="headerlink" href="#possible-technical-improvements" title="Permalink to this headline"></a></h2>
+<p>type here …</p>
+<!-- ROADMAP -->
+</div>
+</div>
+<div class="section" id="roadmap">
+<h1>Roadmap<a class="headerlink" href="#roadmap" title="Permalink to this headline"></a></h1>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Complete the introduction of the template</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Describe the software architechture</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Component diagram (<em>not mandatory</em>)</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Temporal diagram + comments</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> States diagrams, whether applicable + comments</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a list describing ROS messages and parameters</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Describe the installation steps and the running procedures</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a dedicated paragraph</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Include all the steps to display the robot’s behaviour</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Show in the “usage” section the running code</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a small video tutorial of the launch</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Create a small animated gif of the terminal while running code</p></li>
+</ul>
+</li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Describe the Working hypothesis and environment</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Dedicated section for System’s features</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Dedicated section for System’s limitations</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Dedicated section for Possible technical improvements</p></li>
+</ul>
+</li>
+</ul>
+<p>See the <a class="reference external" href="https://github.com/fedehub/expTest/issues">open issues</a> for a full list of proposed features (and known issues).</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- CONTRIBUTING -->
+</div>
+<div class="section" id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline"></a></h1>
+<p>If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag “enhancement”</p>
+<ol class="arabic simple">
+<li><p>Fork the Project</p></li>
+<li><p>Create your Feature Branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span> <span class="pre">feature/AmazingFeature</span></code>)</p></li>
+<li><p>Commit your Changes (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">'Add</span> <span class="pre">some</span> <span class="pre">AmazingFeature'</span></code>)</p></li>
+<li><p>Push to the Branch (<code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">feature/AmazingFeature</span></code>)</p></li>
+<li><p>Open a Pull Request</p></li>
+</ol>
+<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- LICENSE -->
+</div>
+<div class="section" id="license">
+<h1>License<a class="headerlink" href="#license" title="Permalink to this headline"></a></h1>
+<p>Distributed under none License.</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- CONTACT -->
+</div>
+<div class="section" id="contact">
+<h1>Contact<a class="headerlink" href="#contact" title="Permalink to this headline"></a></h1>
+<p>Federico Civetta - s4194543&#64;studenti.unige.it</p>
+<p>Project Link: <a class="reference external" href="https://github.com/fedehub/expTest">https://github.com/fedehub/expTest</a></p>
+<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- ACKNOWLEDGMENTS -->
+</div>
+<div class="section" id="list-of-resources">
+<h1>List of resources<a class="headerlink" href="#list-of-resources" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.ros.org/smach/Tutorials/Smach%20Viewer">Viewing state machine</a></p></li>
+<li><p><a class="reference external" href="http://wiki.ros.org/smach">Smach</a></p></li>
+<li><p><a class="reference external" href="https://github.com/EmaroLab/armor">Armor</a></p></li>
+<li><p><a class="reference external" href="https://protege.stanford.edu">Protègè</a></p></li>
+</ul>
+<p align="right">(<a href="#top">back to top</a>)</p>
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 </div>
 
 

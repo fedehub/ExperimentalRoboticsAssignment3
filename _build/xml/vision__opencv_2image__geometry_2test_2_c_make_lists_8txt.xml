@@ -42,13 +42,13 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1" refid="vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1a4b42f14c2129f24b05c38de267eea2bf" refkind="member"><highlight class="normal"><ref refid="vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1a4b42f14c2129f24b05c38de267eea2bf" kindref="member">catkin_add_nosetests</ref>(<ref refid="namespacedirected" kindref="compound">directed</ref>.py)</highlight></codeline>
+<codeline lineno="1" refid="vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1a4b42f14c2129f24b05c38de267eea2bf" refkind="member"><highlight class="normal"><ref refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1a4b42f14c2129f24b05c38de267eea2bf" kindref="member">catkin_add_nosetests</ref>(<ref refid="namespacedirected" kindref="compound">directed</ref>.py)</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal">catkin_add_gtest(${PROJECT_NAME}-utest<sp/>utest.cpp)</highlight></codeline>
-<codeline lineno="4" refid="vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1ae52e1693c2fb9f99471b9cb9caa26588" refkind="member"><highlight class="normal"><ref refid="vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1ae52e1693c2fb9f99471b9cb9caa26588" kindref="member">target_link_libraries</ref>(${PROJECT_NAME}-utest<sp/>${PROJECT_NAME}<sp/>${OpenCV_LIBS})</highlight></codeline>
+<codeline lineno="4" refid="vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1ae52e1693c2fb9f99471b9cb9caa26588" refkind="member"><highlight class="normal"><ref refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1ae52e1693c2fb9f99471b9cb9caa26588" kindref="member">target_link_libraries</ref>(${PROJECT_NAME}-utest<sp/>${PROJECT_NAME}<sp/>${OpenCV_LIBS})</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal">catkin_add_gtest(${PROJECT_NAME}-utest-equi<sp/>utest_equi.cpp)</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"><ref refid="vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1ae52e1693c2fb9f99471b9cb9caa26588" kindref="member">target_link_libraries</ref>(${PROJECT_NAME}-utest-equi<sp/>${PROJECT_NAME}<sp/>${OpenCV_LIBS})</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><ref refid="__build_2html_2__sources_2vision__opencv_2image__geometry_2test_2_c_make_lists_8txt_1ae52e1693c2fb9f99471b9cb9caa26588" kindref="member">target_link_libraries</ref>(${PROJECT_NAME}-utest-equi<sp/>${PROJECT_NAME}<sp/>${OpenCV_LIBS})</highlight></codeline>
     </programlisting>
     <location file="vision_opencv/image_geometry/test/CMakeLists.txt"/>
   </compounddef>

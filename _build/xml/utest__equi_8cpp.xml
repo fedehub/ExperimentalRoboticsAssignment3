@@ -112,7 +112,7 @@
           <type><ref refid="class_equidistant_test" kindref="compound">EquidistantTest</ref></type>
         </param>
         <param>
-          <type>rectifyPoint</type>
+          <type><ref refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1ad1d920a994361476b564374598ced134" kindref="member">rectifyPoint</ref></type>
         </param>
         <briefdescription>
         </briefdescription>
@@ -297,7 +297,7 @@
 <codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="88"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
-<codeline lineno="90" refid="utest__equi_8cpp_1a3bc17170fe1f2929af04532434e69c06" refkind="member"><highlight class="normal"><ref refid="utest__equi_8cpp_1ac4a62f029d22ca89d0217e413c903f40" kindref="member">TEST_F</ref>(<ref refid="class_equidistant_test" kindref="compound">EquidistantTest</ref>,<sp/>rectifyPoint)</highlight></codeline>
+<codeline lineno="90" refid="utest__equi_8cpp_1a3bc17170fe1f2929af04532434e69c06" refkind="member"><highlight class="normal"><ref refid="utest__equi_8cpp_1ac4a62f029d22ca89d0217e413c903f40" kindref="member">TEST_F</ref>(<ref refid="class_equidistant_test" kindref="compound">EquidistantTest</ref>,<sp/><ref refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1ad1d920a994361476b564374598ced134" kindref="member">rectifyPoint</ref>)</highlight></codeline>
 <codeline lineno="91"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Spot<sp/>test<sp/>an<sp/>arbitrary<sp/>point.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
