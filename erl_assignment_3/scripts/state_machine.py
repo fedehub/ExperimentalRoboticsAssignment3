@@ -257,6 +257,10 @@ if __name__ == "__main__":
 		smach.StateMachine.add( 'CHECK', CHECK(), transitions={'NEXT':'SHOW', 'IMPOSSIBLE':'mystery_not_solvable', 'AGAIN':'MOVE'}, remapping={} )
 		smach.StateMachine.add( 'SHOW', SHOW(), transitions={'AGAIN':'MOVE', 'SUCCESS':'mystery_solved'}, remapping={} )
 	
+	# starting the introspection server needed for smachviewer 
+	sis = smach_ros.IntrospectionServer('sm_server', sm, '/sm_root')
+	sis.start()
+	
 	outcome = sm.execute()
 	if outcome=="mystery_solved":
 		rospy.loginfo(f"mystery solved! ID={winnerID} with data(who={case_data['who']},where={case_data['where']},what={case_data['what']}")
