@@ -199,7 +199,7 @@ empty, or just one field is empty, ....)
 * [smach][1]
 * [OpenCV]
 * [MoveIt Frameowrk][6]
-<!-- *[move_base][7] -->
+* [move_base][7]
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -448,11 +448,9 @@ As shown in the above component diagram, this software architechture relies on t
 
 Let's start with the `go_to_point.py` node
 
-![image]()
-
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/61761835/188335448-5d015d4a-7907-4f01-9ad2-02d841a1c627.png" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_state_machine_py.jpg" width= 500 height=500>
 </p>
 
 It implements a ROS service, whose purpose is that of piloting the robot toward a specific target by following a straight line. As it is shown by the component diagram here reported, it subscribes to the `/odom` topic for retrieving the current robot position and once the robot orientation among x and y coordinates has been computed with respect to the target position (obtained by means of the ros parameter server), it publishes on the `/cmd_vel` topic
@@ -477,10 +475,10 @@ Services:
  * /go_to_point/set_logger_level
 
 ```
-### the main.py node 🪢
+### the navigation.py node 🪢
 
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_2_main_py.jpg" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_navigation_py.jpg" width= 500 height=500>
 </p>
 
 This node represents three core structures, even the "brain" of our achitechture. Being ROSPlan a framework  that owns a variety of nodes which encapsulate planning, problem generation and plan execution, a set of clients have been initialised to, subsequently:
@@ -513,7 +511,7 @@ Services:
 Concerning the `cluedo_kb.py` node:
 
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_2_cluedo_kb_py.jpg" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_cluedo_kb_py.jpg" width= 500 height=500>
 </p>
 
 cluedo_KB is a node that acts as a dedicated ontology for the problem under investigation; it provides a processing/reasoning system that provides the functionalities of:
@@ -541,12 +539,12 @@ Services:
  * /mark_wrong_id
 ```
 
-### the action_interface.cpp node  🪢
+### the simulation.cpp node (final_oracle)  🪢
 
 Concerning the `action_interface.cpp` node:
 
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v3/erl_assignment_2_action_interface_cpp.jpg" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl3_final_oracle_cpp" width= 500 height=500>
 </p>
 
 action_interface.cpp implements all rosplan actions in a single ROS node, moreover:
@@ -697,12 +695,12 @@ Services:
 
 ```
 
-### the manipulation.cpp node 🪢
+### the img_echo.cpp node 🪢
 
 Concerning the `manipulation_cpp` node:
 
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_2_manipulation_cpp.jpg" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_img_echo_cpp.jpg" width= 500 height=500>
 </p>
 
 This node is simply devoted to control the Detectibot's manipulator by directly interacting with the MoveIt! framework
@@ -746,10 +744,10 @@ Services:
  * /manipulation/get_loggers
  * /manipulation/set_logger_level
 ```
-### my_simulation.cpp node 🪢
+### The detectibot_magnifier.cpp node 🪢
 
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl2_my_simulation_cpp.jpg" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_detectibot_magnifier.jpg" width= 500 height=500>
 </p>
 
 This is the node provided by professor with some simplification in order to make the siumulation run faster and test wheter the detectibot would have carry out the investigation entirely. 
