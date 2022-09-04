@@ -458,6 +458,12 @@ It implements a ROS service, whose purpose is that of piloting the robot toward 
 Concerning the ros parameters:
 `des_pos_x` and `des_pos_y` are used for keeping track of the target goal to be assigned to the robot in the go_to_point.py node 
 
+Here below we can find a hand-made state diagram 
+
+<p align="center">
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_state_machine_py.jpg" width= 500 height=500>
+</p>
+
 Node interfaces: 
 ```Plain txt
 Node [/state_machine]
