@@ -463,7 +463,11 @@ https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/state
 
 Moreover, an **introspection Server** has been implemented in order to visualize the possible transitions between states, as well as the currently active state and the values of user data that is passed around 
 
-HERE
+
+<p align="center">
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/gifs/state_machine_functioning.gif" width= 500 height=500>
+</p>
+
 
 
 <p align="center">
