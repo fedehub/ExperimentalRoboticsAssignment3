@@ -242,7 +242,7 @@ You can now download the repository inside the `src` folder
 cd /home/ros_ws/src
 git clone https://github.com/fedehub/ExperimentalRoboticsAssignment3
 ```
-Also download `MoveIt 1.1.5` 
+Also download `MoveIt 1.1.5` (If you haven't already done so)
 ```sh
 git clone https://github.com/ros-planning/moveit.git
 cd moveit
@@ -262,6 +262,20 @@ catkin_make
 catkin_make
 catkin_make
 ```
+Then navigate through the directory, in order to find the marker models 
+
+```sh
+cd /ros_ws/src/ExperimentalRoboticsAssignment3/erl3/models 
+```
+copy all files inside the `erl3` models folder and navigate to the `root/.gazebo` directory
+
+```sh
+cd /root/.gazebo/models
+```
+paste the previously copied files, containing all the marker's models, as showm in the animated gif, here below
+
+![optimized_install_models](https://user-images.githubusercontent.com/61761835/188335313-a364d084-6098-49a8-8f91-d8eda227416b.gif)
+
 
 ## Workspace building e launch
 
@@ -409,12 +423,9 @@ https://user-images.githubusercontent.com/61761835/188322232-e940bd45-e460-4505-
 
 Here there is the UML components diagram of the project
 
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/component_diagram.jpg" >
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/component_diagram.jpg" >
 
 Some remarks about the aformentioned components diagram:
-- The main node simply keeps replanning until the mistery gets solved
-- The rosplan block represents a set of nodes provided by the Rosplan framework
-- The component action_interface represents a moltitude of nodes, each implementing one pddl action 
 
 As shown in the above component diagram, this software architechture relies on the synergy of varius modules: 
 
@@ -422,27 +433,26 @@ As shown in the above component diagram, this software architechture relies on t
 
 - [cluedo_kb.py][20]              <!-- PLEASE INSERT HERE -->
 
-- [go_to_point.py][21]            <!-- PLEASE INSERT HERE -->
+- [navigation.py][21]            <!-- PLEASE INSERT HERE -->
 
-- [main.py][22]                   <!-- PLEASE INSERT HERE -->
+- [state_machine.py][22]                   <!-- PLEASE INSERT HERE -->
 
-- [action_interface.cpp][20]      <!-- PLEASE INSERT HERE -->
+- [final_oracle.cpp][23]      <!-- PLEASE INSERT HERE -->
 
-- [manipulation.cpp][21]          <!-- PLEASE INSERT HERE -->
+- [img_echo.cpp][24]          <!-- PLEASE INSERT HERE -->
+
+- [detectibot_magnifier.cpp][25]
 
 
-Here below we can find the nodes devoted for testing purposes 
-
-- [my_simulation.cpp][26]
-- [test_nav.py][23]               
-  
-
-### the go_to_point.py node  🪢
+### the state_machine.py node  🪢
 
 Let's start with the `go_to_point.py` node
 
+![image]()
+
+
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment2/blob/main/media/component_diagrams/v1/erl_assignment_go_to_point_py.jpg" width= 500 height=500>
+<img src="https://user-images.githubusercontent.com/61761835/188335448-5d015d4a-7907-4f01-9ad2-02d841a1c627.png" width= 500 height=500>
 </p>
 
 It implements a ROS service, whose purpose is that of piloting the robot toward a specific target by following a straight line. As it is shown by the component diagram here reported, it subscribes to the `/odom` topic for retrieving the current robot position and once the robot orientation among x and y coordinates has been computed with respect to the target position (obtained by means of the ros parameter server), it publishes on the `/cmd_vel` topic
@@ -938,30 +948,35 @@ Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment2](https
 
 <!-- Nodes -->
 [20]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/scripts/cluedo_kb.py
-[21]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/scripts/go_to_point.py
-[22]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/scripts/main.py
-[23]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/scripts/test_nav.py
-[24]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/src/action_interface.cpp
-[25]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/src/manipulation.cpp
-[26]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl3/src/my_simulation.cpp
-[27]:https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl3/src/simulation.cpp
+[21]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/scripts/navigation.py
+[22]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/scripts/state_machine.py
+[23]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl3/src/simulation.cpp
+[24]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/src/img_echo.cpp
+[25]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/src/detectibot_magnifier.cpp
+
 
 
 <!-- Launchers -->
-[28]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/launch/run_detectibot_actions.launch
-[29]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/launch/run_rosplan.launch
-[30]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/launch/run_simulated_actions.launch
-[31]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/launch/test_plan_and_sim_actions.sh
+[28]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3/launch/launch_nodes.launch
+[29]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_robot/launch/detectibot_environment_2.launch
+[30]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_robot/launch/detectibot_environment.launch
+
 
 <!-- srvs -->
 [32]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_msgs/srv/GetId.srv
 [33]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_msgs/srv/MarkWrongId.srv
-[34]:https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl3/srv/Oracle.srv
+[34]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_msgs/srv/AddHint.srv
+[35]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_msgs/srv/GetArucoIds.srv
+[36]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_msgs/srv/GoToPoint.srv
+[37]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl_assignment_3_msgs/srv/TurnRobot.srv
+[38]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl3/srv/Marker.srv
+[39]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/erl3/srv/Oracle.srv
+
 
 
 <!-- diagrams  -->
-[100]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v3/component_diagram.jpg
-[101]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v3/erl_assignment_3_action_interface_cpp.jpg
+[100]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/component_diagram.jpg
+[101]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_action_interface_cpp.jpg
 [102]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl3_my_simulation_cpp.jpg
 [103]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_cluedo_kb_py.jpg
 [104]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_main_py.jpg
