@@ -462,17 +462,14 @@ Here below we can find a hand-made state diagram:
 https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/state_diagrams/state_diagram.jpg
 
 Moreover, an **introspection Server** has been implemented in order to visualize the possible transitions between states, as well as the currently active state and the values of user data that is passed around 
+For visualising it, just type:
+```sh
+rosrun smach_viewer smach_viewer.py
+```
+> _REMARK:_ Please, remember to import the correct libraries (i.e `import smach, smach_ros`) otherwise some errors may occur! 
 
+![state_machine_functioning](https://user-images.githubusercontent.com/61761835/188337337-e34d0edf-43af-4210-a359-f6ea4fecb22d.gif)
 
-<p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/gifs/state_machine_functioning.gif" width= 500 height=500>
-</p>
-
-
-
-<p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_state_machine_py.jpg" width= 500 height=500>
-</p>
 
 Node interfaces: 
 ```Plain txt
