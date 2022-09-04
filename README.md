@@ -103,7 +103,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project takes inspiration from the earlier ones ([ExperimentalRoboticsAssignment1][] and [ExperimentalRoboticsAssignment2][], respectively) but unlike them, the environment in which detectiBot moves is much more complex. Indeed, it presents several rooms, and 30 ArUco markers (5 markers for each room)
+This project takes inspiration from the earlier ones ([ExperimentalRoboticsAssignment1][9] and [ExperimentalRoboticsAssignment2][10], respectively) but unlike them, the environment in which detectiBot moves is much more complex. Indeed, it presents several rooms, and 30 ArUco markers (5 markers for each room)
 
 This time, each marker corresponds to a hint, which are always given with the following structure:
 
@@ -425,7 +425,15 @@ Here there is the UML components diagram of the project
 
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/component_diagram.jpg" >
 
-Some remarks about the aformentioned components diagram:
+The aforementioned architechture can be seen as a **Deliberative** one, being its pipeline structured as "sense-plan-act"
+- Concerning the "sense" module, there are three types of sense in this architechture 
+    1. Vision - it is implemented by means of Aruco and OpenCV frameworks
+    2. Localisation - It is implemented through Odom topic, in Gazebo
+    3. Mapping - thanks to laser sensors and GMAPPING
+- Concerning the "plan" module, it is implemented through a [smach][1] state machine 
+- Finally, the "move" module, is implemented by means of move_base 
+
+
 
 As shown in the above component diagram, this software architechture relies on the synergy of varius modules: 
 
@@ -899,8 +907,8 @@ Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment2](https
 [6]: https://moveit.ros.org/
 [7]: http://wiki.ros.org/move_base
 [8]: https://github.com/CarmineD8/exp_assignment3
-[9]: 
-[10]: 
+[9]: https://github.com/fedehub/ExperimentalRoboticsAssignment1
+[10]: https://github.com/fedehub/ExperimentalRoboticsAssignment2
 [11]: 
 [12]: 
 [13]: 
