@@ -460,20 +460,16 @@ Concerning the ros parameters:
 
 Node interfaces: 
 ```Plain txt
-Node [/go_to_point]
+Node [/state_machine]
 Publications: 
- * /cmd_vel [geometry_msgs/Twist]
  * /rosout [rosgraph_msgs/Log]
 
 Subscriptions: 
  * /clock [rosgraph_msgs/Clock]
- * /odom [nav_msgs/Odometry]
 
 Services: 
- * /go_to_point
- * /go_to_point/get_loggers
- * /go_to_point/set_logger_level
-
+ * /state_machine/get_loggers
+ * /state_machine/set_logger_level
 ```
 ### the navigation.py node 🪢
 
@@ -494,17 +490,22 @@ Indeed, if detectibot is not able to solve the mistery at the first round, it is
 
 Node Interfaces:
 ```Plain txt 
-Node [/main]
+Node [/navigation]
 Publications: 
+ * /cmd_vel [geometry_msgs/Twist]
+ * /move_base/cancel [actionlib_msgs/GoalID]
+ * /move_base/goal [move_base_msgs/MoveBaseActionGoal]
  * /rosout [rosgraph_msgs/Log]
 
 Subscriptions: 
  * /clock [rosgraph_msgs/Clock]
+ * /odom [nav_msgs/Odometry]
 
 Services: 
- * /main/get_loggers
- * /main/set_logger_level
-
+ * /go_to_point
+ * /navigation/get_loggers
+ * /navigation/set_logger_level
+ * /turn_robot
 ```
 ### the cluedo_kb.py node 🪢
 
@@ -530,9 +531,10 @@ Publications:
  * /rosout [rosgraph_msgs/Log]
 
 Subscriptions: 
- * /oracle_hint [erl2/ErlOracle]
+ * /clock [rosgraph_msgs/Clock]
 
 Services: 
+ * /add_hint
  * /cluedo_kb/get_loggers
  * /cluedo_kb/set_logger_level
  * /get_id
@@ -566,133 +568,22 @@ Regarding the pddl, it is possible to see their logical implementation within th
 
 here below it is possible to see the conntent of the soultion found. If you want to take a look at the file itself, just [click here][117] 
 
-``` Plain txt
-; States evaluated: 54
-; Cost: 14.013
-; Time 0.00
-0.000: (leave_temple tp wp1)  [1.000]
-1.001: (shift_gripper wp1)  [1.000]
-2.002: (gather_hint wp1)  [1.000]
-3.003: (go_to_wp wp1 wp2)  [1.000]
-4.004: (shift_gripper wp2)  [1.000]
-5.005: (gather_hint wp2)  [1.000]
-6.006: (go_to_wp wp2 wp3)  [1.000]
-7.007: (shift_gripper wp3)  [1.000]
-8.008: (gather_hint wp3)  [1.000]
-9.009: (go_to_wp wp3 wp4)  [1.000]
-10.010: (shift_gripper wp4)  [1.000]
-11.011: (gather_hint wp4)  [1.000]
-12.012: (reach_temple wp4 tp)  [1.000]
-12.012: (check_consistent_hypo wp1)  [1.000]
-13.013: (query_hypo tp)  [1.000]
-```
+
 
 Node interfaces:
 ```Plain txt
-Node [/rpi_leave_temple]
-Publications: 
- * /rosout                                         [rosgraph_msgs/Log]
- * /rosplan_knowledge_base/pddl_action_parameters  [rosplan_knowledge_msgs/DomainFormula]
- * /rosplan_plan_dispatcher/action_feedback        [rosplan_dispatch_msgs/ActionFeedback]
-
-Subscriptions: 
- * /clock [rosgraph_msgs/Clock]
- * /rosplan_plan_dispatcher/action_dispatch [rosplan_dispatch_msgs/ActionDispatch]
-
-Services: 
- * /rpi_leave_temple/get_loggers
- * /rpi_leave_temple/set_logger_level
-
---------------------------------------------------------------------------------
-Node [/rpi_shift_gripper]
+Node [/final_oracle]
 Publications: 
  * /rosout [rosgraph_msgs/Log]
- * /rosplan_knowledge_base/pddl_action_parameters  [rosplan_knowledge_msgs/DomainFormula]
- * /rosplan_plan_dispatcher/action_feedback        [rosplan_dispatch_msgs/ActionFeedback]
 
 Subscriptions: 
  * /clock [rosgraph_msgs/Clock]
- * /rosplan_plan_dispatcher/action_dispatch        [rosplan_dispatch_msgs/ActionDispatch]
 
 Services: 
- * /rpi_shift_gripper/get_loggers
- * /rpi_shift_gripper/set_logger_level
-
---------------------------------------------------------------------------------
-Node [/rpi_gather_hint]
-Publications: 
- * /rosout [rosgraph_msgs/Log]
- * /rosplan_knowledge_base/pddl_action_parameters  [rosplan_knowledge_msgs/DomainFormula]
- * /rosplan_plan_dispatcher/action_feedback        [rosplan_dispatch_msgs/ActionFeedback]
-
-Subscriptions: 
- * /clock [rosgraph_msgs/Clock]
- * /rosplan_plan_dispatcher/action_dispatch        [rosplan_dispatch_msgs/ActionDispatch]
-
-Services: 
- * /rpi_gather_hint/get_loggers
- * /rpi_gather_hint/set_logger_level
-
---------------------------------------------------------------------------------
-Node [/rpi_go_to_wp]
-Publications: 
- * /rosout [rosgraph_msgs/Log]
- * /rosplan_knowledge_base/pddl_action_parameters [rosplan_knowledge_msgs/DomainFormula]
- * /rosplan_plan_dispatcher/action_feedback       [rosplan_dispatch_msgs/ActionFeedback]
-
-Subscriptions: 
- * /clock [rosgraph_msgs/Clock]
- * /rosplan_plan_dispatcher/action_dispatch       [rosplan_dispatch_msgs/ActionDispatch]
-
-Services: 
- * /rpi_go_to_wp/get_loggers
- * /rpi_go_to_wp/set_logger_level
-
---------------------------------------------------------------------------------
-Node [/rpi_reach_temple]
-Publications: 
- * /rosout [rosgraph_msgs/Log]
- * /rosplan_knowledge_base/pddl_action_parameters [rosplan_knowledge_msgs/DomainFormula]
- * /rosplan_plan_dispatcher/action_feedback       [rosplan_dispatch_msgs/ActionFeedback]
-
-Subscriptions: 
- * /clock [rosgraph_msgs/Clock]
- * /rosplan_plan_dispatcher/action_dispatch       [rosplan_dispatch_msgs/ActionDispatch]
-
-Services: 
- * /rpi_reach_temple/get_loggers
- * /rpi_reach_temple/set_logger_level
-
---------------------------------------------------------------------------------
-Node [/rpi_check_consistent_hypo]
-Publications: 
- * /rosout [rosgraph_msgs/Log]
- * /rosplan_knowledge_base/pddl_action_parameters  [rosplan_knowledge_msgs/DomainFormula]
- * /rosplan_plan_dispatcher/action_feedback        [rosplan_dispatch_msgs/ActionFeedback]
-
-Subscriptions: 
- * /clock [rosgraph_msgs/Clock]
- * /rosplan_plan_dispatcher/action_dispatch        [rosplan_dispatch_msgs/ActionDispatch]
-
-Services: 
- * /rpi_check_consistent_hypo/get_loggers
- * /rpi_check_consistent_hypo/set_logger_level
-
---------------------------------------------------------------------------------
-Node [/rpi_query_hypo]
-Publications: 
- * /rosout [rosgraph_msgs/Log]
- * /rosplan_knowledge_base/pddl_action_parameters [rosplan_knowledge_msgs/DomainFormula]
- * /rosplan_plan_dispatcher/action_feedback       [rosplan_dispatch_msgs/ActionFeedback]
-
-Subscriptions: 
- * /clock [rosgraph_msgs/Clock]
- * /rosplan_plan_dispatcher/action_dispatch       [rosplan_dispatch_msgs/ActionDispatch]
-
-Services: 
- * /rpi_query_hypo/get_loggers
- * /rpi_query_hypo/set_logger_level
-
+ * /final_oracle/get_loggers
+ * /final_oracle/set_logger_level
+ * /oracle_hint
+ * /oracle_solution
 ```
 
 ### the img_echo.cpp node 🪢
@@ -708,41 +599,106 @@ This node is simply devoted to control the Detectibot's manipulator by directly 
 
 Node interfaces:
 ```Plain txt
-Node [/manipulation]
+Node [/img_echo]
 Publications: 
- * /attached_collision_object [moveit_msgs/AttachedCollisionObject]
- * /execute_trajectory/cancel [actionlib_msgs/GoalID]
- * /execute_trajectory/goal [moveit_msgs/ExecuteTrajectoryActionGoal]
- * /move_group/cancel [actionlib_msgs/GoalID]
- * /move_group/goal [moveit_msgs/MoveGroupActionGoal]
- * /pickup/cancel [actionlib_msgs/GoalID]
- * /pickup/goal [moveit_msgs/PickupActionGoal]
- * /place/cancel [actionlib_msgs/GoalID]
- * /place/goal [moveit_msgs/PlaceActionGoal]
+ * /img_echo [sensor_msgs/Image]
+ * /img_echo/compressed [sensor_msgs/CompressedImage]
+ * /img_echo/compressed/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /img_echo/compressed/parameter_updates [dynamic_reconfigure/Config]
+ * /img_echo/compressedDepth [sensor_msgs/CompressedImage]
+ * /img_echo/compressedDepth/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /img_echo/compressedDepth/parameter_updates [dynamic_reconfigure/Config]
+ * /img_echo/theora [theora_image_transport/Packet]
+ * /img_echo/theora/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /img_echo/theora/parameter_updates [dynamic_reconfigure/Config]
  * /rosout [rosgraph_msgs/Log]
- * /trajectory_execution_event [std_msgs/String]
 
 Subscriptions: 
  * /clock [rosgraph_msgs/Clock]
- * /execute_trajectory/feedback [moveit_msgs/ExecuteTrajectoryActionFeedback]
- * /execute_trajectory/result [moveit_msgs/ExecuteTrajectoryActionResult]
- * /execute_trajectory/status [actionlib_msgs/GoalStatusArray]
- * /move_group/feedback [moveit_msgs/MoveGroupActionFeedback]
- * /move_group/result [moveit_msgs/MoveGroupActionResult]
- * /move_group/status [actionlib_msgs/GoalStatusArray]
- * /pickup/feedback [moveit_msgs/PickupActionFeedback]
- * /pickup/result [moveit_msgs/PickupActionResult]
- * /pickup/status [actionlib_msgs/GoalStatusArray]
- * /place/feedback [moveit_msgs/PlaceActionFeedback]
- * /place/result [moveit_msgs/PlaceActionResult]
- * /place/status [actionlib_msgs/GoalStatusArray]
- * /tf [tf2_msgs/TFMessage]
- * /tf_static [tf2_msgs/TFMessage]
+ * /robot/camera1/image_raw [sensor_msgs/Image]
 
 Services: 
- * /manipulation
- * /manipulation/get_loggers
- * /manipulation/set_logger_level
+ * /img_echo/compressed/set_parameters
+ * /img_echo/compressedDepth/set_parameters
+ * /img_echo/get_loggers
+ * /img_echo/set_logger_level
+ * /img_echo/theora/set_parameters
+ 
+ --------------------------------------------------------------------------------
+Node [/gazebo]
+Publications: 
+ * /clock [rosgraph_msgs/Clock]
+ * /gazebo/link_states [gazebo_msgs/LinkStates]
+ * /gazebo/model_states [gazebo_msgs/ModelStates]
+ * /gazebo/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /gazebo/parameter_updates [dynamic_reconfigure/Config]
+ * /odom [nav_msgs/Odometry]
+ * /robot/camera1/camera_info [sensor_msgs/CameraInfo]
+ * /robot/camera1/image_raw [sensor_msgs/Image]
+ * /robot/camera1/image_raw/compressed [sensor_msgs/CompressedImage]
+ * /robot/camera1/image_raw/compressed/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /robot/camera1/image_raw/compressed/parameter_updates [dynamic_reconfigure/Config]
+ * /robot/camera1/image_raw/compressedDepth [sensor_msgs/CompressedImage]
+ * /robot/camera1/image_raw/compressedDepth/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /robot/camera1/image_raw/compressedDepth/parameter_updates [dynamic_reconfigure/Config]
+ * /robot/camera1/image_raw/theora [theora_image_transport/Packet]
+ * /robot/camera1/image_raw/theora/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /robot/camera1/image_raw/theora/parameter_updates [dynamic_reconfigure/Config]
+ * /robot/camera1/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+ * /robot/camera1/parameter_updates [dynamic_reconfigure/Config]
+ * /rosout [rosgraph_msgs/Log]
+ * /scan [sensor_msgs/LaserScan]
+ * /tf [tf2_msgs/TFMessage]
+
+Subscriptions: 
+ * /clock [rosgraph_msgs/Clock]
+ * /cmd_vel [geometry_msgs/Twist]
+ * /gazebo/set_link_state [unknown type]
+ * /gazebo/set_model_state [unknown type]
+
+Services: 
+ * /controller_manager/list_controller_types
+ * /controller_manager/list_controllers
+ * /controller_manager/load_controller
+ * /controller_manager/reload_controller_libraries
+ * /controller_manager/switch_controller
+ * /controller_manager/unload_controller
+ * /gazebo/apply_body_wrench
+ * /gazebo/apply_joint_effort
+ * /gazebo/clear_body_wrenches
+ * /gazebo/clear_joint_forces
+ * /gazebo/delete_light
+ * /gazebo/delete_model
+ * /gazebo/get_joint_properties
+ * /gazebo/get_light_properties
+ * /gazebo/get_link_properties
+ * /gazebo/get_link_state
+ * /gazebo/get_loggers
+ * /gazebo/get_model_properties
+ * /gazebo/get_model_state
+ * /gazebo/get_physics_properties
+ * /gazebo/get_world_properties
+ * /gazebo/pause_physics
+ * /gazebo/reset_simulation
+ * /gazebo/reset_world
+ * /gazebo/set_joint_properties
+ * /gazebo/set_light_properties
+ * /gazebo/set_link_properties
+ * /gazebo/set_link_state
+ * /gazebo/set_logger_level
+ * /gazebo/set_model_configuration
+ * /gazebo/set_model_state
+ * /gazebo/set_parameters
+ * /gazebo/set_physics_properties
+ * /gazebo/spawn_sdf_model
+ * /gazebo/spawn_urdf_model
+ * /gazebo/unpause_physics
+ * /robot/camera1/image_raw/compressed/set_parameters
+ * /robot/camera1/image_raw/compressedDepth/set_parameters
+ * /robot/camera1/image_raw/theora/set_parameters
+ * /robot/camera1/set_camera_info
+ * /robot/camera1/set_parameters
+
 ```
 ### The detectibot_magnifier.cpp node 🪢
 
@@ -754,20 +710,18 @@ This is the node provided by professor with some simplification in order to make
 
 Node interfaces:
 ```Plain txt
-Node [/my_simulation]
+Node [/detectibot_magnifier]
 Publications: 
- * /oracle_hint [erl2/ErlOracle]
  * /rosout [rosgraph_msgs/Log]
- * /visualization_marker [visualization_msgs/MarkerArray]
 
 Subscriptions: 
- * /gazebo/link_states [gazebo_msgs/LinkStates]
+ * /clock [rosgraph_msgs/Clock]
+ * /robot/camera1/image_raw [sensor_msgs/Image]
 
 Services: 
- * /my_simulation/get_loggers
- * /my_simulation/set_logger_level
- * /oracle_solution
-
+ * /aruco_markers
+ * /detectibot_magnifier/get_loggers
+ * /detectibot_magnifier/set_logger_level
 ```
 
 
