@@ -342,7 +342,7 @@ roslaunch erl_assignment_3_robot detectibot_environment_2.launch
 - Open a second shell and run the navigation node 
 
 ```sh
-rosrun erl_assignment_3 navigation.py`
+rosrun erl_assignment_3 navigation.py
 ```
 
 
