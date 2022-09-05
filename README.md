@@ -467,13 +467,16 @@ Let's start with the `state_machine.py` node
 <p align="center">
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_state_machine_py.jpg" width= 300 height=300>
 </p>
+ 
+It implements a state machine that controls the operations of the robot; it is the core node of the architecture that interacts with and directs all remaining parts 
 
-It implements a ROS service, whose purpose is that of piloting the robot toward a specific target by following a straight line. As it is shown by the component diagram here reported, it subscribes to the `/odom` topic for retrieving the current robot position and once the robot orientation among x and y coordinates has been computed with respect to the target position (obtained by means of the ros parameter server), it publishes on the `/cmd_vel` topic
+In particular the machine organises the investigation into four states.
+- **move** → moves the robot between rooms inside the simulated indoor environment 
+- **collect** → the robot rotates on itself to read the largest number of hints within the room 
+- **check** → takes hints from the sensing system via a service, and uses the ontology to work out whether there are possible solutions or not. If there occurs no possible solutions, the outcome is `mistery_not_solvable`, and the robot transitions back to the "move" state. Otherwise, if there actually occurs possible solutions, the state machine makes a transition to the "show" state, responsible for querying the oracle about the solution's truthfulness
+- **show** → questions the oracle about the solution
 
-Concerning the ros parameters:
-`des_pos_x` and `des_pos_y` are used for keeping track of the target goal to be assigned to the robot in the go_to_point.py node 
-
-Here below we can find a hand-made state diagram:
+Here below we can find a hand-made state diagram, representing how the system works 
 <p align="center">
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/state_diagrams/state_diagram.jpg" width= 500 height=500>
 </p>
@@ -510,16 +513,12 @@ Services:
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_navigation_py.jpg" width= 500 height=500>
 </p>
 
-This node represents three core structures, even the "brain" of our achitechture. Being ROSPlan a framework  that owns a variety of nodes which encapsulate planning, problem generation and plan execution, a set of clients have been initialised to, subsequently:
+this is our navigation node. 
 
-- generate a problem: a [pddl problem][115] is published on a topic 
-- establish a plan: a planner is called for  publishing the plan to a topic 
-- parse a plan: At this stage the PDDL plan is converted into ROS messages, ready to be executed
-- dispatch a plan:  for being then executed 
 
-There is also the possibility to update the Knowledge base (being it the main responsible for the PDDL domain model amd current problem istance stroage)
-
-Indeed, if detectibot is not able to solve the mistery at the first round, it is possible to count on a "replanning phase", after which it starts roaming around the environment for gathering hints held by the markers
+- Localisation takes place through the subscription to the odom (nav_msgs/Odom) topic, 
+- The node uses **move_base** (from move_base pkg) to perform the navigation. The main function of this package is to move a robot from its current position to a goal position with the help of other navigation nodes. The move_base node inside this package links the global-planner and the local-planner for the path planning, connecting to the rotate-recovery package if the robot is stuck in some obstacle and connecting global costmap and local costmap for getting the map. The move_base node is basically an implementation of SimpleActionServer, which takes a goal pose with message type (geometry_msgs/PoseStamped). We can send a goal position to this node using a SimpleActionClient node.
+- In addition the navigation service provides a **service** to rotate the robot (erl_assignment_3_msgs/TurnRobot) by a certain angle speed for a certain time; this functionality is aimed at the collection of clues!
 
 Node Interfaces:
 ```Plain txt 
@@ -550,12 +549,11 @@ Concerning the `cluedo_kb.py` node:
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_cluedo_kb_py.jpg" width= 500 height=500>
 </p>
 
-cluedo_KB is a node that acts as a dedicated ontology for the problem under investigation; it provides a processing/reasoning system that provides the functionalities of:
-
-- registering the clues
-- building and processing hypotheses based on the added information
-- finding possible solutions to the case
-- rejecting hypotheses
+1. cluedo_KB is a node that serves as a specialised ontology for the problem in hand; it supplies a processing/reasoning system that provides the functionality of:
+2. Registering clues 
+3. Building and processing hypotheses based on the added information 
+4. Finding possible solutions to the case 
+5. Rejecting hypotheses (whether needed)
 
 > ***REMARK*** the KB listens in on the oracle's topic and as soon as the oracle transmits the clue, the KB adds the message to the ontology without the need for an explicit request
 
@@ -580,32 +578,16 @@ Services:
 
 ### the simulation.cpp node (final_oracle)  🪢
 
-Concerning the `action_interface.cpp` node:
+Concerning the `simulation.cpp` node:
 
 <p align="center">
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl3_final_oracle_cpp" width= 500 height=500>
 </p>
 
-action_interface.cpp implements all rosplan actions in a single ROS node, moreover:
-
-- the same node can be run replicated for all actions specified in the pddl
-- topics and services only get allocated when the action is called for the first time via the rosplan action dispatcher
-- the node interacts with the navigation and manipulation systems to move the robot and the arm
-- The node also interacts with the KB and the oracle for clue and hypothesis processing operations
-
-Regarding the pddl, it is possible to see their logical implementation within the domain file, inside the [detectibot_pddl][116] folder. There you can find both the predicates and seven actions, namely:
-
-1. leave_temple
-2. shift_gripper
-3. gather_hint
-4. go_to_wp
-5. reach_temple
-6. check_consistent_hypo
-7. query_hypo
-
-here below it is possible to see the conntent of the soultion found. If you want to take a look at the file itself, just [click here][117] 
-
-
+The architecture is based on the simulation.cpp node which is the same node we were provided by our Professors
+This latter supplies two services:
+- Concerning the first one (/oracle_hint [erl3/Marker]), once it has been provided with a certain ID, it returns the clue corresponding to that ID (Identifier of an index in an array of messages yield by the oracle)
+- Concerning the second one (/oracle_solution [erl3/Oracle]), it is needed to check the correctness of a proposed hypothesis at the end of the case 
 
 Node interfaces:
 ```Plain txt
@@ -626,13 +608,15 @@ Services:
 
 ### the img_echo.cpp node 🪢
 
-Concerning the `manipulation_cpp` node:
+Concerning the `img_echo.cpp` node :
 
 <p align="center">
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_img_echo_cpp.jpg" width= 500 height=500>
 </p>
 
-This node is simply devoted to control the Detectibot's manipulator by directly interacting with the MoveIt! framework
+It takes the image from the robot's camera, broadcasts it back and at the same time transmits it on a separate window. 
+
+
 
 
 Node interfaces:
@@ -745,7 +729,7 @@ Services:
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_detectibot_magnifier.jpg" width= 500 height=500>
 </p>
 
-This is the node provided by professor with some simplification in order to make the siumulation run faster and test wheter the detectibot would have carry out the investigation entirely. 
+This node implements detection with ARUCO on a single camera
 
 Node interfaces:
 ```Plain txt
@@ -786,9 +770,9 @@ In the figure below, circles represent nodes and squares represent topic message
 
 The  architecture  is designed for providing a raw simplification of the Cluedo Game. Hints are set a-priori and the True hipothesis is  randomly chosen before starting the game. 
 
-Detectibot (the robot involved in the investigation), moves in a obstacle-free environment charachterised by a perfectly flat floor (without irregularities), within a square-shaped indoor environment 
+Detectibot (the robot involved in the investigation), moves in a obstacle-free environment charachterised by a perfectly flat floor (without irregularities), within a square-shaped indoor environment, provided with rooms
 
-Concerning the markers we can say that they are positioned in such  a way that the arm can reach them 
+Concerning the Aruco markers we can say that they are well-displayed all over the simulated indoor environment, at different heights
 
 All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite unrealistic but functional.
 
@@ -798,7 +782,7 @@ All choices were made with the aim of making the system as modular and flexible 
 
 Most of them have been already discussed in the Software architecture’s section. 
 
-The project implements the robot behaviour so that it can keep roaming around, looking for clues. This serves for solving the case. 
+The project implements the robot behaviour so that it can keep roaming around, looking for Aruco Markers inside the environmeent. This serves for solving the case. 
 
 Indeed, while it navigates through the environment it tries to combine them in order to find a solution. This is where the reasoning & AI module, represented by the [cluedo_kb.py][20], comes imto play
 
@@ -810,12 +794,7 @@ Concerning the architecture, it is centralised and designed in such a way that i
 
 Here below, some of the major system limitations are listed:
 
-- the navigation module is not suitable for environments with obstacles as it needs to make a straight line between the starting point and the target.
-- since there is no unit that deals explicitly with the marker topology, changing such a topology requires the modification of several parts of the architecture including:
-  - the main node that takes into account the topology for being able to do replanning
-  - the pddl models, in particular the problem file
-  - the oracle, represented by the simulation.cpp node, having hard-coded markers, must be modified to support a new topology
-- the architecture could also be executed in a distributed manner by dividing the components over various devices. However, this possibility was not considered during the design of the system. It is therefore necessary to identify possible criticalities in the communication protocol (i.e. to better manage service calls that fail based on the quality of the connection) and to treat them appropriately
+- If the robot had more than one camera, the detection system (detectibot_magnifirer) would have to be re-implemented to ensure a certain performance from the system 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -833,30 +812,31 @@ As for the system limitations, some of the most relevant potential techincal imp
   
 - the robot needs a lot of manoeuvring space to move; There should be the need of seeking an appropriate navigation algorithm to reduce the necessary manoeuvring space
 
+- The architecture could also be executed in a distributed manner by splitting the components over several devices. However, this possibility was not considered during the design of the system. It is therefore necessary to identify possible criticalities in the communication protocol (i.e. to better manage service calls that fail based on the quality of the connection) and deal with them appropriately 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Complete the introduction of the template 
-- [ ] Describe the software architechture
-  - [ ] Component diagram (*not mandatory*)
+- [x] Complete the introduction of the template 
+- [x] Describe the software architechture
+  - [x] Component diagram (*not mandatory*)
   - [ ] Temporal diagram + comments
-  - [ ] States diagrams, whether applicable + comments
-  - [ ] Create a list describing ROS messages and parameters 
-- [ ] Describe the installation steps and the running procedures
-    - [ ] Create a dedicated paragraph
-    - [ ] Include all the steps to display the robot's behaviour
+  - [x] States diagrams, whether applicable + comments
+  - [x] Create a list describing ROS messages and parameters 
+- [x] Describe the installation steps and the running procedures
+    - [x] Create a dedicated paragraph
+    - [x] Include all the steps to display the robot's behaviour
 - [x] Show in the "usage" section the running code
   - [x] Create a small video tutorial of the launch
   - [x] Create a small animated gif of the terminal while running code
-- [ ] Describe the Working hypothesis and environment
-  - [ ] Dedicated section for System's features
-  - [ ] Dedicated section for System's limitations
-  - [ ] Dedicated section for Possible technical improvements
+- [x] Describe the Working hypothesis and environment
+  - [x] Dedicated section for System's features
+  - [x] Dedicated section for System's limitations
+  - [x] Dedicated section for Possible technical improvements
 
- 
-    
+  
 
 See the [open issues](https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues) for a full list of proposed features (and known issues).
 
