@@ -445,21 +445,21 @@ As shown in the above component diagram, this software architechture relies on t
 
 - [cluedo_kb.py][20]              <!-- PLEASE INSERT HERE -->
 
-- [navigation.py][21]            <!-- PLEASE INSERT HERE -->
+- [navigation.py][21]             <!-- PLEASE INSERT HERE -->
 
-- [state_machine.py][22]                   <!-- PLEASE INSERT HERE -->
+- [state_machine.py][22]          <!-- PLEASE INSERT HERE -->
 
-- [final_oracle.cpp][23]      <!-- PLEASE INSERT HERE -->
+- [final_oracle.cpp][23]          <!-- PLEASE INSERT HERE -->
 
-- [img_echo.cpp][24]          <!-- PLEASE INSERT HERE -->
+- [img_echo.cpp][24]              <!-- PLEASE INSERT HERE -->
 
-- [detectibot_magnifier.cpp][25]
+- [detectibot_magnifier.cpp][25]  <!-- PLEASE INSERT HERE -->
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### the state_machine.py node  🪢
+### the state_machine.py node :knot:
 
 Let's start with the `state_machine.py` node
 
@@ -507,7 +507,7 @@ Services:
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### the navigation.py node 🪢
+### the navigation.py node :knot:
 
 <p align="center">
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_navigation_py.jpg" width= 500 height=500>
@@ -541,7 +541,7 @@ Services:
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### the cluedo_kb.py node 🪢
+### the cluedo_kb.py node :knot:
 
 Concerning the `cluedo_kb.py` node:
 
@@ -576,7 +576,7 @@ Services:
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### the simulation.cpp node (final_oracle)  🪢
+### the simulation.cpp node (final_oracle) :knot:
 
 Concerning the `simulation.cpp` node:
 
@@ -606,7 +606,7 @@ Services:
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### the img_echo.cpp node 🪢
+### the img_echo.cpp node :knot:
 
 Concerning the `img_echo.cpp` node :
 
@@ -615,8 +615,6 @@ Concerning the `img_echo.cpp` node :
 </p>
 
 It takes the image from the robot's camera, broadcasts it back and at the same time transmits it on a separate window. 
-
-
 
 
 Node interfaces:
@@ -723,7 +721,7 @@ Services:
 ```
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### The detectibot_magnifier.cpp node 🪢
+### The detectibot_magnifier.cpp node :knot:
 
 <p align="center">
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_detectibot_magnifier.jpg" width= 500 height=500>
@@ -907,20 +905,20 @@ Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment2](https
 [license-shield]: https://img.shields.io/github/license/fedehub/ExperimentalRoboticsAssignment3
 
 <!-- general resources -->
-[1]: http://wiki.ros.org/smach
-[3]: http://wiki.ros.org/smach/Tutorials/Smach%20Viewer
-[4]: http://wiki.ros.org
-[5]: https://github.com/KCL-Planning/ROSPlan
-[6]: https://moveit.ros.org/
-[7]: http://wiki.ros.org/move_base
-[8]: https://github.com/CarmineD8/exp_assignment3
-[9]: https://github.com/fedehub/ExperimentalRoboticsAssignment1
+[1]:  http://wiki.ros.org/smach
+[3]:  http://wiki.ros.org/smach/Tutorials/Smach%20Viewer
+[4]:  http://wiki.ros.org
+[5]:  https://github.com/KCL-Planning/ROSPlan
+[6]:  https://moveit.ros.org/
+[7]:  http://wiki.ros.org/move_base
+[8]:  https://github.com/CarmineD8/exp_assignment3
+[9]:  https://github.com/fedehub/ExperimentalRoboticsAssignment1
 [10]: https://github.com/fedehub/ExperimentalRoboticsAssignment2
-[11]: 
-[12]: 
-[13]: 
-[14]: 
-[15]:
+[11]: < insert here >
+[12]: < insert here >
+[13]: < insert here >
+[14]: < insert here >
+[15]: < insert here >
 [16]: https://ontogenesis.knowledgeblog.org/1260/
 [17]: http://emarolab.github.io/armor_py_api/armor_utils_client.html
 [18]: https://docs.python.org/3/library/queue.html
