@@ -399,6 +399,8 @@ rosrun erl_assignment_3 cluedo_kb.py
 rosrun erl_assignment_3 state_machine.py
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -427,13 +429,15 @@ Here there is the UML components diagram of the project
 
 The aforementioned architechture can be seen as a **Deliberative** one, being its pipeline structured as "sense-plan-act"
 - Concerning the "sense" module, there are three types of sense in this architechture 
-    1. Vision - it is implemented by means of Aruco and OpenCV frameworks
-    2. Localisation - It is implemented through Odom topic, in Gazebo
-    3. Mapping - thanks to laser sensors and GMAPPING
+    1. **Vision** -       it is implemented by means of Aruco and OpenCV frameworks
+    2. **Localisation** - It is implemented by means of the Odom topic, in Gazebo
+    3. **Mapping** - made possible by laser sensors and GMAPPING algorithm
 - Concerning the "plan" module, it is implemented through a [smach][1] state machine 
-- Finally, the "move" module, is implemented by means of move_base 
+- Finally, the move_base pkg is responsible for the detectibot's movement around the environment  
 
-
+<p align="center">
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/miscellaneous/deliberative_sketch_arch.png" width= 500 height=100>
+</p>
 
 As shown in the above component diagram, this software architechture relies on the synergy of varius modules: 
 
@@ -452,13 +456,16 @@ As shown in the above component diagram, this software architechture relies on t
 - [detectibot_magnifier.cpp][25]
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 ### the state_machine.py node  🪢
 
-Let's start with the `go_to_point.py` node
+Let's start with the `state_machine.py` node
 
 
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_state_machine_py.jpg" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_state_machine_py.jpg" width= 300 height=300>
 </p>
 
 It implements a ROS service, whose purpose is that of piloting the robot toward a specific target by following a straight line. As it is shown by the component diagram here reported, it subscribes to the `/odom` topic for retrieving the current robot position and once the robot orientation among x and y coordinates has been computed with respect to the target position (obtained by means of the ros parameter server), it publishes on the `/cmd_vel` topic
@@ -467,7 +474,9 @@ Concerning the ros parameters:
 `des_pos_x` and `des_pos_y` are used for keeping track of the target goal to be assigned to the robot in the go_to_point.py node 
 
 Here below we can find a hand-made state diagram:
-https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/state_diagrams/state_diagram.jpg
+<p align="center">
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/state_diagrams/state_diagram.jpg" width= 500 height=500>
+</p>
 
 Moreover, an **introspection Server** has been implemented in order to visualize the possible transitions between states, as well as the currently active state and the values of user data that is passed around 
 For visualising it, just type:
@@ -476,7 +485,8 @@ rosrun smach_viewer smach_viewer.py
 ```
 > _REMARK:_ Please, remember to import the correct libraries (i.e `import smach, smach_ros`) otherwise some errors may occur! 
 
-![state_machine_functioning](https://user-images.githubusercontent.com/61761835/188337337-e34d0edf-43af-4210-a359-f6ea4fecb22d.gif)
+![state_machine_functioning](https://user-images.githubusercontent.com/61761835/188338883-71fa5cc8-ad81-4621-87c5-35a7ca21c44a.gif)
+
 
 
 Node interfaces: 
@@ -492,6 +502,8 @@ Services:
  * /state_machine/get_loggers
  * /state_machine/set_logger_level
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### the navigation.py node 🪢
 
 <p align="center">
@@ -528,6 +540,8 @@ Services:
  * /navigation/set_logger_level
  * /turn_robot
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### the cluedo_kb.py node 🪢
 
 Concerning the `cluedo_kb.py` node:
@@ -561,6 +575,8 @@ Services:
  * /get_id
  * /mark_wrong_id
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ### the simulation.cpp node (final_oracle)  🪢
 
@@ -606,6 +622,7 @@ Services:
  * /oracle_hint
  * /oracle_solution
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### the img_echo.cpp node 🪢
 
@@ -719,8 +736,9 @@ Services:
  * /robot/camera1/image_raw/theora/set_parameters
  * /robot/camera1/set_camera_info
  * /robot/camera1/set_parameters
-
 ```
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### The detectibot_magnifier.cpp node 🪢
 
 <p align="center">
@@ -746,6 +764,7 @@ Services:
 ```
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### rqt_graph
 
@@ -761,6 +780,7 @@ In the figure below, circles represent nodes and squares represent topic message
 
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Working hypothesis and environment 
 
@@ -772,6 +792,8 @@ Concerning the markers we can say that they are positioned in such  a way that t
 
 All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite unrealistic but functional.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### System's features
 
 Most of them have been already discussed in the Software architecture’s section. 
@@ -781,6 +803,8 @@ The project implements the robot behaviour so that it can keep roaming around, l
 Indeed, while it navigates through the environment it tries to combine them in order to find a solution. This is where the reasoning & AI module, represented by the [cluedo_kb.py][20], comes imto play
 
 Concerning the architecture, it is centralised and designed in such a way that individual components can be replaced as long as they meet the same required interface 
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### System's limitations
 
@@ -792,6 +816,8 @@ Here below, some of the major system limitations are listed:
   - the pddl models, in particular the problem file
   - the oracle, represented by the simulation.cpp node, having hard-coded markers, must be modified to support a new topology
 - the architecture could also be executed in a distributed manner by dividing the components over various devices. However, this possibility was not considered during the design of the system. It is therefore necessary to identify possible criticalities in the communication protocol (i.e. to better manage service calls that fail based on the quality of the connection) and to treat them appropriately
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Possible technical Improvements
 
@@ -807,6 +833,7 @@ As for the system limitations, some of the most relevant potential techincal imp
   
 - the robot needs a lot of manoeuvring space to move; There should be the need of seeking an appropriate navigation algorithm to reduce the necessary manoeuvring space
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
