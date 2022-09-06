@@ -756,9 +756,13 @@ In the figure below, circles represent nodes and squares represent topic message
 
 ### UML temporal diagram
 
-> :warning: Due to the size of the original image, it is shown only a raw preview, opened with the standard pc's imahe viewer. If you want to download the original file, you can find it [here][111]
+By means of this diagram it is possible to show how the system works. As the state_machine gets launched, the robot enters the MOVE state, responsible for the acrivation of the `/go_to_point` service. Hence, it reaches the center of the room and it starts to collect as many marker as possible. 
 
-<img src= "https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/miscellaneous/raw_preview.png" />
+This has been made possible through the implementation of a `/turn_robot` service that, as the name explicitly suggests, makes detectibot turning around its own position. Only after, the system transitions to the CHECK state, where a request is made by the `/aruco_marker` service to retrieve the detected marker's IDs (by means of a topic subscription). Whenever a new hint gets detected, the knowledge base represented by cluedo_kb node is issued (with a `/oracle_hint` service request). 
+
+By means of a further request, made to the final_oracle node through the `/oracle_solution` service, the True ID gets compared and it is chosen whether to terminate the investigation (ending up in a MISTERY_SOLVED state) or pursuing it, transitioning back to the MOVE state
+
+<img src= "https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/temporal_diagrams/erl_temporal_diagram.jpg" />
 
 
 
@@ -961,6 +965,10 @@ Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment2](https
 [105]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_manipulation_cpp.jpg
 [106]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_test_nav_py.jpg
 [107]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_go_to_point_py.jpg
+
+
+<!-- Temporal diagram -->
+[116]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/temporal_diagrams/erl_temporal_diagram.jpg
 
 <!-- rqt graphs -->
 [108]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/tree/main/media/rqt/rosgraph_nodes_only.png
