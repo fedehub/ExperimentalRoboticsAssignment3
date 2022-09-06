@@ -1,5 +1,4 @@
-
-Code docs -- *oracle_final.cpp*
+Code docs -- *final_oracle.cpp*
 =================================
 
 
@@ -38,7 +37,7 @@ the field of type *erl3/ErlOracle* has these fields:
 How to check if the hint is valid
 ----------------------------------
 
-to check whether a specific ID is the solution of the mystery, call the service ``/oracle_solution`` of type ``erl2/Oracle``. Here's the prototype of the service:
+to check whether a specific ID is the solution of the mystery, call the service ``/oracle_solution`` of type ``erl3/Oracle``. Here's the prototype of the service:
 
 .. code-block::
 	
@@ -46,3 +45,8 @@ to check whether a specific ID is the solution of the mystery, call the service 
 	int32 ID
 
 
+Code Reference
+---------------
+
+.. doxygenfile:: simulation.cpp
+    :project: ExperimentalRoboticsAssignment3

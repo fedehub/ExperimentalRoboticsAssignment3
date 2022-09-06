@@ -64,3 +64,10 @@ Here below the prototype of the robot is reported
     This service will be functional to the actual detection of
     the aruco markers scattered around the map 
 
+
+Code Reference
+---------------
+
+.. automodule:: navigation
+	:members:
+	:noindex:
