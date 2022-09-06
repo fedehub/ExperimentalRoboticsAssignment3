@@ -772,7 +772,13 @@ By means of a further request, made to the final_oracle node through the `/oracl
 
 This architecture is designed for providing a reinterpretation of the Cluedo Game. Markers are set a-priori both on the ground and on wall-fixed boxes. The hypothesis IDs are contained within Aruco markers. The True ID instead, is  randomly chosen before starting the game. 
 
-Detectibot (the robot involved in the investigation), moves in a obstacle-free environment charachterised by a perfectly flat floor (without irregularities), within a indoor environment, provided with rooms without furnitures. It has been designed to mount a single camera, pointing toward the front side. It is also equipped with lasers which make possible to employ a SLAM algorithm 
+Detectibot (the robot involved in the investigation), moves in a obstacle-free environment charachterised by a perfectly flat floor (without irregularities), within a indoor environment, provided with rooms without furnitures. Path planning, has been implemented by menas of the MoveBase package It has been designed to mount a single camera, pointing toward the front side. 
+
+It is also equipped with laser range finders which make possible, together with Odometry data, to employ a SLAM gmapping algorithm. This approach uses a particle filter in which each particle carries an individual map of the environment. To ensure its employability, the following requirements were met:
+- laser outputs are published onto `/scan`  topic
+- the robot model is endowed with two frames required for mapping algorithms, which are: `link_chassis` and `odom`
+
+Concerning the Aruco detection, it has been implemented by the [detectibotMagnifier][25]. This reads images on a specific topic (`topic_info`)
 
 All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite unrealistic but functional.
 
@@ -985,4 +991,5 @@ Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment2](https
 [114]: https://github.com/fedehub/ExperimentalRoboticsAssignment2
 
 <!-- OpemCV -- Aruco -->
-[115]: https://opencv.org/
+[115]: https://www.github.com/opencv/opencv/wiki
+[117]: https://github.com/ros-perception/vision_opencv
