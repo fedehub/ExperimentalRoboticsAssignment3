@@ -1,5 +1,28 @@
+"""
+.. module:: cluedo_kb
+	:platform: Unix
+	:synopsis: Python module aimed at implementong the Reasoning & AI side
+.. moduleauthor:: Federico fedeunivers@gmail.com
 
-'''file cluedo_kb node
+cluedo_KB is a node that serves as a specialised ontology for the problem in hand; it supplies a processing/reasoning system that provides the functionality of:  
+
+- Registering clues 
+- Building and processing hypotheses based on the added information 
+- Finding possible solutions to the case 
+- Rejecting hypotheses (whether needed)
+
+Subscribes to:
+	/clock 
+	
+Publishes to:
+	/rosout [rosgraph_msgs/Log]
+Service :
+	/get_id [erl_assignment3/GetId]
+	/add_hint [erl_assignment3/AddHint]
+	/mark_wrong_id [erl_assignment3/MarkWrongID]
+"""
+
+'''testing snippet
 
 rosrun erl_assignment_3 cluedo_kb.py 
 rosrun erl3 final_oracle
@@ -102,7 +125,7 @@ def add_hint( hint ):
 	''' receive and store (if possible) the hint
 	
 	Parameters: 
-		hint (erl2/ErlOracle):
+		hint (erl3/ErlOracle):
 			the hint received directly from the Oracle
 	'''
 	
@@ -181,9 +204,11 @@ def add_hint_to_list( hint ):
 	else:
 		rospy.logwarn( f"(cluedo_kb -> add_hint_to_list) received a unknown hint.key : {hint.key}" )
 	
+	# --- --- --- --- --- --- --- ---  Testing --- --- --- --- --- --- --- 
 	# rospy.loginfo(f"empty WHO? {kb[hint.ID][record_who] == ''}")
 	# rospy.loginfo(f"empty WHERE? {kb[hint.ID][record_where] == ''}")
 	# rospy.loginfo(f"empty WHAT? {kb[hint.ID][record_what] == ''}")
+	
 	if (kb[hint.ID][record_where] != "") and (kb[hint.ID][record_what] != "") and (kb[hint.ID][record_who] != ""):
 		# rospy.loginfo(f"ID{hint.ID} is complete")
 		kb[hint.ID][is_complete] = True 
@@ -202,7 +227,7 @@ def add_hint_to_list( hint ):
 		if hint.ID in kb_consistent:
 			kb_consistent.remove( hint.ID );
 	elif len(kb_consistent) == 0:
-		rospy.loginfo( f"nothing to discard (received a unconsistent ID={hint.ID})" )
+		rospy.loginfo( f"nothing to discard (received an inconsistent ID={hint.ID})" )
 
 
 
@@ -313,8 +338,12 @@ cl_oracle_hint = None
 def add_hint_service(req):
 	''' add a hint to th knowledge.
 	
-	th service calls the oracle and asks for a hint, then stores
+	the service calls the oracle and asks for a hint, then stores
 	the hint. 
+
+	Parameters: 
+			req (erl_assignment_3/AddHintRequest):
+				the service request 
 	'''
 	
 	global cl_oracle_hint
@@ -327,6 +356,8 @@ def add_hint_service(req):
 
 
 def shut_msg( ):
+	'''print on console shut message
+	'''
 	rospy.loginfo( "stopping ... " )
 
 
@@ -340,22 +371,24 @@ if __name__ == "__main__":
 	kb_consistent = list( )
 	for i in range(0, 6):
 		kb.append( ["", "", "", True, False] )
-		kb_consistent.append( i )
+		kb_consistent.append(i)
 	rospy.loginfo( "cluedo_kb initialization... done" )
 	
+	## --- --- --- --- --- --- --- ---  Testing --- --- --- --- --- --- --- ##
 	# rospy.loginfo( "cluedo_kb subscriber /oracle_hint..." )
 	# rospy.Subscriber( "oracle_hint", ErlOracle, add_hint )
+
 	rospy.loginfo("srv add_hint")
 	rospy.Service("/add_hint", AddHint, add_hint_service)
 	
 	rospy.loginfo("client oracle_hint")
 	cl_oracle_hint = rospy.ServiceProxy("/oracle_hint", Marker)
 	
-	rospy.loginfo( "cluedo_kb client /get_id..." )
+	rospy.loginfo("cluedo_kb client /get_id...")
 	srv_get_id = rospy.Service( "/get_id", GetId, get_id )
 	
-	rospy.loginfo( "cluedo_kb client /mark_wrong_id..." )
+	rospy.loginfo("cluedo_kb client /mark_wrong_id...")
 	srv_get_id = rospy.Service( "/mark_wrong_id", MarkWrongId, mark_wrong_id )
 	
-	rospy.loginfo( "cluedo_kb starting..." )
+	rospy.loginfo("cluedo_kb starting...")
 	rospy.spin( )

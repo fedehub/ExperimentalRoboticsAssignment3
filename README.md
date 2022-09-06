@@ -18,84 +18,84 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3">
-    <img src="media/miscellaneous/logo-black.png" alt="Logo" width="200" height="100">
-  </a>
+	<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3">
+		<img src="media/miscellaneous/logo-black.png" alt="Logo" width="200" height="100">
+	</a>
 
-  <h3 align="center">Experimental Robotics Laboratory</h3>
+	<h3 align="center">Experimental Robotics Laboratory</h3>
 
-  <p align="center">
-    First assignment for the Experimental Robotics laboratory course 
-    <br />
-    <a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/doc"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/demo">View Demo</a>
-    ·
-    <a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Request Feature</a>
-  </p>
+	<p align="center">
+		First assignment for the Experimental Robotics laboratory course 
+		<br />
+		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/doc"><strong>Explore the docs »</strong></a>
+		<br />
+		<br />
+		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/demo">View Demo</a>
+		·
+		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Report Bug</a>
+		·
+		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Request Feature</a>
+	</p>
 </div>
 
 
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#assignments-prerequisites">Assignment's prerequisites</a></li>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation-procedure">Installation procedure</a></li>
-        <li><a href="#workspace-building-and-launch">Workspace building and launch</a></li>
-        <li><a href="#running-pocedure">Running procedure</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#usage">Usage</a>
-    </li>
-    <li>
-      <a href="#ros-node-description-an-overview">ROS node description: An overview</a>
-      <ul>
-        <li><a href="#the-main.py-node ">the main.py node</a></li>
-        <li><a href="#the-cluedo_kb.py-node ">the cluedo_kb.py node</a></li>
-        <li><a href="#the-action_interface.cpp-node">the action_interface.cpp node</a></li>
-        <li><a href="#the-manipulation.cpp-node ">the manipulation.cpp node</a></li>
-        <li><a href="#the-my_simulation.cpp-node ">the my_simulation.cpp node </a></li>
-        <li><a href="#rqt_graph">rqt_graph</a></li>
-      </ul>
-    <li>
-        <a href="#Working-hypothesis-and-environment">Working hypothesis and environment</a>
-    </li>
-      <ul>
-        <li><a href="#System's features">System's features</a></li>
-        <li><a href="#System's limitations">System's limitations</a></li>
-        <li><a href="#Possible technical Improvements">Possible technical Improvements</a></li>
-      </ul>
-    <li>
-      <a href="#roadmap">Roadmap</a>
-    </li>
-    <li>
-      <a href="#contributing">Contributing</a>
-    </li>
-    <li>
-      <a href="#license">License</a>
-    </li>
-    <li>
-      <a href="#contact">Contact</a>
-    </li>
-    <li>
-      <a href="#acknowledgments">Acknowledgments</a>
-    </li>
-  </ol>
+	<summary>Table of Contents</summary>
+	<ol>
+		<li>
+			<a href="#about-the-project">About The Project</a>
+			<ul>
+				<li><a href="#assignments-prerequisites">Assignment's prerequisites</a></li>
+				<li><a href="#built-with">Built With</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#getting-started">Getting Started</a>
+			<ul>
+				<li><a href="#installation-procedure">Installation procedure</a></li>
+				<li><a href="#workspace-building-and-launch">Workspace building and launch</a></li>
+				<li><a href="#running-pocedure">Running procedure</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#usage">Usage</a>
+		</li>
+		<li>
+			<a href="#ros-node-description-an-overview">ROS node description: An overview</a>
+			<ul>
+				<li><a href="#the-main.py-node ">the main.py node</a></li>
+				<li><a href="#the-cluedo_kb.py-node ">the cluedo_kb.py node</a></li>
+				<li><a href="#the-action_interface.cpp-node">the action_interface.cpp node</a></li>
+				<li><a href="#the-manipulation.cpp-node ">the manipulation.cpp node</a></li>
+				<li><a href="#the-my_simulation.cpp-node ">the my_simulation.cpp node </a></li>
+				<li><a href="#rqt_graph">rqt_graph</a></li>
+			</ul>
+		<li>
+				<a href="#Working-hypothesis-and-environment">Working hypothesis and environment</a>
+		</li>
+			<ul>
+				<li><a href="#System's features">System's features</a></li>
+				<li><a href="#System's limitations">System's limitations</a></li>
+				<li><a href="#Possible technical Improvements">Possible technical Improvements</a></li>
+			</ul>
+		<li>
+			<a href="#roadmap">Roadmap</a>
+		</li>
+		<li>
+			<a href="#contributing">Contributing</a>
+		</li>
+		<li>
+			<a href="#license">License</a>
+		</li>
+		<li>
+			<a href="#contact">Contact</a>
+		</li>
+		<li>
+			<a href="#acknowledgments">Acknowledgments</a>
+		</li>
+	</ol>
 </details>
 
 
@@ -124,14 +124,14 @@ If the solution is the correct one, the game ends.
 
 > **REMARK** x and y coordinates belonging to each room's point where known a priori as shown in the table below   
 
-  | room  | x,y coordinates  | 
-  |--|--|
-  | Room1 | ( -4 , -3 ) | 
-  | Room2 | ( -4 , +2 ) | 
-  | Room3 | ( -4 , +7 ) | 
-  | Room4 | ( 5 , -7 )  | 
-  | Room5 | ( 5 , -3 )  | 
-  | Room6 | ( 5 , +1 )  | 
+	| room  | x,y coordinates  | 
+	|--|--|
+	| Room1 | ( -4 , -3 ) | 
+	| Room2 | ( -4 , +2 ) | 
+	| Room3 | ( -4 , +7 ) | 
+	| Room4 | ( 5 , -7 )  | 
+	| Room5 | ( 5 , -3 )  | 
+	| Room6 | ( 5 , +1 )  | 
  
 Having differen values for z, it is needed that detectibot reaches both quotes with its cluedo_link
 
@@ -175,13 +175,13 @@ the assignment
 
 What does the [starting package][8] contain:
 -  a node, which implements the oracle. Concerning the implementation of the Oracle consider that:
-    - there are in total 6 IDs [0...5];
-    - ome of these IDs (randomly chosen) may generate inconsistent hypotheses (e.g. multiple persons,
+		- there are in total 6 IDs [0...5];
+		- ome of these IDs (randomly chosen) may generate inconsistent hypotheses (e.g. multiple persons,
 rooms, objects)
-    -  the «trustable» ID is also randomly chosen (among the IDs which do not generate inconsisten
-    -  the oracle node implements two services: the first one (/oracle_hint) recevies an Int32 as request (the id of
+		-  the «trustable» ID is also randomly chosen (among the IDs which do not generate inconsisten
+		-  the oracle node implements two services: the first one (/oracle_hint) recevies an Int32 as request (the id of
 the marker) and returns the hint as a erl2/ErlOracle message;
-    - The oracle node implements also a service (/oracle_solution) which returns the trustable ID (erl2/Oracle.h,
+		- The oracle node implements also a service (/oracle_solution) which returns the trustable ID (erl2/Oracle.h,
 with an empty message for the request, and a int32 for the reply).
 - similarly to the second assignment, some markers correspond to malformed hints (e.g, all fields are
 empty, or just one field is empty, ....)
@@ -228,13 +228,13 @@ sudo apt get upgrade
 Then run `catkin_make` on your workspace; in my case:
 
 - Navigate to your ROS workspace
-  ```sh
-  cd /home/ros_ws/
-  ```
+	```sh
+	cd /home/ros_ws/
+	```
 - Run catkin
-  ```sh
-  catkin_make
-  ```
+	```sh
+	catkin_make
+	```
 
 You can now download the repository inside the `src` folder 
 
@@ -311,7 +311,7 @@ source devel/setup.bash
 To test the **project**, first of all:
 
 - Open a shell and run:
-  
+	
 ```sh
 roslaunch erl_assignment_3_robot detectibot_environment_2.launch 2>/dev/null
 ```
@@ -334,7 +334,7 @@ rosrun erl_assignment_3 state_machine.py
 To test the navigation module, first of all:
 
 - Open a shell and run:
-  
+	
 ```sh
 roslaunch erl_assignment_3_robot detectibot_environment_2.launch
 ```
@@ -352,7 +352,7 @@ rosrun erl_assignment_3 navigation.py
 To test the vision module, first of all:
 
 - Open a shell and run:
-  
+	
 ```sh
 roslaunch erl_assignment_3_robot detectibot_environment_2.launch
 ```
@@ -374,7 +374,7 @@ rosrun erl_assignment_3 detectibot_magnifier
 To test the state machine's module , first of all:
 
 - Open a shell and run:
-  
+	
 ```sh
 roslaunch erl_assignment_3_robot detectibot_environment.launch 2>/dev/null
 ```
@@ -429,9 +429,9 @@ Here there is the UML components diagram of the project
 
 The aforementioned architechture can be seen as a **Deliberative** one, being its pipeline structured as "sense-plan-act"
 - Concerning the "sense" module, there are three types of sense in this architechture 
-    1. **Vision** -       it is implemented by means of Aruco and OpenCV frameworks
-    2. **Localisation** - It is implemented by means of the Odom topic, in Gazebo
-    3. **Mapping** - made possible by laser sensors and GMAPPING algorithm
+		1. **Vision** -       it is implemented by means of Aruco and OpenCV frameworks
+		2. **Localisation** - It is implemented by means of the Odom topic, in Gazebo
+		3. **Mapping** - made possible by laser sensors and GMAPPING algorithm
 - Concerning the "plan" module, it is implemented through a [smach][1] state machine 
 - Finally, the move_base pkg is responsible for the detectibot's movement around the environment  
 
@@ -549,13 +549,31 @@ Concerning the `cluedo_kb.py` node:
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_cluedo_kb_py.jpg" width= 500 height=500>
 </p>
 
-1. cluedo_KB is a node that serves as a specialised ontology for the problem in hand; it supplies a processing/reasoning system that provides the functionality of:
-2. Registering clues 
-3. Building and processing hypotheses based on the added information 
-4. Finding possible solutions to the case 
-5. Rejecting hypotheses (whether needed)
+cluedo_KB is a node that serves as a specialised ontology for the problem in hand; it supplies a processing/reasoning system that provides the functionality of:  
 
-> ***REMARK*** the KB listens in on the oracle's topic and as soon as the oracle transmits the clue, the KB adds the message to the ontology without the need for an explicit request
+- Registering clues 
+- Building and processing hypotheses based on the added information 
+- Finding possible solutions to the case 
+- Rejecting hypotheses (whether needed)
+
+More specifically, When the robot starts roaming around looking for Aruco markers, (where the hints' IDs are stored), it  makes a service request through `/add_hint` for soliciting the oracle to announce the found hint. This latter, consists in a request of type `erl3/Marker` here below reported
+
+```Plain txt
+# erl3/Marker service implementation
+
+int32 markerId
+---
+# erl3/ErlOracle oracle_hint
+ErlOracle oracle_hint
+```
+Since could happen that sometimes the Oracle sends a wrong hint (i.e. it may occurs that some fields are empty strings and/or some fields has value -1), a function responsible for checking its quality, has been implemented. 
+
+> *Remark* In the previous section we mentioned the difference between consistent and inconsistent hypothesis; It is worthmentioning that this nodes also implements a function  to cope with the removal of inconsistent hypothesis from the list of possible hints
+
+
+
+
+> ***REMARK*** the KB listens to the oracle's topic and as soon as the oracle transmits the clue, the KB adds the message to the ontology without the need for an explicit request
 
 Node interfaces:
 ```Plain txt
@@ -809,13 +827,13 @@ Here below, some of the major system limitations are listed:
 As for the system limitations, some of the most relevant potential techincal improvements:
 
 - The current KB can be modified to implement the same functionalities on a different ontology system (i.e. Armor); the component can be extended for more accurate  hypotheses processing or for providing, for instance, a ontology backup feature
-  
+	
 - The current navigation system is rather poor; it should be replaced with a more elaborate navigation system. In particular, the new navigation system should make it possible to achieve a certain orientation as well as a final position.
-  
+	
 - The manipulation could be replaced with a more advanced node that performs a finer (more precise) control on moveit
-  
+	
 - The current robot model is quite unstable. It should be adjusted so that it does not oscillate during its movments
-  
+	
 - the robot needs a lot of manoeuvring space to move; There should be the need of seeking an appropriate navigation algorithm to reduce the necessary manoeuvring space
 
 - The architecture could also be executed in a distributed manner by splitting the components over several devices. However, this possibility was not considered during the design of the system. It is therefore necessary to identify possible criticalities in the communication protocol (i.e. to better manage service calls that fail based on the quality of the connection) and deal with them appropriately 
@@ -827,22 +845,22 @@ As for the system limitations, some of the most relevant potential techincal imp
 
 - [x] Complete the introduction of the template 
 - [x] Describe the software architechture
-  - [x] Component diagram (*not mandatory*)
-  - [ ] Temporal diagram + comments
-  - [x] States diagrams, whether applicable + comments
-  - [x] Create a list describing ROS messages and parameters 
+	- [x] Component diagram (*not mandatory*)
+	- [ ] Temporal diagram + comments
+	- [x] States diagrams, whether applicable + comments
+	- [x] Create a list describing ROS messages and parameters 
 - [x] Describe the installation steps and the running procedures
-    - [x] Create a dedicated paragraph
-    - [x] Include all the steps to display the robot's behaviour
+		- [x] Create a dedicated paragraph
+		- [x] Include all the steps to display the robot's behaviour
 - [x] Show in the "usage" section the running code
-  - [x] Create a small video tutorial of the launch
-  - [x] Create a small animated gif of the terminal while running code
+	- [x] Create a small video tutorial of the launch
+	- [x] Create a small animated gif of the terminal while running code
 - [x] Describe the Working hypothesis and environment
-  - [x] Dedicated section for System's features
-  - [x] Dedicated section for System's limitations
-  - [x] Dedicated section for Possible technical improvements
+	- [x] Dedicated section for System's features
+	- [x] Dedicated section for System's limitations
+	- [x] Dedicated section for Possible technical improvements
 
-  
+	
 
 See the [open issues](https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues) for a full list of proposed features (and known issues).
 
