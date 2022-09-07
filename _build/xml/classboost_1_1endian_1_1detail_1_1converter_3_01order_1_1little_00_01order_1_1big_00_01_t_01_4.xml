@@ -27,6 +27,7 @@
         <location file="vision_opencv/cv_bridge/src/boost/endian/conversion.hpp" line="418" column="14" bodyfile="vision_opencv/cv_bridge/src/boost/endian/conversion.hpp" bodystart="418" bodyend="418"/>
         <references refid="namespaceboost_1_1endian_1a8f0cde80b0c6e1d75b7e255f9152ad0e" compoundref="conversion_8hpp" startline="364" endline="367">boost::endian::endian_reverse_inplace</references>
         <references refid="classboost_1_1endian_1_1detail_1_1converter_3_01order_1_1little_00_01order_1_1big_00_01_t_01_4_1a2e0efe4bbaf4aaa936bd9a665e1dbaf1" compoundref="conversion_8hpp" startline="418" endline="418">operator()</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
         <referencedby refid="classboost_1_1endian_1_1detail_1_1converter_3_01order_1_1little_00_01order_1_1big_00_01_t_01_4_1a2e0efe4bbaf4aaa936bd9a665e1dbaf1" compoundref="conversion_8hpp" startline="418" endline="418">operator()</referencedby>
       </memberdef>
       </sectiondef>

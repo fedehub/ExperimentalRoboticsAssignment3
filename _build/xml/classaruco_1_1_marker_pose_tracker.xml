@@ -103,6 +103,7 @@
         <references refid="classaruco_1_1_camera_parameters_1a33a5ab0b2f00a4753a2fda307e24360a" compoundref="cameraparameters_8h" startline="50">aruco::CameraParameters::Distorsion</references>
         <references refid="classaruco_1_1_marker_1a047a6cfac4e5bbca087273618ac1fd52" compoundref="marker_8h" startline="204" endline="207">aruco::Marker::get3DPoints</references>
         <references refid="classaruco_1_1_marker_1a5f31be5060bf2a6762890a1a54c98cfd" compoundref="marker_8h" startline="56">aruco::Marker::Rvec</references>
+        <references refid="_state__machine_8rst_8txt_1abefde73421c9664340fcc4d23667d7cc" compoundref="_state__machine_8rst_8txt" startline="18">solutions</references>
         <references refid="namespacearuco_1ac3489ddda33f94f247d9be2e6da021f9" compoundref="ippe_8cpp" startline="109" endline="117">aruco::solvePnP_</references>
         <references refid="classaruco_1_1_marker_1ac5df65736cc539e78d6620307739b5b1" compoundref="marker_8h" startline="54">aruco::Marker::ssize</references>
         <references refid="classaruco_1_1_marker_1a14068630efdf1a5f665a2dcb34e496d0" compoundref="marker_8h" startline="56">aruco::Marker::Tvec</references>

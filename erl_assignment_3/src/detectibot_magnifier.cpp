@@ -1,4 +1,4 @@
-/** @ package erl_assignment_3
+/** @package erl_assignment_3
 * 
 *	@file detectibot_magnifier.cpp
 *	@brief This node implements the Detection task with Aruco on a single camera 

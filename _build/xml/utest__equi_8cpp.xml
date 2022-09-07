@@ -186,6 +186,7 @@
         </inbodydescription>
         <location file="vision_opencv/image_geometry/test/utest_equi.cpp" line="162" column="1" bodyfile="vision_opencv/image_geometry/test/utest_equi.cpp" bodystart="162" bodyend="251"/>
         <references refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" compoundref="rosfacedetect_8py" startline="41">rosfacedetect.type</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
       </memberdef>
       <memberdef kind="function" id="utest__equi_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -408,11 +409,11 @@
 <codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(0,<sp/>y),<sp/>cv::Point(cam_info_.width,<sp/>y),</highlight></codeline>
 <codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color,<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref>,<sp/>thickness);</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;=<sp/>cam_info_.width;<sp/>x<sp/>+=<sp/>cam_info_.width/10)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>&lt;=<sp/>cam_info_.width;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>+=<sp/>cam_info_.width/10)</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>draw<sp/>the<sp/>lines<sp/>thick<sp/>so<sp/>the<sp/>prorportion<sp/>of<sp/>interpolation<sp/>error<sp/>is<sp/>reduced</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>cv::line(distorted_image,</highlight></codeline>
-<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(x,<sp/>0),<sp/>cv::Point(x,<sp/>cam_info_.height),</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(<ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>,<sp/>0),<sp/>cv::Point(<ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>,<sp/>cam_info_.height),</highlight></codeline>
 <codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color,<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref>,<sp/>thickness);</highlight></codeline>
 <codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"></highlight></codeline>

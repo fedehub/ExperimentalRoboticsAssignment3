@@ -1163,6 +1163,8 @@
   </compound>
   <compound refid="namespaceenumerants" kind="namespace"><name>enumerants</name>
   </compound>
+  <compound refid="namespaceerl__assignment__3" kind="namespace"><name>erl_assignment_3</name>
+  </compound>
   <compound refid="namespaceexample__ball" kind="namespace"><name>example_ball</name>
     <member refid="namespaceexample__ball_1a8d5b298ec64984d904f17dcef37de3e8" kind="variable"><name>VERBOSE</name></member>
     <member refid="namespaceexample__ball_1ad8c26c28637704c1a7347002405d3cbf" kind="function"><name>main</name></member>
@@ -1380,6 +1382,15 @@
   </compound>
   <compound refid="vision__opencv_2vision__opencv_2_c_h_a_n_g_e_l_o_g_8rst_8txt" kind="file"><name>CHANGELOG.rst.txt</name>
   </compound>
+  <compound refid="_detectibot__magnifier_8rst_8txt" kind="file"><name>Detectibot_magnifier.rst.txt</name>
+    <member refid="_detectibot__magnifier_8rst_8txt_1a6f151bf053f064333fa41575c7af1daa" kind="variable"><name>packages</name></member>
+    <member refid="_detectibot__magnifier_8rst_8txt_1aab7935661ade1e68845326aa28cf201d" kind="variable"><name>format</name></member>
+  </compound>
+  <compound refid="_img__echo_8rst_8txt" kind="file"><name>Img_echo.rst.txt</name>
+    <member refid="_img__echo_8rst_8txt_1a1790a56af86ecde0b03cdf2f0fe4d387" kind="variable"><name>window</name></member>
+    <member refid="_img__echo_8rst_8txt_1af89959d671d8edcafe6635b166adec1a" kind="variable"><name>chosen</name></member>
+    <member refid="_img__echo_8rst_8txt_1a43047111e6e12a759e27a3dd09a8e2a5" kind="variable"><name>subscribers</name></member>
+  </compound>
   <compound refid="code__documentation_2index_8md_8txt" kind="file"><name>index.md.txt</name>
   </compound>
   <compound refid="documents_2index_8md_8txt" kind="file"><name>index.md.txt</name>
@@ -1387,7 +1398,7 @@
   <compound refid="_navigation_8rst_8txt" kind="file"><name>Navigation.rst.txt</name>
   </compound>
   <compound refid="_oracle_8rst_8txt" kind="file"><name>Oracle.rst.txt</name>
-    <member refid="_oracle_8rst_8txt_1a0d549c8fd63fd5124ce0824222ae2860" kind="variable"><name>code</name></member>
+    <member refid="_oracle_8rst_8txt_1a7b9676e6340377e1c2930da27fd133a0" kind="variable"><name>code</name></member>
     <member refid="_oracle_8rst_8txt_1a19e3c62854c506eb9993730f963d146d" kind="variable"><name>space</name></member>
     <member refid="_oracle_8rst_8txt_1a82d55e07a4a4f63b0d123ed5a37c27ce" kind="variable"><name>than</name></member>
     <member refid="_oracle_8rst_8txt_1a055f013165feb3c8b64fe722e5692938" kind="variable"><name>oracle_msgs</name></member>
@@ -1395,9 +1406,31 @@
     <member refid="_oracle_8rst_8txt_1a3d397519c2d9adf8283ffa3045d32aaf" kind="variable"><name>particular</name></member>
     <member refid="_oracle_8rst_8txt_1acc5905728f3f1ab997990f9b4ccaa13b" kind="variable"><name>ID</name></member>
     <member refid="_oracle_8rst_8txt_1a31598fc9ace12f0c15d34780665fbcf9" kind="variable"><name>hint</name></member>
-    <member refid="_oracle_8rst_8txt_1a9c60414e0116ebf318b07fc7945c3652" kind="variable"><name>service</name></member>
+    <member refid="_oracle_8rst_8txt_1aa2bb0bbefdabed4fced22acc09b2f715" kind="variable"><name>service</name></member>
     <member refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" kind="variable"><name>Marker</name></member>
     <member refid="_oracle_8rst_8txt_1ae9e73c5f55a667c884e25c3bdf1101b6" kind="variable"><name>follows</name></member>
+  </compound>
+  <compound refid="_state__machine_8rst_8txt" kind="file"><name>State_machine.rst.txt</name>
+    <member refid="_state__machine_8rst_8txt_1ad685c8ea8188e50a20227f8228e7f606" kind="variable"><name>service</name></member>
+    <member refid="_state__machine_8rst_8txt_1abefde73421c9664340fcc4d23667d7cc" kind="variable"><name>solutions</name></member>
+    <member refid="_state__machine_8rst_8txt_1a7463cda555922b364d4d9285bc99f4e4" kind="variable"><name>mistery_not_solvable</name></member>
+    <member refid="_state__machine_8rst_8txt_1a5c4f7762ecc115173cd76d7536a61804" kind="variable"><name>Otherwise</name></member>
+    <member refid="_state__machine_8rst_8txt_1ab29524ec61eb0a0afa9a3bf3bccaee93" kind="variable"><name>state</name></member>
+    <member refid="_state__machine_8rst_8txt_1a88645ce357612100d96d5e7be1a989f9" kind="variable"><name>jpg</name></member>
+    <member refid="_state__machine_8rst_8txt_1a9b5199b4c81a0e3487465bc0a08a44ad" kind="variable"><name>launched</name></member>
+    <member refid="_state__machine_8rst_8txt_1abd37dd137fbf00923d40243939f0a8b0" kind="variable"><name>Hence</name></member>
+    <member refid="_state__machine_8rst_8txt_1a0b536d100a54f87beeb088ead9e55ff2" kind="variable"><name>that</name></member>
+    <member refid="_state__machine_8rst_8txt_1a6bdac697dc1f28556bb0b540e2e7d166" kind="variable"><name>suggests</name></member>
+    <member refid="_state__machine_8rst_8txt_1a76a8180e1e1e68a3988d24cc5f7c98e8" kind="variable"><name>after</name></member>
+    <member refid="_state__machine_8rst_8txt_1a784e647f2b3eb81ad423541600c71ddb" kind="variable"><name>aspects</name></member>
+    <member refid="_state__machine_8rst_8txt_1ab33486ceadd7a3e45e246b2743118981" kind="variable"><name>are</name></member>
+    <member refid="_state__machine_8rst_8txt_1af11e9ac7d4e83f3a1c9d027dd32ddbf1" kind="variable"><name>large</name></member>
+    <member refid="_state__machine_8rst_8txt_1a0a0b85e13b1280def97c39ad9cbd3466" kind="variable"><name>Introspection</name></member>
+    <member refid="_state__machine_8rst_8txt_1ad8f8ce1821d1acad67cfe572fd968fbe" kind="variable"><name>transitions</name></member>
+    <member refid="_state__machine_8rst_8txt_1a69249a33a341db4aa4cb8bc9b88d503a" kind="variable"><name>flow</name></member>
+    <member refid="_state__machine_8rst_8txt_1ad09e3d9cbc01b152c2c1311a5a5950f0" kind="function"><name>IDs</name></member>
+    <member refid="_state__machine_8rst_8txt_1a2659887f46d0b471a57b5e07c4be95e6" kind="function"><name>issued</name></member>
+    <member refid="_state__machine_8rst_8txt_1a98ae9a1bfb617ab4f379f45fea176bfe" kind="function"><name>investigation</name></member>
   </compound>
   <compound refid="markdown-vs-rest_8md_8txt" kind="file"><name>markdown-vs-rest.md.txt</name>
   </compound>
@@ -1425,33 +1458,20 @@
     <member refid="vision__opencv_2image__geometry_2doc_2index_8rst_8txt_1a6a891e907fcb9e482a0c3e6edcdae360" kind="variable"><name>fx</name></member>
   </compound>
   <compound refid="_r_e_a_d_m_e_8md_8txt" kind="file"><name>README.md.txt</name>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1ac6e8065e6053bcc4ccbf83026ef61a59" kind="variable"><name>is</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a4e2943fe68aab0ed3cff5599c6c0057d" kind="variable"><name>ID2_1</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1afee02f61923a55f0e4607cfef7adffae" kind="variable"><name>ID2_2</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1abfcf4550afcb4a8d6ecdbd5196fdb740" kind="variable"><name>ID2_3</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a358916b3595c2318ef2c5ff102e87096" kind="variable"><name>hypothesis</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a58f322226df79214c202526ebf74ac29" kind="variable"><name>ID4_1</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a98c01d4fca8ca4b5dafd8e175b0aa660" kind="variable"><name>ID4_2</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a10734599183cc0ea14dcb882317e001c" kind="variable"><name>ID4_3</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1aa5516cc1877ee021702b5d58420446c7" kind="variable"><name>ID4_4</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1aeebd95ae61f4a97188f83103e2e31678" kind="variable"><name>folder</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1aeab6238076b2b1a75d29328d62a3ea1c" kind="variable"><name>listed</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1adfcedc19c0edd440d2eba68add0ab1f6" kind="variable"><name>below</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1af4e5ea58be79f4dd4ac44bf3377e8868" kind="variable"><name>instead</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a50303c5a7476330458c995afdf6c83f9" kind="variable"><name>https</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1af455a43cbed60c6fd55093096274e9f7" kind="variable"><name>terminal</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kind="variable"><name>p</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a4500f6927956acf4563d5436fc7f739a" kind="variable"><name>all</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a747c4ab470b1450f008b1f5ab8321b70" kind="variable"><name>node</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a9bd4e2768a116aeb2dbe43ef546c7366" kind="variable"><name>sequentially</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1acf77567deaf8d1e80acf73a1aa16e376" kind="variable"><name>roscore</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a344ad6e34c976b6aa139375def35f8c2" kind="variable"><name>follows</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a000149c8f25eaf82da99e4db7f42addb" kind="variable"><name>then</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1ae0f217649da21562028ca559c4b6137a" kind="variable"><name>finally</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1acd7383e8199446b79fce2b440e895408" kind="variable"><name>priori</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a44a26e7477784eb84207c62ba25404ab" kind="variable"><name>end</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a4c32f466e6a3383f61e0e39652750544" kind="variable"><name>this</name></member>
-    <member refid="_r_e_a_d_m_e_8md_8txt_1a9c2d2c99bf88ebdabbe6a37d365a9cb7" kind="variable"><name>diagrams</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kind="variable"><name>x</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1aca57f8a96b8d4ed96b1b6208de7a1ef6" kind="variable"><name>z</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1ab0dc513ee1cd7fe2bb426f5359186e76" kind="variable"><name>environment</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a375f47bedc3d0d753d1874b24e755b40" kind="variable"><name>one</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1af1324d0bc77791472f5243eadcfb11b2" kind="variable"><name>is</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1ab8d5f8942208cd797e1386c9060482bb" kind="variable"><name>ID2_1</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1ae7cabc3e5acb50c2cffb17d0ee74368f" kind="variable"><name>ID2_2</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1aa9f57c8de9d14951a09170fd65fe37ad" kind="variable"><name>ID2_3</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a092d27941cd531a28f8d6f19690228ac" kind="variable"><name>hypothesis</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1aca7722d4c280e5b446037c7231f98662" kind="variable"><name>rooms</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a992deea13c1fc8fa46c3d65a9b2599be" kind="function"><name>Room1</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a752227dbbbdd21a418cdd3c681eebdf6" kind="function"><name>Room3</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1a170b3da9056b258a6060d8ede6cb0dd5" kind="function"><name>Room5</name></member>
+    <member refid="_r_e_a_d_m_e_8md_8txt_1af44ad78dd08b743e7bc7ba5f11c9a7a7" kind="function"><name>IDs</name></member>
   </compound>
   <compound refid="_r_e_a_d_m_e_8rst_8txt" kind="file"><name>README.rst.txt</name>
     <member refid="_r_e_a_d_m_e_8rst_8txt_1aac93e586127c0fc4e733e2d01bcda438" kind="variable"><name>vision_opencv</name></member>

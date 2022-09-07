@@ -164,7 +164,7 @@
 <codeline lineno="155"><highlight class="normal">##<sp/>Install<sp/>##</highlight></codeline>
 <codeline lineno="156"><highlight class="normal">#############</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal">#<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a4500f6927956acf4563d5436fc7f739a" kindref="member">all</ref><sp/>install<sp/>targets<sp/>should<sp/>use<sp/>catkin<sp/>DESTINATION<sp/>variables</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">#<sp/>all<sp/>install<sp/>targets<sp/>should<sp/>use<sp/>catkin<sp/>DESTINATION<sp/>variables</highlight></codeline>
 <codeline lineno="159"><highlight class="normal">#<sp/>See<sp/>http:</highlight><highlight class="comment">//ros.org/doc/api/catkin/html/adv_user_guide/variables.html</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="160"><highlight class="normal"></highlight></codeline>
 <codeline lineno="161"><highlight class="normal">##<sp/>Mark<sp/>executable<sp/>scripts<sp/>(Python<sp/>etc.)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>installation</highlight></codeline>

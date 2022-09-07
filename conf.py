@@ -15,8 +15,8 @@ import sys
 import subprocess
 
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.insert(0, os.path.abspath('./erl_assignment_2/'))
-sys.path.insert(0, os.path.abspath('./erl_assignment_2/scripts/'))
+sys.path.insert(0, os.path.abspath('./erl_assignment_3/'))
+sys.path.insert(0, os.path.abspath('./erl_assignment_3/scripts/'))
 
 
 # -- Project information -----------------------------------------------------
@@ -104,11 +104,11 @@ subprocess.call( 'doxygen doxygen_config', shell=True )
 
 # path of the doxygen generated HTML
 breathe_projects = {
-  "ExperimentalRoboticsAssignment2": "_build/xml/"
+  "ExperimentalRoboticsAssignment3": "_build/xml/"
 }
 
 # title of the Doxygen project
-breathe_default_project = "ExperimentalRoboticsAssignment2"
+breathe_default_project = "ExperimentalRoboticsAssignment3"
 breathe_default_members = ('members', 'undoc-members')
 
 

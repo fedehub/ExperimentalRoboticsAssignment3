@@ -186,6 +186,7 @@
         </inbodydescription>
         <location file="vision_opencv/image_geometry/test/utest.cpp" line="164" column="1" bodyfile="vision_opencv/image_geometry/test/utest.cpp" bodystart="164" bodyend="250"/>
         <references refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" compoundref="rosfacedetect_8py" startline="41">rosfacedetect.type</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
       </memberdef>
       <memberdef kind="function" id="image__geometry_2test_2utest_8cpp_1a87ba8d4909ff3a9375f87307ccece1f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -214,6 +215,7 @@
         <references refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" compoundref="rosfacedetect_8py" startline="41">rosfacedetect.type</references>
         <references refid="classimage__geometry_1_1_pinhole_camera_model_1a017a52e057c798c49a8da3999967ee63" compoundref="pinhole__camera__model_8cpp" startline="360" endline="382">image_geometry::PinholeCameraModel::unrectifyImage</references>
         <references refid="classimage__geometry_1_1_pinhole_camera_model_1afdf040f493b8fa60a6192cd3f01901d3" compoundref="pinhole__camera__model_8cpp" startline="418" endline="421">image_geometry::PinholeCameraModel::unrectifyPoint</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
         <referencedby refid="image__geometry_2test_2utest_8cpp_1a2457cb8074d12195a610ec8d07b89c04" compoundref="image__geometry_2test_2utest_8cpp" startline="330" endline="333">TEST_F</referencedby>
       </memberdef>
       <memberdef kind="function" id="image__geometry_2test_2utest_8cpp_1a2457cb8074d12195a610ec8d07b89c04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -557,11 +559,11 @@
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(0,<sp/>y),<sp/>cv::Point(cam_info_.width,<sp/>y),</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color,<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref>,<sp/>thickness);</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;=<sp/>cam_info_.width;<sp/>x<sp/>+=<sp/>cam_info_.width/10)</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>&lt;=<sp/>cam_info_.width;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>+=<sp/>cam_info_.width/10)</highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>draw<sp/>the<sp/>lines<sp/>thick<sp/>so<sp/>the<sp/>prorportion<sp/>of<sp/>interpolation<sp/>error<sp/>is<sp/>reduced</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>cv::line(distorted_image,</highlight></codeline>
-<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(x,<sp/>0),<sp/>cv::Point(x,<sp/>cam_info_.height),</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(<ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>,<sp/>0),<sp/>cv::Point(<ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>,<sp/>cam_info_.height),</highlight></codeline>
 <codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color,<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref>,<sp/>thickness);</highlight></codeline>
 <codeline lineno="211"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="212"><highlight class="normal"></highlight></codeline>
@@ -621,10 +623,10 @@
 <codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(0,<sp/>y),<sp/>cv::Point(cam_info.width,<sp/>y),</highlight></codeline>
 <codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color,<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref>,<sp/>thickness);</highlight></codeline>
 <codeline lineno="268"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
-<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;=<sp/>rectified_image.cols;<sp/>x<sp/>+=<sp/>rectified_image.cols<sp/>/<sp/>10)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>&lt;=<sp/>rectified_image.cols;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>+=<sp/>rectified_image.cols<sp/>/<sp/>10)</highlight></codeline>
 <codeline lineno="270"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/>cv::line(rectified_image,</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(x,<sp/>0),<sp/>cv::Point(x,<sp/>cam_info.height),</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point(<ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>,<sp/>0),<sp/>cv::Point(<ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>,<sp/>cam_info.height),</highlight></codeline>
 <codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color,<sp/><ref refid="namespacerosfacedetect_1aa846ed4b5a4bf1b026629f15f519db9f" kindref="member">type</ref>,<sp/>thickness);</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
 <codeline lineno="275"><highlight class="normal"></highlight></codeline>
@@ -654,9 +656,9 @@
 <codeline lineno="299"><highlight class="normal"><sp/><sp/>cv::Mat<sp/>mask<sp/>=<sp/>cv::Mat::zeros(rectified_image.size(),<sp/>CV_8UC1);</highlight></codeline>
 <codeline lineno="300"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/>rectified_image.rows;<sp/>y++)</highlight></codeline>
 <codeline lineno="301"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
-<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/>rectified_image.cols;<sp/>x++)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>=<sp/>0;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref><sp/>&lt;<sp/>rectified_image.cols;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>++)</highlight></codeline>
 <codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point2i<sp/>uv_rect(x,<sp/>y),<sp/>uv_raw;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>cv::Point2i<sp/>uv_rect(<ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref>,<sp/>y),<sp/>uv_raw;</highlight></codeline>
 <codeline lineno="305"><highlight class="normal"></highlight></codeline>
 <codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>uv_raw<sp/>=<sp/>model.<ref refid="classimage__geometry_1_1_pinhole_camera_model_1afdf040f493b8fa60a6192cd3f01901d3" kindref="member">unrectifyPoint</ref>(uv_rect);</highlight></codeline>
 <codeline lineno="307"><highlight class="normal"></highlight></codeline>

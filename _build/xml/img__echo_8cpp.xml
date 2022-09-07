@@ -95,6 +95,7 @@
       </node>
     </incdepgraph>
     <innerclass refid="classimg__echo__class" prot="public">img_echo_class</innerclass>
+    <innernamespace refid="namespaceerl__assignment__3">erl_assignment_3</innernamespace>
       <sectiondef kind="var">
       <memberdef kind="variable" id="img__echo_8cpp_1ac8b1805a7073a3ed84d89f2aaef3f254" prot="public" static="yes" mutable="no">
         <type>const std::string</type>
@@ -140,7 +141,6 @@
 <para>This node reads the camera input and show it onto a floating window. </para>
     </briefdescription>
     <detaileddescription>
-<para>@ package erl_assignment_3</para>
 <para><simplesect kind="author"><para>Federico Civetta </para>
 </simplesect>
 <simplesect kind="version"><para>1.0.0</para>

@@ -317,7 +317,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco_ros/src/simple_single.cpp" line="335" column="5" bodyfile="aruco_ros/aruco_ros/src/simple_single.cpp" bodystart="335" bodyend="342"/>
-        <references refid="_r_e_a_d_m_e_8md_8txt_1a747c4ab470b1450f008b1f5ab8321b70" compoundref="_r_e_a_d_m_e_8md_8txt" startline="347">node</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -663,7 +662,7 @@
 <codeline lineno="336"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="337"><highlight class="normal"><sp/><sp/>ros::init(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;aruco_simple&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="338"><highlight class="normal"></highlight></codeline>
-<codeline lineno="339"><highlight class="normal"><sp/><sp/><ref refid="class_aruco_simple" kindref="compound">ArucoSimple</ref><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a747c4ab470b1450f008b1f5ab8321b70" kindref="member">node</ref>;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><ref refid="class_aruco_simple" kindref="compound">ArucoSimple</ref><sp/>node;</highlight></codeline>
 <codeline lineno="340"><highlight class="normal"></highlight></codeline>
 <codeline lineno="341"><highlight class="normal"><sp/><sp/>ros::spin();</highlight></codeline>
 <codeline lineno="342"><highlight class="normal">}</highlight></codeline>

@@ -224,7 +224,7 @@
         <argsstring></argsstring>
         <name>breathe_projects</name>
         <initializer>=  {
-  &quot;ExperimentalRoboticsAssignment2&quot;: &quot;_build/xml/&quot;
+  &quot;ExperimentalRoboticsAssignment3&quot;: &quot;_build/xml/&quot;
 }</initializer>
         <briefdescription>
         </briefdescription>
@@ -239,7 +239,7 @@
         <definition>string conf.breathe_default_project</definition>
         <argsstring></argsstring>
         <name>breathe_default_project</name>
-        <initializer>=  &quot;ExperimentalRoboticsAssignment2&quot;</initializer>
+        <initializer>=  &quot;ExperimentalRoboticsAssignment3&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

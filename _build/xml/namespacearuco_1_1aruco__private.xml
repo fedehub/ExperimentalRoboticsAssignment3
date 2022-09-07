@@ -84,6 +84,7 @@
         <references refid="classaruco_1_1_camera_parameters_1a5210f7dd5f0f4f0fea728357005d6bcd" compoundref="cameraparameters_8h" startline="47">aruco::CameraParameters::CameraMatrix</references>
         <references refid="classaruco_1_1_camera_parameters_1a33a5ab0b2f00a4753a2fda307e24360a" compoundref="cameraparameters_8h" startline="50">aruco::CameraParameters::Distorsion</references>
         <references refid="namespacearuco_1_1aruco__private_1ae3d3e913cfca024f2bb948b44496fa1d" compoundref="posetracker_8cpp" startline="82" endline="99">impl__aruco_getRTfromMatrix44</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
       </memberdef>
       <memberdef kind="function" id="namespacearuco_1_1aruco__private_1aeb25dcbda31030c3dd21e248324ff981" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>

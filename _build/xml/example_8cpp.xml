@@ -80,7 +80,7 @@
         <definition>const std::string OPENCV_WINDOW</definition>
         <argsstring></argsstring>
         <name>OPENCV_WINDOW</name>
-        <initializer>= &quot;Image window&quot;</initializer>
+        <initializer>= &quot;Image <ref refid="_img__echo_8rst_8txt_1a1790a56af86ecde0b03cdf2f0fe4d387" kindref="member">window</ref>&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

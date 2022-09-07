@@ -31,8 +31,8 @@ Packages for interfacing ROS with OpenCV</initializer>
 <codeline lineno="1"><highlight class="normal"><ref refid="_r_e_a_d_m_e_8rst_8txt_1aac93e586127c0fc4e733e2d01bcda438" kindref="member">vision_opencv</ref></highlight></codeline>
 <codeline lineno="2" refid="_r_e_a_d_m_e_8rst_8txt_1aac93e586127c0fc4e733e2d01bcda438" refkind="member"><highlight class="normal">=============</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">..<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a50303c5a7476330458c995afdf6c83f9" kindref="member">image:: https</ref>:</highlight><highlight class="comment">//travis-ci.org/ros-perception/vision_opencv.svg?branch=indigo</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>:target:<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a50303c5a7476330458c995afdf6c83f9" kindref="member">https</ref>:</highlight><highlight class="comment">//travis-ci.org/ros-perception/vision_opencv</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">..<sp/>image::<sp/>https:</highlight><highlight class="comment">//travis-ci.org/ros-perception/vision_opencv.svg?branch=indigo</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>:target:<sp/>https:</highlight><highlight class="comment">//travis-ci.org/ros-perception/vision_opencv</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal">Packages<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>interfacing<sp/>ROS<sp/>with<sp/>OpenCV,<sp/>a<sp/>library<sp/>of<sp/>programming<sp/>functions<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>real<sp/>time<sp/>computer<sp/>vision.</highlight></codeline>
     </programlisting>

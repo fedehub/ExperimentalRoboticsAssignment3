@@ -257,6 +257,7 @@
       </node>
     </incdepgraph>
     <innerclass refid="classdetectibot__magnifier__class" prot="public">detectibot_magnifier_class</innerclass>
+    <innernamespace refid="namespaceerl__assignment__3">erl_assignment_3</innernamespace>
       <sectiondef kind="func">
       <memberdef kind="function" id="detectibot__magnifier_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -285,7 +286,6 @@
 <para>This node implements the Detection task with Aruco on a single camera. </para>
     </briefdescription>
     <detaileddescription>
-<para>@ package erl_assignment_3</para>
 <para><simplesect kind="author"><para>Federico Civetta </para>
 </simplesect>
 <simplesect kind="version"><para>1.0.0</para>

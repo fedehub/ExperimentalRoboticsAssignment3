@@ -155,7 +155,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco_ros/include/aruco_ros/aruco_ros_utils.h" line="34" column="28" bodyfile="aruco_ros/aruco_ros/src/aruco_ros_utils.cpp" bodystart="122" bodyend="139" declfile="aruco_ros/aruco_ros/include/aruco_ros/aruco_ros_utils.h" declline="34" declcolumn="28"/>
-        <references refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" compoundref="_oracle_8rst_8txt" startline="21">Marker</references>
+        <references refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" compoundref="_oracle_8rst_8txt" startline="20">Marker</references>
         <references refid="simple__double_8cpp_1a46ba90e214408b92c4329be16a5cd5d0" compoundref="simple__double_8cpp" startline="68">marker_size</references>
       </memberdef>
       </sectiondef>

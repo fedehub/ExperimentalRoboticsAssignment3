@@ -163,7 +163,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/include/aruco/markermap.h" line="80" column="15" bodyfile="aruco_ros/aruco/include/aruco/markermap.h" bodystart="80" bodyend="83"/>
-        <references refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" compoundref="_r_e_a_d_m_e_8md_8txt" startline="341">p</references>
       </memberdef>
       <memberdef kind="function" id="classaruco_1_1_marker3_d_info_1ad3a16b097392ab53833cd39a9c6ee5e2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -211,6 +210,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="aruco_ros/aruco/include/aruco/markermap.h" line="98" column="15" bodyfile="aruco_ros/aruco/include/aruco/markermap.h" bodystart="98" bodyend="105"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1aca57f8a96b8d4ed96b1b6208de7a1ef6" compoundref="_r_e_a_d_m_e_8md_8txt" startline="136">z</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

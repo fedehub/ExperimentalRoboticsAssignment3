@@ -1364,6 +1364,7 @@
         <references refid="classimage__geometry_1_1_pinhole_camera_model_1a2eade4c2b648c1980092b13b758d8835" compoundref="pinhole__camera__model_8h" startline="272">K_full_</references>
         <references refid="classimage__geometry_1_1_pinhole_camera_model_1a6b50cc5d72c233d01fcb30b1af6d9fe8" compoundref="pinhole__camera__model_8h" startline="273">P_full_</references>
         <references refid="classimage__geometry_1_1_pinhole_camera_model_1af9f461bb4610dadfed25aef2da6bc1c8" compoundref="pinhole__camera__model_8cpp" startline="384" endline="387">rectifyPoint</references>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
         <referencedby refid="classimage__geometry_1_1_pinhole_camera_model_1a017a52e057c798c49a8da3999967ee63" compoundref="pinhole__camera__model_8cpp" startline="360" endline="382">unrectifyImage</referencedby>
       </memberdef>
       </sectiondef>

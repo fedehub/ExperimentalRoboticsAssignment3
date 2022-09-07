@@ -325,14 +325,13 @@
         <inbodydescription>
         </inbodydescription>
         <location file="erl3/src/simulation.cpp" line="45" column="5" bodyfile="erl3/src/simulation.cpp" bodystart="45" bodyend="140"/>
-        <references refid="_r_e_a_d_m_e_8md_8txt_1a44a26e7477784eb84207c62ba25404ab" compoundref="_r_e_a_d_m_e_8md_8txt" startline="417">end</references>
         <references refid="simulation_8cpp_1a0049a8a39c319bf1470f36c9e0f75abd" compoundref="simulation_8cpp" startline="20">key</references>
         <references refid="simulation_8cpp_1a42b80e0b5892e0aba8cc512980770c1c" compoundref="simulation_8cpp" startline="29">oracle_msgs</references>
         <references refid="simulation_8cpp_1ae03e072c5ab0129b0d05a862f394628c" compoundref="simulation_8cpp" startline="39" endline="43">oracleCallback</references>
         <references refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" compoundref="simulation_8cpp" startline="33" endline="37">oracleService</references>
         <references refid="simulation_8cpp_1a68fa6a0c7a1208892294604263e23d92" compoundref="simulation_8cpp" startline="21">person</references>
         <references refid="simulation_8cpp_1a5e5bd50ead53d20df3f8ede527f47ce7" compoundref="simulation_8cpp" startline="23">place</references>
-        <references refid="_oracle_8rst_8txt_1a9c60414e0116ebf318b07fc7945c3652" compoundref="_oracle_8rst_8txt" startline="21">service</references>
+        <references refid="_oracle_8rst_8txt_1aa2bb0bbefdabed4fced22acc09b2f715" compoundref="_oracle_8rst_8txt" startline="20">service</references>
         <references refid="simulation_8cpp_1a37d4a0b625b8b9583adf9362f5aae971" compoundref="simulation_8cpp" startline="25">uIDs</references>
         <references refid="simulation_8cpp_1a90c5d03e068ddae91702223f47eff712" compoundref="simulation_8cpp" startline="26">winID</references>
       </memberdef>
@@ -392,7 +391,7 @@
 <codeline lineno="48"><highlight class="normal">ros::init(argc,<sp/>argv,<sp/></highlight><highlight class="stringliteral">&quot;assignment2&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">ros::NodeHandle<sp/>nh;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal">ros::ServiceServer<sp/>oracle<sp/>=<sp/>nh.advertiseService(<sp/></highlight><highlight class="stringliteral">&quot;/oracle_hint&quot;</highlight><highlight class="normal">,<sp/><ref refid="simulation_8cpp_1ae03e072c5ab0129b0d05a862f394628c" kindref="member">oracleCallback</ref>);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal">ros::ServiceServer<sp/><ref refid="_oracle_8rst_8txt_1a9c60414e0116ebf318b07fc7945c3652" kindref="member">service</ref>=<sp/>nh.advertiseService(</highlight><highlight class="stringliteral">&quot;/oracle_solution&quot;</highlight><highlight class="normal">,<sp/><ref refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" kindref="member">oracleService</ref>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">ros::ServiceServer<sp/><ref refid="_oracle_8rst_8txt_1aa2bb0bbefdabed4fced22acc09b2f715" kindref="member">service</ref>=<sp/>nh.advertiseService(</highlight><highlight class="stringliteral">&quot;/oracle_solution&quot;</highlight><highlight class="normal">,<sp/><ref refid="simulation_8cpp_1a0d73bff11432b51e4628218bc5befc76" kindref="member">oracleService</ref>);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">srand<sp/>(time(NULL));</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
@@ -474,7 +473,7 @@
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>c++;</highlight></codeline>
 <codeline lineno="131"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal">std::random_shuffle(std::begin(<ref refid="simulation_8cpp_1a42b80e0b5892e0aba8cc512980770c1c" kindref="member">oracle_msgs</ref>),<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a44a26e7477784eb84207c62ba25404ab" kindref="member">std::end</ref>(<ref refid="simulation_8cpp_1a42b80e0b5892e0aba8cc512980770c1c" kindref="member">oracle_msgs</ref>));</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">std::random_shuffle(std::begin(<ref refid="simulation_8cpp_1a42b80e0b5892e0aba8cc512980770c1c" kindref="member">oracle_msgs</ref>),<sp/>std::end(<ref refid="simulation_8cpp_1a42b80e0b5892e0aba8cc512980770c1c" kindref="member">oracle_msgs</ref>));</highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight></codeline>
 <codeline lineno="135"><highlight class="normal">ros::spin();</highlight></codeline>
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>

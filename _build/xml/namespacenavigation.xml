@@ -240,7 +240,7 @@ Parameters:
         <argsstring>(x, y)</argsstring>
         <name>send_move_base</name>
         <param>
-          <type>x</type>
+          <type><ref refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" kindref="member">x</ref></type>
           <defname>x</defname>
         </param>
         <param>

@@ -34,6 +34,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="vision_opencv/cv_bridge/src/boost/endian/conversion.hpp" line="166" column="14" bodyfile="vision_opencv/cv_bridge/src/boost/endian/conversion.hpp" bodystart="166" bodyend="173"/>
+        <references refid="_r_e_a_d_m_e_8md_8txt_1a32adde371575f865b948a2d9efdef5b1" compoundref="_r_e_a_d_m_e_8md_8txt" startline="127">x</references>
       </memberdef>
       <memberdef kind="function" id="namespaceboost_1_1endian_1_1detail_1a7ea37c68200019f8a3f06f3568d2228d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <templateparamlist>

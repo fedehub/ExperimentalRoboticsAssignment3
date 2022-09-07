@@ -46,7 +46,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Code docs – <em>Navigation.py</em></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-go-to-point-service">The “go_to_point” service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-turn-the-robot-service">The “turn the robot” service</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#code-reference">Code Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-navigation">Code Reference</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="Oracle.html">Code docs – <em>final_oracle.cpp</em></a></li>
@@ -135,8 +135,158 @@ bool success
 </pre></div>
 </div>
 </div>
-<div class="section" id="code-reference">
-<h2>Code Reference<a class="headerlink" href="#code-reference" title="Permalink to this heading"></a></h2>
+<div class="section" id="module-navigation">
+<span id="code-reference"></span><h2>Code Reference<a class="headerlink" href="#module-navigation" title="Permalink to this heading"></a></h2>
+<p>This node implements two different services aimed at letting the robot reach
+different rooms in order to fulfill its investigation-related tasks.
+The go_to_point service calls MoveBase and waits until the robot hasn’t reached
+the given target whereas the turn_robot service listens for a request containing
+the angular velocity around x to keep, and the time during which the robot has to
+turn at that angular velocity.
+Further keypoints:
+- Localisation takes place through the subscription to the <strong>odom</strong> (nav_msgs/Odom)</p>
+<blockquote>
+<div><p>topic</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>The node uses <strong>move_base</strong> (from move_base pkg) to perform the navigation.</p></li>
+</ul>
+<dl class="simple">
+<dt>Subscribes to:</dt><dd><p>/clock</p>
+</dd>
+<dt>Publishes to:</dt><dd><p>/cmd_vel [geometry_msgs/Twist]
+/move_base/cancel [actionlib_msgs/GoalID]
+/move_base/goal [move_base_msgs/MoveBaseActionGoal]
+/rosout [rosgraph_msgs/Log]</p>
+</dd>
+<dt>Service :</dt><dd><p>/go_to_point
+/navigation/get_loggers
+/navigation/set_logger_level
+/turn_robot</p>
+</dd>
+</dl>
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">dist_vector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/navigation.html#dist_vector"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>returns the difference vector between points.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">P1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">P2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/navigation.html#distance"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>eucledian distance between P1 and P2</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>P1</strong> (<em>geometry_msgs/Point</em>) – first point</p></li>
+<li><p><strong>P2</strong> (<em>geometry_msgs/Point</em>) – second point</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">go_to_point</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/navigation.html#go_to_point"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>service implementation of /go_to_point</p>
+<p>the service calls MoveBase and waits until the robot hasn’t reached
+the given target.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>req</strong> (<em>erl_assignment_3_msgs/GoToPointRequest</em>) – the target point to go at</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns</dt><dd><dl class="simple">
+<dt>res (erl_assignment_3_msgs/GoToPointResponse):</dt><dd><p>whether the request succeeded or not.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">last_odometry</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">header:</span>&#160;&#160;&#160; <span class="pre">seq:</span> <span class="pre">0</span>&#160;&#160; <span class="pre">stamp:</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">secs:</span> <span class="pre">0</span>&#160;&#160;&#160;&#160; <span class="pre">nsecs:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">0</span>&#160;&#160; <span class="pre">frame_id:</span> <span class="pre">''</span> <span class="pre">child_frame_id:</span> <span class="pre">''</span> <span class="pre">pose:</span>&#160;&#160;&#160; <span class="pre">pose:</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">position:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">x:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">y:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">z:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160; <span class="pre">orientation:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">x:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">y:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">z:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">w:</span> <span class="pre">0.0</span>&#160;&#160; <span class="pre">covariance:</span> <span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0]</span> <span class="pre">twist:</span>&#160;&#160;&#160; <span class="pre">twist:</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">linear:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">x:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">y:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">z:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160; <span class="pre">angular:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">x:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">y:</span> <span class="pre">0.0</span>&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">z:</span> <span class="pre">0.0</span>&#160;&#160; <span class="pre">covariance:</span> <span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0,</span> <span class="pre">0.0]</span></em></dt>
+<dd><p>last received odometry (nav_msgs/Odometry)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">last_pos</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">x:</span> <span class="pre">0.0</span> <span class="pre">y:</span> <span class="pre">0.0</span> <span class="pre">z:</span> <span class="pre">0.0</span></em></dt>
+<dd><p>the last position returned by the odometry</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">last_target</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">x:</span> <span class="pre">0.0</span> <span class="pre">y:</span> <span class="pre">0.0</span> <span class="pre">z:</span> <span class="pre">0.0</span></em></dt>
+<dd><p>last required target (geometry_msgs/Point)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">move_base_goal_topic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/move_base/goal'</span></em></dt>
+<dd><p>goal topic name for commanding the navigation stack</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">odometry_topic</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'/odom'</span></em></dt>
+<dd><p>name of the odometry source topic</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">pub_cancel_move_base</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>publisher to /move_base/cancel (actionlib_msgs/GoalID)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">pub_cmd_vel</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>velocity publisher (used by the turn_robot service)</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">pub_move_base</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em></dt>
+<dd><p>publisher to the /move_base/goal topic (move_base/MoveBaseGoal)</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">read_odom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/navigation.html#read_odom"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>read and save the data from the Odometry topic</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<em>nav_msgs/Odometry</em>) – the current odometry message</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">send_move_base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/navigation.html#send_move_base"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>send a goal to the navigation stack</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – x coordinate</p></li>
+<li><p><strong>y</strong> (<em>float</em>) – y coordinate</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">navigation.</span></span><span class="sig-name descname"><span class="pre">turn_robot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">req</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/navigation.html#turn_robot"><span class="viewcode-link"><span class="pre">[source]</span></span></a></dt>
+<dd><p>implementation of the service /turn_robot</p>
+<p>this service listens for a request containing the angular velocity around
+x to keep, and the time during which the robot has to turn at that
+angular velocity.</p>
+</dd></dl>
+
 </div>
 </div>
 

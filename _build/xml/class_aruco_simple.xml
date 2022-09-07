@@ -355,7 +355,7 @@
         <references refid="classaruco_1_1_marker_detector_1afc3be319bb1db9237d9db80cc0bafc89" compoundref="markerdetector_8h" startline="246" endline="249">aruco::MarkerDetector::getParameters</references>
         <references refid="class_aruco_simple_1a4187d02eb1f8af79b91dc901c3f96586" compoundref="simple__single_8cpp" startline="185" endline="309">image_callback</references>
         <references refid="simple__double_8cpp_1a087dfb98bb2b81122d7d59298493d59a" compoundref="simple__double_8cpp" startline="60">image_pub</references>
-        <references refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" compoundref="_oracle_8rst_8txt" startline="21">Marker</references>
+        <references refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" compoundref="_oracle_8rst_8txt" startline="20">Marker</references>
         <references refid="simple__double_8cpp_1a46ba90e214408b92c4329be16a5cd5d0" compoundref="simple__double_8cpp" startline="68">marker_size</references>
         <references refid="simple__double_8cpp_1ad8cb3a609f794f135f65302c4cd5b479" compoundref="simple__double_8cpp" startline="56">mDetector</references>
         <references refid="class_aruco_simple_1a0e9ec3c4c943c8e98dd840288e60ef23" compoundref="simple__single_8cpp" startline="325" endline="332">reconf_callback</references>
@@ -419,7 +419,7 @@
         <references refid="simple__double_8cpp_1a087dfb98bb2b81122d7d59298493d59a" compoundref="simple__double_8cpp" startline="60">image_pub</references>
         <references refid="simple__double_8cpp_1a374b17b49a8f5297b86083844a543b80" compoundref="simple__double_8cpp" startline="52">inImage</references>
         <references refid="classaruco_1_1_camera_parameters_1ab5ff265805e264fb13f119b97e0597f7" compoundref="cameraparameters_8h" startline="87" endline="91">aruco::CameraParameters::isValid</references>
-        <references refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" compoundref="_oracle_8rst_8txt" startline="21">Marker</references>
+        <references refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" compoundref="_oracle_8rst_8txt" startline="20">Marker</references>
         <references refid="simple__double_8cpp_1a46ba90e214408b92c4329be16a5cd5d0" compoundref="simple__double_8cpp" startline="68">marker_size</references>
         <references refid="simple__double_8cpp_1ad3609934b55a628fdda977ca8724ce34" compoundref="simple__double_8cpp" startline="57">markers</references>
         <references refid="simple__double_8cpp_1ad8cb3a609f794f135f65302c4cd5b479" compoundref="simple__double_8cpp" startline="56">mDetector</references>

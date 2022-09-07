@@ -1,4 +1,4 @@
-/** @ package erl_assignment_3
+/** @package erl_assignment_3
 * 
 *	@file img_echo.cpp
 *	@brief This node reads the camera input and show it onto a floating window

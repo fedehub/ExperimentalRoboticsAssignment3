@@ -362,7 +362,6 @@ catch (const cv::Exception &amp;e) \
         <location file="vision_opencv/cv_bridge/src/module_opencv4.cpp" line="352" column="10" bodyfile="vision_opencv/cv_bridge/src/module_opencv4.cpp" bodystart="352" bodyend="366"/>
         <references refid="module__opencv4_8cpp_1a1dbb0f1a245a4dc0666126cbfec04739" compoundref="module__opencv4_8cpp" startline="64">ERRWRAP2</references>
         <references refid="module__opencv4_8cpp_1aa309097169dcb9bdd444eb73dc45d29e" compoundref="module__opencv4_8cpp" startline="163">g_numpyAllocator</references>
-        <references refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" compoundref="_r_e_a_d_m_e_8md_8txt" startline="341">p</references>
       </memberdef>
       <memberdef kind="function" id="module__opencv4_8cpp_1a6c0555e5d855fc3500098940533b8207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -560,7 +559,7 @@ catch (const cv::Exception &amp;e) \
 <codeline lineno="164"><highlight class="normal"></highlight></codeline>
 <codeline lineno="165"><highlight class="normal"></highlight></codeline>
 <codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="module__opencv4_8cpp_1a1017f5b310301f94c55c825f3bf16df1" kindref="member">pyopencv_to</ref>(PyObject*<sp/>obj,<sp/>T&amp;<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&lt;unknown&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="module__opencv4_8cpp_1a1017f5b310301f94c55c825f3bf16df1" kindref="member">pyopencv_to</ref>(PyObject*<sp/>obj,<sp/>T&amp;<sp/>p,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&lt;unknown&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"></highlight></codeline>
 <codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="170"><highlight class="normal">PyObject*<sp/><ref refid="module__opencv4_8cpp_1a888bf745b252653ccb533a0bbc6b3785" kindref="member">pyopencv_from</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T&amp;<sp/>src);</highlight></codeline>
@@ -749,14 +748,14 @@ catch (const cv::Exception &amp;e) \
 <codeline lineno="353"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!m.data<sp/>)</highlight></codeline>
 <codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Py_RETURN_NONE;</highlight></codeline>
-<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>Mat<sp/>temp,<sp/>*<ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref><sp/>=<sp/>(Mat*)&amp;m;</highlight></codeline>
-<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>-&gt;u<sp/>||<sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>-&gt;allocator<sp/>!=<sp/>&amp;<ref refid="module__opencv4_8cpp_1aa309097169dcb9bdd444eb73dc45d29e" kindref="member">g_numpyAllocator</ref>)</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/>Mat<sp/>temp,<sp/>*p<sp/>=<sp/>(Mat*)&amp;m;</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!p-&gt;u<sp/>||<sp/>p-&gt;allocator<sp/>!=<sp/>&amp;<ref refid="module__opencv4_8cpp_1aa309097169dcb9bdd444eb73dc45d29e" kindref="member">g_numpyAllocator</ref>)</highlight></codeline>
 <codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp.allocator<sp/>=<sp/>&amp;<ref refid="module__opencv4_8cpp_1aa309097169dcb9bdd444eb73dc45d29e" kindref="member">g_numpyAllocator</ref>;</highlight></codeline>
 <codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="module__opencv4_8cpp_1a1dbb0f1a245a4dc0666126cbfec04739" kindref="member">ERRWRAP2</ref>(m.copyTo(temp));</highlight></codeline>
-<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref><sp/>=<sp/>&amp;temp;</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p<sp/>=<sp/>&amp;temp;</highlight></codeline>
 <codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>PyObject*<sp/>o<sp/>=<sp/>(PyObject*)<ref refid="_r_e_a_d_m_e_8md_8txt_1a0d514022d3bcd05cb4a488dfb6ffb8f7" kindref="member">p</ref>-&gt;u-&gt;userdata;</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>PyObject*<sp/>o<sp/>=<sp/>(PyObject*)p-&gt;u-&gt;userdata;</highlight></codeline>
 <codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>Py_INCREF(o);</highlight></codeline>
 <codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>o;</highlight></codeline>
 <codeline lineno="366"><highlight class="normal">}</highlight></codeline>
