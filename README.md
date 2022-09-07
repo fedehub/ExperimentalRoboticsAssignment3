@@ -634,6 +634,8 @@ Concerning the `img_echo.cpp` node :
 
 Briefly, this node reads the input image from the robot's camera. Secondly, it  print it on a floating window, namely DetectiCAm, by means of a `cv_ptr`. (the `cv_bridge::CvImagePtr cv_ptr` returns a ROS image into an appropriate format compatible with OpenCV). Thirdly it publish the video stream!
 
+![detecticam_optimised](https://user-images.githubusercontent.com/61761835/188857662-adec563d-f4ec-4517-bd43-c74b1b9261d7.gif)
+
 > Remark: Since we have to deal with the image, multiple copies of it will be needed; For this purpose the BGR8 image encoding  has been chosen, being it less susceptible against typos.
 > Further Remark: ImageTransport's  methods have been employed for creating image publishers and subscribers, being `image_transport` a package that provides transparetn support for transporting images in low-bandwidth compressed formats.
 > *Further Further Remark*: Please remember to include `cv_bridge` in your `xml` package! Also do not forget to add the following headers to your cpp file
