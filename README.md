@@ -18,24 +18,24 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-	<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3">
-		<img src="media/miscellaneous/logo-black.png" alt="Logo" width="200" height="100">
-	</a>
+<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3">
+	<img src="media/miscellaneous/logo-black.png" alt="Logo" width="200" height="100">
+</a>
 
-	<h3 align="center">Experimental Robotics Laboratory</h3>
+<h3 align="center">Experimental Robotics Laboratory</h3>
 
-	<p align="center">
-		First assignment for the Experimental Robotics laboratory course 
-		<br />
-		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/doc"><strong>Explore the docs »</strong></a>
-		<br />
-		<br />
-		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/demo">View Demo</a>
-		·
-		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Report Bug</a>
-		·
-		<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Request Feature</a>
-	</p>
+<p align="center">
+	First assignment for the Experimental Robotics laboratory course 
+	<br />
+	<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/doc"><strong>Explore the docs »</strong></a>
+	<br />
+	<br />
+	<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/demo">View Demo</a>
+	·
+	<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Report Bug</a>
+	·
+	<a href="https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues">Request Feature</a>
+</p>
 </div>
 
 
