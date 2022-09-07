@@ -1406,31 +1406,31 @@
     <member refid="_oracle_8rst_8txt_1a3d397519c2d9adf8283ffa3045d32aaf" kind="variable"><name>particular</name></member>
     <member refid="_oracle_8rst_8txt_1acc5905728f3f1ab997990f9b4ccaa13b" kind="variable"><name>ID</name></member>
     <member refid="_oracle_8rst_8txt_1a31598fc9ace12f0c15d34780665fbcf9" kind="variable"><name>hint</name></member>
-    <member refid="_oracle_8rst_8txt_1aa2bb0bbefdabed4fced22acc09b2f715" kind="variable"><name>service</name></member>
+    <member refid="_oracle_8rst_8txt_1a0a5467f9aa584c3c28d5dd38515df80d" kind="variable"><name>service</name></member>
     <member refid="_oracle_8rst_8txt_1a9f004aa0214bce303e8084747182b339" kind="variable"><name>Marker</name></member>
     <member refid="_oracle_8rst_8txt_1ae9e73c5f55a667c884e25c3bdf1101b6" kind="variable"><name>follows</name></member>
   </compound>
   <compound refid="_state__machine_8rst_8txt" kind="file"><name>State_machine.rst.txt</name>
-    <member refid="_state__machine_8rst_8txt_1ad685c8ea8188e50a20227f8228e7f606" kind="variable"><name>service</name></member>
+    <member refid="_state__machine_8rst_8txt_1a5a2fea8da5f22e06a373df0a50635af7" kind="variable"><name>service</name></member>
     <member refid="_state__machine_8rst_8txt_1abefde73421c9664340fcc4d23667d7cc" kind="variable"><name>solutions</name></member>
     <member refid="_state__machine_8rst_8txt_1a7463cda555922b364d4d9285bc99f4e4" kind="variable"><name>mistery_not_solvable</name></member>
     <member refid="_state__machine_8rst_8txt_1a5c4f7762ecc115173cd76d7536a61804" kind="variable"><name>Otherwise</name></member>
-    <member refid="_state__machine_8rst_8txt_1ab29524ec61eb0a0afa9a3bf3bccaee93" kind="variable"><name>state</name></member>
-    <member refid="_state__machine_8rst_8txt_1a88645ce357612100d96d5e7be1a989f9" kind="variable"><name>jpg</name></member>
-    <member refid="_state__machine_8rst_8txt_1a9b5199b4c81a0e3487465bc0a08a44ad" kind="variable"><name>launched</name></member>
-    <member refid="_state__machine_8rst_8txt_1abd37dd137fbf00923d40243939f0a8b0" kind="variable"><name>Hence</name></member>
-    <member refid="_state__machine_8rst_8txt_1a0b536d100a54f87beeb088ead9e55ff2" kind="variable"><name>that</name></member>
-    <member refid="_state__machine_8rst_8txt_1a6bdac697dc1f28556bb0b540e2e7d166" kind="variable"><name>suggests</name></member>
-    <member refid="_state__machine_8rst_8txt_1a76a8180e1e1e68a3988d24cc5f7c98e8" kind="variable"><name>after</name></member>
-    <member refid="_state__machine_8rst_8txt_1a784e647f2b3eb81ad423541600c71ddb" kind="variable"><name>aspects</name></member>
-    <member refid="_state__machine_8rst_8txt_1ab33486ceadd7a3e45e246b2743118981" kind="variable"><name>are</name></member>
-    <member refid="_state__machine_8rst_8txt_1af11e9ac7d4e83f3a1c9d027dd32ddbf1" kind="variable"><name>large</name></member>
-    <member refid="_state__machine_8rst_8txt_1a0a0b85e13b1280def97c39ad9cbd3466" kind="variable"><name>Introspection</name></member>
-    <member refid="_state__machine_8rst_8txt_1ad8f8ce1821d1acad67cfe572fd968fbe" kind="variable"><name>transitions</name></member>
-    <member refid="_state__machine_8rst_8txt_1a69249a33a341db4aa4cb8bc9b88d503a" kind="variable"><name>flow</name></member>
-    <member refid="_state__machine_8rst_8txt_1ad09e3d9cbc01b152c2c1311a5a5950f0" kind="function"><name>IDs</name></member>
-    <member refid="_state__machine_8rst_8txt_1a2659887f46d0b471a57b5e07c4be95e6" kind="function"><name>issued</name></member>
-    <member refid="_state__machine_8rst_8txt_1a98ae9a1bfb617ab4f379f45fea176bfe" kind="function"><name>investigation</name></member>
+    <member refid="_state__machine_8rst_8txt_1a965938a2b0327e6235ebf15cf08b74c8" kind="variable"><name>state</name></member>
+    <member refid="_state__machine_8rst_8txt_1ae0c515dcccf8520144a30a7e27ab8d9c" kind="variable"><name>Therefore</name></member>
+    <member refid="_state__machine_8rst_8txt_1ab6e94b9807624f7b10578399a38a8c99" kind="variable"><name>launched</name></member>
+    <member refid="_state__machine_8rst_8txt_1a8795d0cbcbce9d1f5a4f121d36ae9856" kind="variable"><name>Hence</name></member>
+    <member refid="_state__machine_8rst_8txt_1a973e6a2335642e1fca2cbdb36866d90d" kind="variable"><name>that</name></member>
+    <member refid="_state__machine_8rst_8txt_1ab0d35d99dfc2bcfe0deeadf72e956203" kind="variable"><name>suggests</name></member>
+    <member refid="_state__machine_8rst_8txt_1a356fc6064841a827d84384ebbce4feb8" kind="variable"><name>after</name></member>
+    <member refid="_state__machine_8rst_8txt_1ae455ca303251ee486329430c7344df99" kind="variable"><name>aspects</name></member>
+    <member refid="_state__machine_8rst_8txt_1ab080984025e7c021fc2b817b444dd1c7" kind="variable"><name>are</name></member>
+    <member refid="_state__machine_8rst_8txt_1aa938c20f191f64595b34e9196183c6ed" kind="variable"><name>large</name></member>
+    <member refid="_state__machine_8rst_8txt_1a2b673ca771c556b86267c05ef249fb84" kind="variable"><name>Introspection</name></member>
+    <member refid="_state__machine_8rst_8txt_1a9eaafcc72614aa07c812a97f63887e7e" kind="variable"><name>transitions</name></member>
+    <member refid="_state__machine_8rst_8txt_1a8361c1c8eae15e8847a1dbe42c52e0dc" kind="variable"><name>flow</name></member>
+    <member refid="_state__machine_8rst_8txt_1a27e3293a8ed022d070944510e45397b8" kind="function"><name>IDs</name></member>
+    <member refid="_state__machine_8rst_8txt_1af02ef9c2367a4d39cf0079d4d331f464" kind="function"><name>issued</name></member>
+    <member refid="_state__machine_8rst_8txt_1a5bb5a5cc03d674c262d4e45359c6336a" kind="function"><name>investigation</name></member>
   </compound>
   <compound refid="markdown-vs-rest_8md_8txt" kind="file"><name>markdown-vs-rest.md.txt</name>
   </compound>

@@ -1,11 +1,11 @@
 
-# Other Documentation for ExperimentalRoboticsAssignment2
+# Other Documentation for ExperimentalRoboticsAssignment3
 
 ```{toctree}
 ---
 maxdepth: 2
 glob:
-caption: Other documentation for ERA2
+caption: Other documentation for ERA3
 ---
 
 ./*

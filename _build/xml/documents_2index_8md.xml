@@ -8,13 +8,13 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>Other<sp/>Documentation<sp/>for<sp/>ExperimentalRoboticsAssignment2</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Other<sp/>Documentation<sp/>for<sp/>ExperimentalRoboticsAssignment3</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{toctree}</highlight></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline><highlight class="normal">maxdepth:<sp/>2</highlight></codeline>
 <codeline><highlight class="normal">glob:</highlight></codeline>
-<codeline><highlight class="normal">caption:<sp/>Other<sp/>documentation<sp/>for<sp/>ERA2</highlight></codeline>
+<codeline><highlight class="normal">caption:<sp/>Other<sp/>documentation<sp/>for<sp/>ERA3</highlight></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">./*</highlight></codeline>

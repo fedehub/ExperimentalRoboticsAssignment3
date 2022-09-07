@@ -10,7 +10,7 @@
 <codeline lineno="1"><highlight class="normal"><ref refid="namespacecv__bridge" kindref="compound">cv_bridge</ref></highlight></codeline>
 <codeline lineno="2"><highlight class="normal">=========</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal">``<ref refid="namespacecv__bridge" kindref="compound">cv_bridge</ref>``<sp/>contains<sp/>a<sp/>single<sp/>class<sp/>:</highlight><highlight class="keyword">class</highlight><highlight class="normal">:`CvBridge`<sp/><ref refid="_state__machine_8rst_8txt_1a0b536d100a54f87beeb088ead9e55ff2" kindref="member">that</ref><sp/>converts<sp/>ROS<sp/>Image<sp/>messages<sp/>to<sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">``<ref refid="namespacecv__bridge" kindref="compound">cv_bridge</ref>``<sp/>contains<sp/>a<sp/>single<sp/>class<sp/>:</highlight><highlight class="keyword">class</highlight><highlight class="normal">:`CvBridge`<sp/><ref refid="_state__machine_8rst_8txt_1a973e6a2335642e1fca2cbdb36866d90d" kindref="member">that</ref><sp/>converts<sp/>ROS<sp/>Image<sp/>messages<sp/>to<sp/></highlight></codeline>
 <codeline lineno="5"><highlight class="normal">OpenCV<sp/>images.</highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal">..<sp/>module::<sp/>cv_bridge</highlight></codeline>
