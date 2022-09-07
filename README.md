@@ -181,8 +181,8 @@ rooms, objects)
 		-  the «trustable» ID is also randomly chosen (among the IDs which do not generate inconsisten
 		-  the oracle node implements two services: the first one (/oracle_hint) recevies an Int32 as request (the id of
 the marker) and returns the hint as a erl2/ErlOracle message;
-		- The oracle node implements also a service (/oracle_solution) which returns the trustable ID (erl2/Oracle.h,
-with an empty message for the request, and a int32 for the reply).
+		- The oracle node implements also a service (/oracle_solution) which returns the trustable ID (`erl2/Oracle.h`,
+with an empty message for the request, and a `int32` for the reply).
 - similarly to the second assignment, some markers correspond to malformed hints (e.g, all fields are
 empty, or just one field is empty, ....)
 
@@ -880,6 +880,16 @@ As for the system limitations, some of the most relevant potential techincal imp
 
 See the [open issues](https://github.com/fedehub/ExperimentalRoboticsAssignment3/issues) for a full list of proposed features (and known issues).
 
+For consulting the Sphinx documentation, please refer to the `index.html` file inside the `_build/html` folder; Just type:
+```
+firefox html/index.html
+```
+inside the `html` folder
+
+![image](https://user-images.githubusercontent.com/61761835/188905686-5cbd813d-6439-4eb6-a298-eee45b5826fe.png)
+
+
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -913,7 +923,7 @@ Distributed under none License.
 
 Federico Civetta - s4194543@studenti.unige.it
 
-Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment2](https://github.com/fedehub/ExperimentalRoboticsAssignment2)
+Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment3](https://github.com/fedehub/ExperimentalRoboticsAssignment3)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -925,7 +935,7 @@ Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment2](https
 * [Viewing state machine](http://wiki.ros.org/smach/Tutorials/Smach%20Viewer)
 * [Smach](http://wiki.ros.org/smach)
 * [Armor](https://github.com/EmaroLab/armor)
-* [Protègè](https://protege.stanford.edu)
+
 
 
 
