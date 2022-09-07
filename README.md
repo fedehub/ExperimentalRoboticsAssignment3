@@ -428,18 +428,20 @@ Here there is the UML components diagram of the project
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/component_diagram.jpg" >
 
 The aforementioned architechture can be seen as a **deliberative** one, being its pipeline structured as *"sense-plan-act"*
-- More specifically, there are *three types* of sense in this architechture 
-		1. **Vision** -       it is implemented by means of Aruco and OpenCV frameworks
-		2. **Localisation** - It is implemented by means of the Odom topic, in Gazebo
-		3. **Mapping** - made possible by laser sensors and GMAPPING algorithm
-- Concerning the "plan" module, it is implemented through a [Smach][1] state machine 
+More specifically, there are *three types* of sense in this architechture 
+- **Vision**:      It is implemented by means of Aruco and OpenCV frameworks
+- **Localisation**: It is implemented by means of the Odom topic, in Gazebo
+- **Mapping**: made possible by laser sensors and GMAPPING algorithm
+
+Moreover:
+- Concerning the *"plan"* module, it is implemented through a [Smach][1] state machine 
 - Finally, the `move_base` pkg is responsible for the detectibot's movement around the environment  
 
 <p align="center">
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/miscellaneous/deliberative_sketch_arch.png" width= 500 height=100>
 </p>
 
-As shown in the above component diagram, this software architechture relies on the synergy of varius modules: 
+As shown in the above component diagram, this software architechture relies on the synergy of varius modules, here beeow listed: 
 
 
 
