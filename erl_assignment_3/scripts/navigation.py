@@ -1,3 +1,27 @@
+"""
+.. module:: navigation
+	:platform: Unix
+	:synopsis: Python module aimed at implementong the Navigation module
+.. moduleauthor:: Federico fedeunivers@gmail.com
+
+This node implements two different services aimed at letting the robot reach
+different rooms in order to fulfill its investigation-related tasks.
+The go_to_point service calls MoveBase and waits until the robot hasn't reached
+the given target whereas the turn_robot service listens for a request containing 
+the angular velocity around x to keep, and the time during which the robot has to
+turn at that angular velocity. 
+ 
+Subscribes to:
+	/clock 
+	
+Publishes to:
+	/rosout [rosgraph_msgs/Log]
+Service :
+	/get_id [erl_assignment3/GetId]
+	/add_hint [erl_assignment3/AddHint]
+	/mark_wrong_id [erl_assignment3/MarkWrongID]
+"""
+
 
 import rospy
 import math
@@ -41,7 +65,7 @@ def read_odom(data):
 
 
 def dist_vector(P1, P2):
-	'''returns the difference vector betwee the points.
+	'''returns the difference vector between points.
 	'''
 	
 	v = Vector3()
