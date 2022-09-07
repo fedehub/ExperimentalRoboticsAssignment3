@@ -4,8 +4,8 @@
 	:synopsis: Core Python module aimed at implementong the Smach state machine
 .. moduleauthor:: Federico fedeunivers@gmail.com
 
-The cluedo_KB node implements a state machine (by means of ROS Smach pkg) that
-establishes the operations the robot can actually perform, It also represent
+The state_machine node implements a state machine (by means of ROS Smach pkg) that
+establishes the operations the robot can actually perform; It also represent
 the core module of the overall architechture 
  
 In particular the machine organises the investigation into four states.

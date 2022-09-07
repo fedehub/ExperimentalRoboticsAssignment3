@@ -632,8 +632,17 @@ Concerning the `img_echo.cpp` node :
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_img_echo_cpp.jpg" width= 500 height=500>
 </p>
 
-It takes the image from the robot's camera, broadcasts it back and at the same time transmits it on a separate window. 
+Briefly, this node reads the input image from the robot's camera. Secondly, it  print it on a floating window, namely DetectiCAm, by means of a `cv_ptr`. (the `cv_bridge::CvImagePtr cv_ptr` returns a ROS image into an appropriate format compatible with OpenCV). Thirdly it publish the video stream!
 
+> Remark: Since we have to deal with the image, multiple copies of it will be needed; For this purpose the BGR8 image encoding  has been chosen, being it less susceptible against typos.
+> Further Remark: ImageTransport's  methods have been employed for creating image publishers and subscribers, being `image_transport` a package that provides transparetn support for transporting images in low-bandwidth compressed formats.
+> *Further Further Remark*: Please remember to include `cv_bridge` in your `xml` package! Also do not forget to add the following headers to your cpp file
+
+```cpp
+#include <cv_bridge/cv_bridge.h>
+#include <opencv2/imgproc/imgproc.hpp> 
+#include <opencv2/highgui/highgui.hpp>
+```
 
 Node interfaces:
 ```Plain txt
@@ -745,7 +754,12 @@ Services:
 <img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_detectibot_magnifier.jpg" width= 500 height=500>
 </p>
 
-This node implements detection with ARUCO on a single camera
+This node is devoted to the detection of ARUCO's markers made through a single camera mounted on the front side of the robot. 
+It also implements a service that allows for retrieving the IDs identified through Aruco.
+
+For realising such a node, the [vision_openCV][117] packages, aimed at interfacing ROS with OpenCV have been emploied. OpenCV basically consists in a library of programming functions for real time computer vision. Hence this node employs a bridge between OpenCV and ROS. Due to the fact that ROS sends Images in `sensor_msgs/Image` format, our goal is to obtain images in `cv_bridge` format.
+
+> *REMARK* Please note that By using `image_transport::Publisher image_pub_ `and subscribing to the topic `/robot/camera1/image_raw` we are able to decrease the bandwidth!
 
 Node interfaces:
 ```Plain txt

@@ -1,7 +1,7 @@
 """
 .. module:: cluedo_kb
 	:platform: Unix
-	:synopsis: Python module aimed at implementong the Reasoning & AI side
+	:synopsis: Python module aimed at implementong the Reasoning & AI module
 .. moduleauthor:: Federico fedeunivers@gmail.com
 
 cluedo_KB is a node that serves as a specialised ontology for the problem in hand; it supplies a processing/reasoning system that provides the functionality of:  
@@ -11,15 +11,23 @@ cluedo_KB is a node that serves as a specialised ontology for the problem in han
 - Finding possible solutions to the case 
 - Rejecting hypotheses (whether needed)
 
+It also implements two different services; As the robot starts its investigation,
+it moves from one room to tne next; In the meantime it makes a service request 
+through `/add_hint` for soliciting the oracle to announce the found hint. 
+This latter, consists in a request of type `erl3/Marker` 
+
+
 Subscribes to:
-	/clock 
+		/clock [rosgraph_msgs/Clock]
 	
 Publishes to:
-	/rosout [rosgraph_msgs/Log]
+		/rosout [rosgraph_msgs/Log]
 Service :
-	/get_id [erl_assignment3/GetId]
-	/add_hint [erl_assignment3/AddHint]
-	/mark_wrong_id [erl_assignment3/MarkWrongID]
+ 		/add_hint
+		/cluedo_kb/get_loggers
+		/cluedo_kb/set_logger_level
+		/get_id
+		/mark_wrong_id
 """
 
 '''testing snippet

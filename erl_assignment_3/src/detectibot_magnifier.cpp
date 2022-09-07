@@ -1,3 +1,38 @@
+/** @ package erl_assignment_3
+* 
+*	@file detectibot_magnifier.cpp
+*	@brief This node implements the Detection task with Aruco on a single camera 
+*
+*	@author Federico Civetta
+*	@version 1.0.0
+*   
+*	Subscribes to: <BR>
+*		/clock 											[rosgraph_msgs/Clock]
+*		/robot/camera1/image_raw 						[sensor_msgs/Image]
+*	Publishes to: <BR>
+*		/rosout [rosgraph_msgs/Log]
+* 		
+*
+*	Services: <BR>
+* 		/aruco_markers
+* 		/detectibot_magnifier/get_loggers
+* 		/detectibot_magnifier/set_logger_level
+* 
+*	Client Services: <BR>
+		None
+*
+*	Action Services: <BR>
+*    	None
+*
+*	Description: <BR>
+*		This node handles the Aruco's marker's detection task. After 
+*		having received the image input, the Aruco marker is detected 
+*		and only after the detections are sent through the output topic 
+*
+*
+*
+*/
+
 
 #include "ros/ros.h"
 #include "aruco/aruco.h"

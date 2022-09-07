@@ -1,4 +1,47 @@
-
+/** @ package erl_assignment_3
+* 
+*	@file img_echo.cpp
+*	@brief This node reads the camera input and show it onto a floating window
+*
+*	@author Federico Civetta
+*	@version 1.0.0
+*   
+*	Subscribes to: <BR>
+*		/clock 											[rosgraph_msgs/Clock]
+*		/robot/camera1/image_raw 						[sensor_msgs/Image]
+*	Publishes to: <BR>
+* 		/img_echo [sensor_msgs/Image]
+* 		/img_echo/compressed [sensor_msgs/CompressedImage]
+*		/img_echo/compressed/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+*		/img_echo/compressed/parameter_updates [dynamic_reconfigure/Config]
+* 		/img_echo/compressedDepth [sensor_msgs/CompressedImage]
+* 		/img_echo/compressedDepth/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+* 		/img_echo/compressedDepth/parameter_updates [dynamic_reconfigure/Config]
+* 		/img_echo/theora [theora_image_transport/Packet]
+* 		/img_echo/theora/parameter_descriptions [dynamic_reconfigure/ConfigDescription]
+* 		/img_echo/theora/parameter_updates [dynamic_reconfigure/Config]
+* 		/rosout [rosgraph_msgs/Log]
+*	Services: <BR>
+* 		/img_echo/compressed/set_parameters
+* 		/img_echo/compressedDepth/set_parameters
+* 		/img_echo/get_loggers
+* 		/img_echo/set_logger_level
+* 		/img_echo/theora/set_parameters
+* 
+*	Client Services: <BR>
+		None
+*
+*	Action Services: <BR>
+*    	None
+*
+*	Description: <BR>
+*		Briefly, this node reads the input image from the robot's camera.
+*		Secondly, it  print it on a floating window, namely DetectiCAm, by means
+*		of a cv_ptr; Thirdly it publish the video stream!
+*
+*
+*
+*/
 #include "ros/ros.h"
 #include "cv_bridge/cv_bridge.h"
 #include "sensor_msgs/image_encodings.h"
