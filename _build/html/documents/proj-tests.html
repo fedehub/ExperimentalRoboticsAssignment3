@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -81,56 +82,56 @@
            <div itemprop="articleBody">
              
   <div class="tex2jax_ignore mathjax_ignore section" id="project-testing">
-<h1>Project Testing<a class="headerlink" href="#project-testing" title="Permalink to this headline"></a></h1>
+<h1>Project Testing<a class="headerlink" href="#project-testing" title="Permalink to this heading"></a></h1>
 <div class="section" id="navigation-testing">
-<h2>Navigation Testing<a class="headerlink" href="#navigation-testing" title="Permalink to this headline"></a></h2>
+<h2>Navigation Testing<a class="headerlink" href="#navigation-testing" title="Permalink to this heading"></a></h2>
 <p>shell 1: (environment gazebo rviz move_base slam gmapping)</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">erl_assignment_3_robot</span> <span class="n">detectibot_environment</span><span class="p">.</span><span class="n">launch</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>roslaunch erl_assignment_3_robot detectibot_environment.launch
 </pre></div>
 </div>
 <p>shell 2: (navigation node)</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">navigation</span><span class="p">.</span><span class="n">py</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 navigation.py
 </pre></div>
 </div>
 </div>
 <div class="section" id="vision-testing">
-<h2>Vision Testing<a class="headerlink" href="#vision-testing" title="Permalink to this headline"></a></h2>
+<h2>Vision Testing<a class="headerlink" href="#vision-testing" title="Permalink to this heading"></a></h2>
 <p>shell 1:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">erl_assignment_3_robot</span> <span class="n">detectibot_environment</span><span class="p">.</span><span class="n">launch</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>roslaunch erl_assignment_3_robot detectibot_environment.launch
 </pre></div>
 </div>
 <p>shell 2:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">img_echo</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 img_echo
 </pre></div>
 </div>
 <p>shell 3:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">detectibot_magnifier</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 detectibot_magnifier
 </pre></div>
 </div>
 </div>
 <div class="section" id="state-machine-test">
-<h2>State machine test<a class="headerlink" href="#state-machine-test" title="Permalink to this headline"></a></h2>
+<h2>State machine test<a class="headerlink" href="#state-machine-test" title="Permalink to this heading"></a></h2>
 <p>shell 1:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">roslaunch</span> <span class="n">erl_assignment_3_robot</span> <span class="n">detectibot_environment</span><span class="p">.</span><span class="n">launch</span> <span class="mi">2</span><span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="k">null</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>roslaunch erl_assignment_3_robot detectibot_environment.launch 2&gt;/dev/null
 </pre></div>
 </div>
 <p>shell 2:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">img_echo</span> <span class="o">&amp;</span>
-<span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">detectibot_magnifier</span> <span class="o">&amp;</span>
-<span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">navigation</span><span class="p">.</span><span class="n">py</span> 
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 img_echo &amp;
+rosrun erl_assignment_3 detectibot_magnifier &amp;
+rosrun erl_assignment_3 navigation.py 
 </pre></div>
 </div>
 <p>shell 3:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">cluedo_kb</span><span class="p">.</span><span class="n">py</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 cluedo_kb.py
 </pre></div>
 </div>
 <p>shell 4:</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosrun</span> <span class="n">erl_assignment_3</span> <span class="n">state_machine</span><span class="p">.</span><span class="n">py</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>rosrun erl_assignment_3 state_machine.py
 </pre></div>
 </div>
 </div>
 <div class="section" id="the-entire-project">
-<h2>The entire project<a class="headerlink" href="#the-entire-project" title="Permalink to this headline"></a></h2>
+<h2>The entire project<a class="headerlink" href="#the-entire-project" title="Permalink to this heading"></a></h2>
 <p>shell 1:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch erl_assignment_3_robot detectibot_environment_2.launch <span class="m">2</span>&gt;/dev/null
 </pre></div>

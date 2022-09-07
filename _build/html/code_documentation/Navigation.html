@@ -14,12 +14,13 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Code docs – oracle_final.cpp" href="Oracle.html" />
-    <link rel="prev" title="Code Documentation for ExperimentalRoboticsAssignment2" href="index.html" /> 
+    <link rel="next" title="Code docs – final_oracle.cpp" href="Oracle.html" />
+    <link rel="prev" title="Code docs – Img_echo.cpp" href="Img_echo.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -40,12 +41,16 @@
               <p class="caption" role="heading"><span class="caption-text">Code documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Code Documentation for ExperimentalRoboticsAssignment2</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Detectibot_magnifier.html">Code docs – <em>Detectibot_magnifier.cpp</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Img_echo.html">Code docs – <em>Img_echo.cpp</em></a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Code docs – <em>Navigation.py</em></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#the-go-to-point-service">The “go_to_point” service</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-turn-the-robot-service">The “turn the robot” service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-reference">Code Reference</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="Oracle.html">Code docs – <em>oracle_final.cpp</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Oracle.html">Code docs – <em>final_oracle.cpp</em></a></li>
+<li class="toctree-l2"><a class="reference internal" href="State_machine.html">Code docs – <em>State_machine.py</em></a></li>
 </ul>
 </li>
 </ul>
@@ -80,7 +85,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="code-docs-navigation-py">
-<h1>Code docs – <em>Navigation.py</em><a class="headerlink" href="#code-docs-navigation-py" title="Permalink to this headline"></a></h1>
+<h1>Code docs – <em>Navigation.py</em><a class="headerlink" href="#code-docs-navigation-py" title="Permalink to this heading"></a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Authors</dt>
 <dd class="field-odd"><p>Fedehub</p>
@@ -91,7 +96,7 @@
 </dl>
 <p>This nodes implements two different service servers</p>
 <div class="section" id="the-go-to-point-service">
-<h2>The “go_to_point” service<a class="headerlink" href="#the-go-to-point-service" title="Permalink to this headline"></a></h2>
+<h2>The “go_to_point” service<a class="headerlink" href="#the-go-to-point-service" title="Permalink to this heading"></a></h2>
 <p>the robot moves from a waypoint to another by means of a
 service call to the <code class="docutils literal notranslate"><span class="pre">move_base</span></code> action (navigation stack).
 Hence, it waits until the robot reaches the given target (or a
@@ -110,25 +115,28 @@ bool success
 </div>
 </div>
 <div class="section" id="the-turn-the-robot-service">
-<h2>The “turn the robot” service<a class="headerlink" href="#the-turn-the-robot-service" title="Permalink to this headline"></a></h2>
+<h2>The “turn the robot” service<a class="headerlink" href="#the-turn-the-robot-service" title="Permalink to this heading"></a></h2>
 <p>The aim of this service is to listen for a request containing an
 <strong>angular velocity</strong> we want the robot to acquire, for making it
 capable of turning around itself within a specific time interval.
 Here below the prototype of the robot is reported</p>
-<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>## <span class="nv">service</span> <span class="nv">file</span> <span class="s1">&#39;</span><span class="s">TurnRobot.srv</span><span class="s1">&#39;</span>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>## service file &#39;TurnRobot.srv&#39;
 
-# <span class="nv">angular</span> <span class="nv">velocity</span> <span class="nv">request</span>
-<span class="nv">float32</span> <span class="nv">angularVel</span>
+# angular velocity request
+float32 angularVel
 
-# <span class="nv">time</span> <span class="nv">allocated</span> <span class="k">for</span> <span class="nv">turning</span> <span class="nv">around</span>
-<span class="nv">float32</span> <span class="nv">time</span>
+# time allocated for turning around
+float32 time
 
-<span class="o">---</span>
+---
 
-# <span class="nv">res</span> <span class="nv">to</span> <span class="nv">set</span> <span class="nv">the</span> <span class="nv">service</span> <span class="nv">as</span> <span class="nv">succeded</span> <span class="nv">or</span> <span class="nv">failed</span>
-<span class="nv">bool</span> <span class="nv">success</span>
+# res to set the service as succeded or failed
+bool success
 </pre></div>
 </div>
+</div>
+<div class="section" id="code-reference">
+<h2>Code Reference<a class="headerlink" href="#code-reference" title="Permalink to this heading"></a></h2>
 </div>
 </div>
 
@@ -136,8 +144,8 @@ Here below the prototype of the robot is reported</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Code Documentation for ExperimentalRoboticsAssignment2" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Oracle.html" class="btn btn-neutral float-right" title="Code docs – oracle_final.cpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Img_echo.html" class="btn btn-neutral float-left" title="Code docs – Img_echo.cpp" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Oracle.html" class="btn btn-neutral float-right" title="Code docs – final_oracle.cpp" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

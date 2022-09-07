@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="120" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="120" bodyend="122"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="145" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="145" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="classstate__machine_1_1_c_o_l_l_e_c_t_1afc9c7daa29434ed9f4b7b13b3a1c9665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -50,8 +50,8 @@ markers as the camera can detect.
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="123" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="123" bodyend="140"/>
-        <references refid="namespacestate__machine_1a15d8b0fa02e1fe70d6bdd9d7ca123442" compoundref="state__machine_8py" startline="51">state_machine.cl_turn_robot</references>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="148" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="148" bodyend="165"/>
+        <references refid="namespacestate__machine_1a15d8b0fa02e1fe70d6bdd9d7ca123442" compoundref="state__machine_8py" startline="76">state_machine.cl_turn_robot</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,7 +80,7 @@ markers as the camera can detect.
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="erl_assignment_3/scripts/state_machine.py" line="119" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="119" bodyend="141"/>
+    <location file="erl_assignment_3/scripts/state_machine.py" line="144" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="144" bodyend="166"/>
     <listofallmembers>
       <member refid="classstate__machine_1_1_c_o_l_l_e_c_t_1a609ba84fc5b6ec9a64ee81ce4d07a999" prot="public" virt="non-virtual"><scope>state_machine::COLLECT</scope><name>__init__</name></member>
       <member refid="classstate__machine_1_1_c_o_l_l_e_c_t_1afc9c7daa29434ed9f4b7b13b3a1c9665" prot="public" virt="non-virtual"><scope>state_machine::COLLECT</scope><name>execute</name></member>

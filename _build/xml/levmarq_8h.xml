@@ -14,30 +14,6 @@
     <includes local="no">iomanip</includes>
     <includedby refid="posetracker_8cpp" local="yes">aruco_ros/aruco/src/aruco/posetracker.cpp</includedby>
     <incdepgraph>
-      <node id="1">
-        <label>aruco_ros/aruco/include/aruco/levmarq.h</label>
-        <link refid="levmarq_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-      </node>
       <node id="11">
         <label>iomanip</label>
       </node>
@@ -62,6 +38,30 @@
       <node id="5">
         <label>iostream</label>
       </node>
+      <node id="1">
+        <label>aruco_ros/aruco/include/aruco/levmarq.h</label>
+        <link refid="levmarq_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
       <node id="10">
         <label>chrono</label>
       </node>
@@ -70,15 +70,15 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="2">
+        <label>aruco_ros/aruco/src/aruco/posetracker.cpp</label>
+        <link refid="posetracker_8cpp"/>
+      </node>
       <node id="1">
         <label>aruco_ros/aruco/include/aruco/levmarq.h</label>
         <link refid="levmarq_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>aruco_ros/aruco/src/aruco/posetracker.cpp</label>
-        <link refid="posetracker_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classaruco_1_1_lev_marq" prot="public">aruco::LevMarq</innerclass>

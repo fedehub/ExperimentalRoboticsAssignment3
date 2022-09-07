@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="66" column="17" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="66" bodyend="-1"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="109" column="17" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classimg__echo__class_1ad2c9abbe0cb1a9f8940990d2163d2614" prot="private" static="no" mutable="no">
         <type>const std::string</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="69" column="19" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="69" bodyend="-1"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="112" column="19" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classimg__echo__class_1abc6d22283406b6eadfad2b1e2ca9b061" prot="private" static="no" mutable="no">
         <type>const std::string</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="72" column="19" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="72" bodyend="-1"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="115" column="19" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="115" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classimg__echo__class_1ae2243fc96201614f1fc861d7ac4706c5" prot="private" static="no" mutable="no">
         <type>image_transport::ImageTransport</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="75" column="33" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="75" bodyend="-1"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="118" column="33" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="118" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classimg__echo__class_1a2a674227eeafa6391b770e7534954683" prot="private" static="no" mutable="no">
         <type>image_transport::Subscriber</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="78" column="29" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="78" bodyend="-1"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="121" column="29" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classimg__echo__class_1ac43cbb98c04b7d516100f2472b5d5933" prot="private" static="no" mutable="no">
         <type>image_transport::Publisher</type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="81" column="28" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="81" bodyend="-1"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="124" column="28" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="124" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -103,8 +103,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="23" column="1" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="23" bodyend="31"/>
-        <references refid="classimg__echo__class_1a395477377683017361fdc80aaf3cc995" compoundref="img__echo_8cpp" startline="41" endline="61">image_callback</references>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="66" column="1" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="66" bodyend="74"/>
+        <references refid="classimg__echo__class_1a395477377683017361fdc80aaf3cc995" compoundref="img__echo_8cpp" startline="84" endline="104">image_callback</references>
       </memberdef>
       <memberdef kind="function" id="classimg__echo__class_1ae8682c1ae3d9a68fece0a38a80b3d296" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="34" column="1" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="34" bodyend="38"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="77" column="1" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="77" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classimg__echo__class_1a395477377683017361fdc80aaf3cc995" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -136,16 +136,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/src/img_echo.cpp" line="41" column="6" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="41" bodyend="61"/>
+        <location file="erl_assignment_3/src/img_echo.cpp" line="84" column="6" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="84" bodyend="104"/>
         <references refid="namespacecv__bridge_1acbf2da402f4d3e505613e95b5a2aed35" compoundref="cv__bridge_8cpp" startline="425" endline="429">cv_bridge::toCvCopy</references>
-        <referencedby refid="classimg__echo__class_1acad80956d38d7b99384d3a624629bed9" compoundref="img__echo_8cpp" startline="23" endline="31">img_echo_class</referencedby>
+        <referencedby refid="classimg__echo__class_1acad80956d38d7b99384d3a624629bed9" compoundref="img__echo_8cpp" startline="66" endline="74">img_echo_class</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="erl_assignment_3/src/img_echo.cpp" line="19" column="1" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="18" bodyend="82"/>
+    <location file="erl_assignment_3/src/img_echo.cpp" line="62" column="1" bodyfile="erl_assignment_3/src/img_echo.cpp" bodystart="61" bodyend="125"/>
     <listofallmembers>
       <member refid="classimg__echo__class_1a395477377683017361fdc80aaf3cc995" prot="public" virt="non-virtual"><scope>img_echo_class</scope><name>image_callback</name></member>
       <member refid="classimg__echo__class_1ac43cbb98c04b7d516100f2472b5d5933" prot="private" virt="non-virtual"><scope>img_echo_class</scope><name>image_pub</name></member>

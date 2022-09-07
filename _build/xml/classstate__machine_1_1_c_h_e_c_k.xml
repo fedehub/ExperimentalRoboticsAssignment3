@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="142" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="142" bodyend="144"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="167" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="167" bodyend="169"/>
       </memberdef>
       <memberdef kind="function" id="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -53,11 +53,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="145" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="145" bodyend="184"/>
-        <references refid="namespacestate__machine_1a61ad2d7f7796d9a8207ee7c2be7b6835" compoundref="state__machine_8py" startline="59">state_machine.cl_add_hint</references>
-        <references refid="namespacestate__machine_1a3beeedfafde415df2974a2a5dda69d6d" compoundref="state__machine_8py" startline="55">state_machine.cl_aruco</references>
-        <references refid="namespacestate__machine_1ad5face4951be519a2ec365d46bce4162" compoundref="state__machine_8py" startline="63">state_machine.cl_get_hint</references>
-        <references refid="namespacestate__machine_1ae1b578fc9d502ebdbfb09a0ff78bf0da" compoundref="state__machine_8py" startline="27" endline="34">state_machine.next_room</references>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="170" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="170" bodyend="209"/>
+        <references refid="namespacestate__machine_1a61ad2d7f7796d9a8207ee7c2be7b6835" compoundref="state__machine_8py" startline="84">state_machine.cl_add_hint</references>
+        <references refid="namespacestate__machine_1a3beeedfafde415df2974a2a5dda69d6d" compoundref="state__machine_8py" startline="80">state_machine.cl_aruco</references>
+        <references refid="namespacestate__machine_1ad5face4951be519a2ec365d46bce4162" compoundref="state__machine_8py" startline="88">state_machine.cl_get_hint</references>
+        <references refid="namespacestate__machine_1ae1b578fc9d502ebdbfb09a0ff78bf0da" compoundref="state__machine_8py" startline="52" endline="59">state_machine.next_room</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -86,7 +86,7 @@
         <label>State</label>
       </node>
     </collaborationgraph>
-    <location file="erl_assignment_3/scripts/state_machine.py" line="141" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="141" bodyend="185"/>
+    <location file="erl_assignment_3/scripts/state_machine.py" line="166" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="166" bodyend="210"/>
     <listofallmembers>
       <member refid="classstate__machine_1_1_c_h_e_c_k_1a6b44632604149b94217dfb1048a1c950" prot="public" virt="non-virtual"><scope>state_machine::CHECK</scope><name>__init__</name></member>
       <member refid="classstate__machine_1_1_c_h_e_c_k_1a509a2fc61bb542261e7f566487d78ef2" prot="public" virt="non-virtual"><scope>state_machine::CHECK</scope><name>execute</name></member>

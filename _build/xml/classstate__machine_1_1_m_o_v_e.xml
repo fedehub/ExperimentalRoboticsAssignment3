@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="82" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="82" bodyend="84"/>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="107" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="107" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classstate__machine_1_1_m_o_v_e_1a08f985b53335e8d21c9c387ab48b6872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -51,8 +51,8 @@ Note:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="erl_assignment_3/scripts/state_machine.py" line="85" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="85" bodyend="118"/>
-        <references refid="namespacestate__machine_1a603958986e96759744716f54f97c0da5" compoundref="state__machine_8py" startline="47">state_machine.cl_go_to_point</references>
+        <location file="erl_assignment_3/scripts/state_machine.py" line="110" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="110" bodyend="143"/>
+        <references refid="namespacestate__machine_1a603958986e96759744716f54f97c0da5" compoundref="state__machine_8py" startline="72">state_machine.cl_go_to_point</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -81,7 +81,7 @@ Note:
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="erl_assignment_3/scripts/state_machine.py" line="81" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="81" bodyend="119"/>
+    <location file="erl_assignment_3/scripts/state_machine.py" line="106" column="1" bodyfile="erl_assignment_3/scripts/state_machine.py" bodystart="106" bodyend="144"/>
     <listofallmembers>
       <member refid="classstate__machine_1_1_m_o_v_e_1a31e46066a60db6c623c2f8005663f1fc" prot="public" virt="non-virtual"><scope>state_machine::MOVE</scope><name>__init__</name></member>
       <member refid="classstate__machine_1_1_m_o_v_e_1a08f985b53335e8d21c9c387ab48b6872" prot="public" virt="non-virtual"><scope>state_machine::MOVE</scope><name>execute</name></member>
