@@ -1,3 +1,28 @@
+"""
+.. module:: state_machine
+	:platform: Unix
+	:synopsis: Core Python module aimed at implementong the Smach state machine
+.. moduleauthor:: Federico fedeunivers@gmail.com
+
+The cluedo_KB node implements a state machine (by means of ROS Smach pkg) that
+establishes the operations the robot can actually perform, It also represent
+the core module of the overall architechture 
+ 
+In particular the machine organises the investigation into four states.
+- **move** → moves the robot between rooms inside the simulated indoor environment 
+- **collect** → the robot rotates on itself to read the largest number of hints within the room 
+- **check** → takes hints from the sensing system via a service, and uses the ontology to work out whether there are possible solutions or not. If there occurs no possible solutions, the outcome is `mistery_not_solvable`, and the robot transitions back to the "move" state. Otherwise, if there actually occurs possible solutions, the state machine makes a transition to the "show" state, responsible for querying the oracle about the solution's truthfulness
+- **show** → questions the oracle about the solution
+Subscribes to:
+		/clock [rosgraph_msgs/Clock]
+	
+Publishes to:
+		/rosout [rosgraph_msgs/Log]
+Service :
+		/state_machine/get_loggers
+		/state_machine/set_logger_level
+"""
+
 
 import rospy
 import smach

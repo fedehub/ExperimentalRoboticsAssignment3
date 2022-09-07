@@ -514,9 +514,9 @@ Services:
 </p>
 
 This node implements two different services aimed at letting the robot reach ifferent rooms in order to fulfill its investigation-related tasks.
-The go_to_point service calls MoveBase and waits until the robot hasn't reached the given target whereas the turn_robot service listens for a request containing the angular velocity around x to keep, and the time during which the robot has to turn at "that" specific angular velocity. Moreover:
+The `/go_to_point` service calls MoveBase and waits until the robot hasn't reached the given target whereas the `/turn_robot` service listens for a request containing the angular velocity around x to keep, and the time during which the robot has to turn at "that" specific angular velocity. Moreover:
 
-- Localisation takes place through the subscription to the odom (nav_msgs/Odom) topic, 
+- Localisation takes place through the subscription to the **odom** (nav_msgs/Odom) topic 
 - The node uses **move_base** (from move_base pkg) to perform the navigation. The main function of this package is to move a robot from its current position to a goal position with the help of other navigation nodes. The move_base node inside this package links the global-planner and the local-planner for the path planning, connecting to the rotate-recovery package if the robot is stuck in some obstacle and connecting global costmap and local costmap for getting the map. The move_base node is basically an implementation of SimpleActionServer, which takes a goal pose with message type (geometry_msgs/PoseStamped). We can send a goal position to this node using a SimpleActionClient node.
 - In addition the navigation service provides a **service** to rotate the robot (erl_assignment_3_msgs/TurnRobot) by a certain angle speed for a certain time; this functionality is aimed at the collection of clues!
 

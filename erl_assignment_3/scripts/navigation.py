@@ -10,16 +10,24 @@ The go_to_point service calls MoveBase and waits until the robot hasn't reached
 the given target whereas the turn_robot service listens for a request containing 
 the angular velocity around x to keep, and the time during which the robot has to
 turn at that angular velocity. 
+Further keypoints:
+- Localisation takes place through the subscription to the **odom** (nav_msgs/Odom) 
+  topic
+- The node uses **move_base** (from move_base pkg) to perform the navigation.
  
 Subscribes to:
 	/clock 
 	
 Publishes to:
-	/rosout [rosgraph_msgs/Log]
+		/cmd_vel [geometry_msgs/Twist]
+		/move_base/cancel [actionlib_msgs/GoalID]
+		/move_base/goal [move_base_msgs/MoveBaseActionGoal]
+		/rosout [rosgraph_msgs/Log]
 Service :
-	/get_id [erl_assignment3/GetId]
-	/add_hint [erl_assignment3/AddHint]
-	/mark_wrong_id [erl_assignment3/MarkWrongID]
+ 		/go_to_point
+ 		/navigation/get_loggers
+ 		/navigation/set_logger_level
+ 		/turn_robot
 """
 
 
