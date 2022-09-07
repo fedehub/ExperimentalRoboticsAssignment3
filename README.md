@@ -814,9 +814,10 @@ It is also equipped with laser range finders which make possible, together with 
 - laser outputs are published onto `/scan`  topic
 - the robot model is endowed with two frames required for mapping algorithms, which are: `link_chassis` and `odom`
 
-Concerning the Aruco detection, it has been implemented by the [detectibotMagnifier][25]. This reads images on a specific topic (`topic_info`)
+Concerning the Aruco detection, it has been implemented by the [detectibotMagnifier][25]. Indeed, ROS images messages are sent over `/robot/camera/image_raw` for being converted im a openCV handable format. This is done by means of `cv_bridge` packages without forgetting to optimise the overall process (please, take a look at the previous paragraph where we mentioned the `image_transport` package and its advantages)
 
-All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite unrealistic but functional.
+All choices were made with the aim of making the system as modular and flexible as possible. Despite this, certain limitations make the system quite *unrealistic* but *functional*.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -836,7 +837,10 @@ Concerning the architecture, it is centralised and designed in such a way that i
 
 Here below, some of the major system limitations are listed:
 
-- If the robot had more than one camera, the detection system (detectibot_magnifirer) would have to be re-implemented to ensure a certain performance from the system 
+- If the robot had more than one camera, the detection system (detectibot_magnifirer) would have to be re-implemented to ensure a certain performance
+- Sometimes the robot seems to face issues in evaluating the target goal; Indeed, it remains stuck at a certain point and it takes a while before it start moving again 
+- Many Aruco Markers are not perceived by the single camera. Modifying the orientation of the camera could be a solution or even better, endowing the manipulator arm with multiple cameras (with different pan and tilt) could work as well.
+- The high computational demand requested by the simulation inevitably leads to the choice of high-performance laptops for avoiding futile delays 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -848,9 +852,7 @@ As for the system limitations, some of the most relevant potential techincal imp
 	
 - The current navigation system is rather poor; it should be replaced with a more elaborate navigation system. In particular, the new navigation system should make it possible to achieve a certain orientation as well as a final position.
 	
-- The manipulation could be replaced with a more advanced node that performs a finer (more precise) control on moveit
-	
-- The current robot model is quite unstable. It should be adjusted so that it does not oscillate during its movments
+- The current robot model is quite unstable. It should be adjusted so that it does not oscillate when it starts moving to reach a certain goal 
 	
 - the robot needs a lot of manoeuvring space to move; There should be the need of seeking an appropriate navigation algorithm to reduce the necessary manoeuvring space
 
@@ -864,7 +866,7 @@ As for the system limitations, some of the most relevant potential techincal imp
 - [x] Complete the introduction of the template 
 - [x] Describe the software architechture
 	- [x] Component diagram (*not mandatory*)
-	- [ ] Temporal diagram + comments
+	- [x] Temporal diagram + comments
 	- [x] States diagrams, whether applicable + comments
 	- [x] Create a list describing ROS messages and parameters 
 - [x] Describe the installation steps and the running procedures
