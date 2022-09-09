@@ -601,7 +601,7 @@ Services:
 Concerning the `simulation.cpp` node:
 
 <p align="center">
-<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl3_final_oracle_cpp" width= 500 height=500>
+<img src="https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl3_final_oracle_cpp.jpg" width= 500 height=500>
 </p>
 
 The architecture is based on the simulation.cpp node which is the same node we were provided by our Professors
@@ -1017,7 +1017,7 @@ Project Link: [https://github.com/fedehub/ExperimentalRoboticsAssignment3](https
 [105]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_manipulation_cpp.jpg
 [106]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_3_test_nav_py.jpg
 [107]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl_assignment_go_to_point_py.jpg
-
+[118]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/component_diagrams/v1/erl3_final_oracle_cpp.jpg
 
 <!-- Temporal diagram -->
 [116]: https://github.com/fedehub/ExperimentalRoboticsAssignment3/blob/main/media/temporal_diagrams/erl_temporal_diagram.jpg
