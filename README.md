@@ -541,7 +541,17 @@ Services:
  * /navigation/set_logger_level
  * /turn_robot
 ```
+> For exploring a bit how move_base actually works, an entire repo used for testing the ROS navigation stack, has been devoted to it 
+
+<a href="https://github.com/fedehub/nav_stack">
+  <p align="center">
+    <img width="600" height="300" src="https://user-images.githubusercontent.com/61761835/189931338-a9f6810b-bb67-46fb-92cc-3f223b4bec25.png">
+  </p>
+</a>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 ### the cluedo_kb.py node :knot:
 
